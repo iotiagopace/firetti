@@ -43,6 +43,24 @@
         }
     }
 }
+.services-area {
+    & .row > [class*="col-"] {
+        display: flex;
+    }
+    & .services-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    & .services-item__content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+    & .services-item__btn {
+        margin-top: auto;
+    }
+}
 .services-item {
     background-color: var(--tp-common-white);
     padding: 70px 55px 70px 50px;

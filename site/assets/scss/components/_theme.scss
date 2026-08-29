@@ -85,11 +85,11 @@ h6 {
 }
 
 h1 {
-	font-family: var(--tp-ff-display);
+	font-family: var(--tp-ff-heading);
 	font-size: clamp(2.5rem, 4.5vw, 4.75rem);
-	font-weight: var(--tp-fw-sbold);
-	letter-spacing: -0.025em;
-	line-height: 1.04;
+	font-weight: var(--tp-fw-ebold);
+	letter-spacing: -0.03em;
+	line-height: 1.08;
 }
 
 h2 {
