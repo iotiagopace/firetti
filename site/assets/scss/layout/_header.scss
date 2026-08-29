@@ -72,8 +72,10 @@
                     position: relative;
                     &::after {
                         content: "";
+                        position: absolute;
                         right: 1px;
                         top: 50%;
+                        display: block;
                         width: 6px;
                         height: 6px;
                         border-right: 1px solid currentColor;
