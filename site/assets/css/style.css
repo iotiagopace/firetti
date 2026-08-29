@@ -4015,10 +4015,10 @@ div.tp-srv-link a {
   font-size: 45px;
 }
 .tp-choose__icon.pink-icon {
-  background-color: rgba(247, 42, 117, 0.1);
+  background-color: var(--tp-icon-pink);
 }
 .tp-choose__icon.pink-icon i {
-  color: var(--tp-icon-pink);
+  color: var(--tp-common-white);
 }
 .tp-choose__icon.green-icon {
   background-color: rgba(16, 208, 161, 0.1);

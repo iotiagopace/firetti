@@ -40,9 +40,9 @@
             font-size: 45px;
         }
         &.pink-icon {
-            background-color: rgb(247, 42, 117, .1);
+            background-color: var(--tp-icon-pink);
             & i {
-                color: var(--tp-icon-pink);
+                color: var(--tp-common-white);
             }
         }
         &.green-icon {
