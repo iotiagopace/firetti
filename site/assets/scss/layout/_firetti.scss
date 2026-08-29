@@ -1,0 +1,42 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  FIRETTI — estilos próprios
+/*----------------------------------------*/
+
+// Etapas numeradas do processo (home e como-funciona)
+.firetti-step {
+    &__num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: var(--tp-icon-green-light);
+        color: var(--tp-theme-primary);
+        font-family: var(--tp-ff-heading);
+        font-size: 28px;
+        line-height: 1;
+    }
+}
+
+// Feedback de validação dos formulários de orçamento
+.firetti-form-error {
+    color: var(--tp-icon-red);
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.firetti-campo-invalido {
+    border-color: var(--tp-icon-red) !important;
+}
+
+// Foco visível em elementos interativos (WCAG 2.4.7)
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--tp-theme-secondary);
+    outline-offset: 2px;
+}
