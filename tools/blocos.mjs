@@ -1,18 +1,21 @@
-<!doctype html>
+/** Blocos compartilhados das páginas do site Firetti */
+/* ---------- blocos compartilhados ---------- */
+
+export const head = (titulo, descricao, og) => `<!doctype html>
 <html class="no-js" lang="pt-BR">
    <head>
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>Solicitar orçamento | Firetti</title>
-      <meta name="description" content="Monte sua lista de produtos e envie para o time comercial da Firetti pelo WhatsApp. Retornamos com valores, quantidades mínimas e prazos.">
+      <title>${titulo}</title>
+      <meta name="description" content="${descricao}">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="theme-color" content="#07375E">
 
       <!-- TODO: trocar por URL absoluta quando o domínio final for definido -->
       <meta property="og:type" content="website">
-      <meta property="og:title" content="Solicitar orçamento | Firetti">
-      <meta property="og:description" content="Monte sua lista de produtos e envie para o time comercial da Firetti pelo WhatsApp. Retornamos com valores, quantidades mínimas e prazos.">
-      <meta property="og:image" content="assets/img/og/og-firetti-1200x630.png">
+      <meta property="og:title" content="${titulo}">
+      <meta property="og:description" content="${descricao}">
+      <meta property="og:image" content="${og}">
       <meta property="og:locale" content="pt_BR">
       <meta name="twitter:card" content="summary_large_image">
 
@@ -36,8 +39,11 @@
       <link rel="stylesheet" href="assets/css/spacing.css">
       <link rel="stylesheet" href="assets/css/style.css">
    </head>
-   <body>
+   <body>`;
 
+export const header = (ativa) => {
+  const cls = (chave) => (chave === ativa ? ' class="active"' : '');
+  return `
       <!-- Scroll-top -->
       <button class="scroll-top scroll-to-target" data-target="html" aria-label="Voltar ao topo">
          <i class="fas fa-angle-up" aria-hidden="true"></i>
@@ -62,22 +68,22 @@
                      <div class="main-menu">
                         <nav id="mobile-menu" aria-label="Navegação principal">
                            <ul>
-                              <li><a href="index.html">Início</a></li>
-                              <li><a href="quem-somos.html">Quem somos</a></li>
-                              <li class="has-dropdown"><a href="como-funciona.html">Como funciona</a>
+                              <li><a${cls('inicio')} href="index.html">Início</a></li>
+                              <li><a${cls('quem-somos')} href="quem-somos.html">Quem somos</a></li>
+                              <li class="has-dropdown"><a${cls('como-funciona')} href="como-funciona.html">Como funciona</a>
                                  <ul class="sub-menu">
                                     <li><a href="como-funciona.html">Terceirize sua produção</a></li>
                                     <li><a href="faq.html">Perguntas frequentes</a></li>
                                  </ul>
                               </li>
-                              <li class="has-dropdown"><a class="active" href="catalogo.html">Catálogo</a>
+                              <li class="has-dropdown"><a${cls('catalogo')} href="catalogo.html">Catálogo</a>
                                  <ul class="sub-menu">
                                     <li><a href="catalogo.html?categoria=capilares">Produtos capilares</a></li>
                                     <li><a href="catalogo.html?categoria=corporais">Produtos corporais</a></li>
                                     <li><a href="catalogo.html?categoria=faciais">Produtos faciais</a></li>
                                  </ul>
                               </li>
-                              <li><a href="contato.html">Contato</a></li>
+                              <li><a${cls('contato')} href="contato.html">Contato</a></li>
                            </ul>
                         </nav>
                      </div>
@@ -144,139 +150,31 @@
       <!-- sidebar-info-end -->
 
       <div class="body-overlay"></div>
+`;
+};
 
-
-      <!-- main-area -->
-      <main>
-
+export const breadcrumb = (titulo, trilhaHtml, bg) => `
          <!-- breadcrumb-area -->
-         <section class="breadcrumb__area pt-100 pb-120 breadcrumb__overlay" data-background="assets/img/conteudo/linha-produtos.jpg">
+         <section class="breadcrumb__area pt-100 pb-120 breadcrumb__overlay" data-background="${bg}">
             <div class="container">
                <div class="row align-items-center">
                   <div class="col-xl-7 col-lg-12 col-md-12 col-12">
                      <div class="tp-breadcrumb">
-                        <h1 class="tp-breadcrumb__title">Lista de orçamento</h1>
+                        <h1 class="tp-breadcrumb__title">${titulo}</h1>
                      </div>
                   </div>
                   <div class="col-xl-5 col-lg-12 col-md-12 col-12">
                      <div class="tp-breadcrumb__link text-xl-end">
-                        <span><a href="index.html">Início</a> : Orçamento</span>
+                        <span>${trilhaHtml}</span>
                      </div>
                   </div>
                </div>
             </div>
          </section>
          <!-- breadcrumb-area-end -->
+`;
 
-         <!-- lista-area -->
-         <section class="cart-area pt-120 pb-40">
-            <div class="container">
-               <div class="row justify-content-center">
-                  <div class="col-lg-9">
-                     <div class="tp-section mb-40">
-                        <span class="tp-section__sub-title left-line mb-20">Sua lista</span>
-                        <h2 class="tp-section__title mb-25">Produtos selecionados</h2>
-                        <p>Revise os produtos que você escolheu no catálogo. Ao enviar o formulário abaixo, a lista completa segue junto com os seus dados para o nosso time comercial.</p>
-                     </div>
-                     <ul id="firetti-lista-itens" class="firetti-lista-itens" aria-label="Produtos na lista de orçamento"></ul>
-                     <div id="firetti-lista-vazia" hidden>
-                        <p class="mb-25">Sua lista ainda está vazia. Explore o catálogo e adicione os produtos que deseja para a sua linha.</p>
-                        <a class="tp-btn-second mb-40" href="catalogo.html">Explorar o catálogo</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!-- lista-area-end -->
-
-         <!-- orcamento-form-area -->
-         <section class="appoinment-area" id="orcamento">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col-xxl-6 col-xl-5 col-lg-12 col-md-12 p-0">
-                     <div class="appoinment-thumb">
-                        <img src="assets/img/conteudo/orcamento-lateral.jpg" alt="Frascos e potes de cosméticos em fundo neutro">
-                     </div>
-                  </div>
-                  <div class="col-xxl-6 col-xl-7 col-lg-12 col-md-12 p-0">
-                     <div class="visitor-info">
-                        <h2 class="appoinment-title mb-25"><i class="fa-light fa-file-signature" aria-hidden="true"></i>Envie sua solicitação</h2>
-                        <p class="mb-30">Preencha seus dados: a mensagem abre no seu WhatsApp já formatada, com a lista de produtos incluída, pronta para enviar ao nosso time.</p>
-                        <div class="visitor-form">
-                           <form class="js-form-orcamento" action="#" novalidate>
-                              <div class="row">
-                                 <div class="col-lg-6">
-                                    <div class="visitor-form__input">
-                                       <label class="visually-hidden" for="orc-nome">Nome completo</label>
-                                       <input type="text" id="orc-nome" name="nome" placeholder="Nome completo" required autocomplete="name">
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-6">
-                                    <div class="visitor-form__input">
-                                       <label class="visually-hidden" for="orc-cidade">Cidade</label>
-                                       <input type="text" id="orc-cidade" name="cidade" placeholder="Cidade" required autocomplete="address-level2">
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-6">
-                                    <div class="visitor-form__input">
-                                       <label class="visually-hidden" for="orc-email">E-mail</label>
-                                       <input type="email" id="orc-email" name="email" placeholder="E-mail" required autocomplete="email">
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-6">
-                                    <div class="visitor-form__input">
-                                       <label class="visually-hidden" for="orc-telefone">Telefone</label>
-                                       <input type="tel" id="orc-telefone" name="telefone" placeholder="Telefone (DDD + número)" required autocomplete="tel">
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-12">
-                                    <div class="visitor-form__input">
-                                       <label class="visually-hidden" for="orc-mensagem">Conte sobre o produto que você quer criar</label>
-                                       <textarea id="orc-mensagem" name="mensagem" placeholder="Conte sobre o produto que você quer criar (opcional)"></textarea>
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-12">
-                                    <p class="firetti-form-error" role="alert" hidden>Preencha os campos obrigatórios antes de enviar.</p>
-                                 </div>
-                                 <div class="col-lg-5 col-md-5 col-12">
-                                    <div class="visit-btn mt-20">
-                                       <button class="tp-btn" type="submit">Enviar via WhatsApp</button>
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-7 col-md-7 col-12">
-                                    <div class="visit-serial mt-45">
-                                       <span>Atendimento : <a href="tel:+551732661022">(17) 3266-1022<i class="fa-regular fa-arrow-right" aria-hidden="true"></i></a></span>
-                                    </div>
-                                 </div>
-                              </div>
-                           </form>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!-- orcamento-form-area-end -->
-
-         <!-- cta-area -->
-         <section class="cta-area pt-130 pb-130">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-12">
-                     <div class="cta-bg theme-light-bg pt-65 pb-70">
-                        <div class="cta-content ml-90">
-                           <h2 class="cta-title mb-35">Prefere conversar <br>primeiro?</h2>
-                           <a href="https://wa.me/5517991262215" target="_blank" rel="noopener" class="tp-cta-btn"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>WhatsApp :</span>(17) 99126-2215</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!-- cta-area-end -->
-      </main>
-      <!-- main-area-end -->
-
+export const rodape = () => `
       <!-- footer-area -->
       <footer>
          <div class="footer-area theme-bg pt-100 pb-50">
@@ -363,3 +261,5 @@
       <script src="assets/js/firetti.js"></script>
    </body>
 </html>
+`;
+

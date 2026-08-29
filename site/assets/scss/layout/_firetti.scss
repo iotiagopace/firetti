@@ -32,6 +32,224 @@
     border-color: var(--tp-icon-red) !important;
 }
 
+// Botão da lista de orçamento no header
+.firetti-lista-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--tp-icon-green-light);
+    color: var(--tp-theme-primary);
+    font-size: 18px;
+    margin-left: 20px;
+    &:hover {
+        background-color: var(--tp-theme-secondary);
+        color: var(--tp-common-white);
+    }
+}
+.firetti-lista-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 5px;
+    border-radius: 10px;
+    background-color: var(--tp-theme-primary);
+    color: var(--tp-common-white);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    &.tem-itens {
+        background-color: var(--tp-theme-secondary);
+    }
+}
+
+// Chips de filtro do catálogo
+.firetti-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.firetti-chip {
+    border: 1px solid var(--tp-border-secondary);
+    background-color: var(--tp-common-white);
+    color: var(--tp-theme-primary);
+    border-radius: 30px;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all .2s ease-out;
+    &:hover {
+        border-color: var(--tp-theme-secondary);
+    }
+    &.ativo {
+        background-color: var(--tp-theme-primary);
+        border-color: var(--tp-theme-primary);
+        color: var(--tp-common-white);
+    }
+}
+
+// Cartão de produto do catálogo
+.firetti-produto-card {
+    background-color: var(--tp-common-white);
+    border: 1px solid var(--tp-border-primary);
+    border-radius: 10px;
+    overflow: hidden;
+    & .firetti-produto-card__thumb img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+    }
+    & .firetti-produto-card__body {
+        padding: 24px;
+    }
+    & .firetti-produto-card__eyebrow {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: .7px;
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--tp-theme-blue);
+        margin-bottom: 8px;
+    }
+    & .firetti-produto-card__titulo {
+        font-size: 18px;
+        margin-bottom: 12px;
+        & a {
+            color: var(--tp-heading-primary);
+            &:hover { color: var(--tp-theme-blue); }
+        }
+    }
+    & .firetti-produto-card__moq {
+        display: block;
+        font-size: 13px;
+        color: var(--tp-text-2);
+        margin-bottom: 18px;
+    }
+}
+.firetti-add-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: 5px;
+    border: none;
+    color: var(--tp-theme-blue);
+    background-color: var(--tp-icon-blue-light);
+    transition: all .2s ease-out;
+    &:hover {
+        background-color: var(--tp-theme-blue);
+        color: var(--tp-common-white);
+    }
+    &.adicionado {
+        background-color: var(--tp-theme-secondary);
+        color: var(--tp-common-white);
+    }
+}
+
+// Configurador de produto
+.firetti-config__campo {
+    margin-bottom: 20px;
+    & label {
+        display: block;
+        font-weight: 600;
+        font-size: 14px;
+        color: var(--tp-heading-primary);
+        margin-bottom: 8px;
+    }
+    & select,
+    & input,
+    & textarea {
+        width: 100%;
+        height: 50px;
+        border: 1px solid var(--tp-border-secondary);
+        border-radius: 5px;
+        padding: 0 16px;
+        color: var(--tp-text-body);
+        background-color: var(--tp-common-white);
+    }
+    & textarea {
+        height: 110px;
+        padding: 12px 16px;
+        resize: vertical;
+    }
+}
+.firetti-add-feedback {
+    color: var(--tp-theme-secondary);
+    font-weight: 600;
+    margin: 10px 0 0;
+}
+.firetti-selos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    & span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        border: 1px solid var(--tp-border-secondary);
+        border-radius: 30px;
+        padding: 6px 14px;
+        font-size: 13px;
+        color: var(--tp-theme-primary);
+    }
+}
+
+// Página da lista de orçamento
+.firetti-lista-itens {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px;
+}
+.firetti-lista-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid var(--tp-border-primary);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    background-color: var(--tp-common-white);
+    &__info {
+        & strong {
+            display: block;
+            color: var(--tp-heading-primary);
+            margin-bottom: 4px;
+        }
+        & span {
+            font-size: 14px;
+            color: var(--tp-text-2);
+        }
+    }
+    &__remover {
+        flex-shrink: 0;
+        border: none;
+        background: none;
+        color: var(--tp-icon-red);
+        font-size: 14px;
+        font-weight: 600;
+        padding: 4px 8px;
+        &:hover { text-decoration: underline; }
+    }
+}
+
+// Vídeo institucional
+.firetti-video {
+    & video {
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+    }
+}
+
 // Foco visível em elementos interativos (WCAG 2.4.7)
 a:focus-visible,
 button:focus-visible,
@@ -39,4 +257,10 @@ input:focus-visible,
 textarea:focus-visible {
     outline: 2px solid var(--tp-theme-secondary);
     outline-offset: 2px;
+}
+
+// Header sempre com fundo sólido (a logo primária exige fundo claro)
+.header__area,
+.tp-mobile-header-area {
+    background-color: var(--tp-common-white);
 }

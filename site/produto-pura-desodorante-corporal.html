@@ -3,16 +3,16 @@
    <head>
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>Solicitar orçamento | Firetti</title>
-      <meta name="description" content="Monte sua lista de produtos e envie para o time comercial da Firetti pelo WhatsApp. Retornamos com valores, quantidades mínimas e prazos.">
+      <title>Pura Desodorante com Extrato de Camomila | Firetti</title>
+      <meta name="description" content="Proteção diária com fórmula suave para peles sensíveis.">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="theme-color" content="#07375E">
 
       <!-- TODO: trocar por URL absoluta quando o domínio final for definido -->
       <meta property="og:type" content="website">
-      <meta property="og:title" content="Solicitar orçamento | Firetti">
-      <meta property="og:description" content="Monte sua lista de produtos e envie para o time comercial da Firetti pelo WhatsApp. Retornamos com valores, quantidades mínimas e prazos.">
-      <meta property="og:image" content="assets/img/og/og-firetti-1200x630.png">
+      <meta property="og:title" content="Pura Desodorante com Extrato de Camomila | Firetti">
+      <meta property="og:description" content="Proteção diária com fórmula suave para peles sensíveis.">
+      <meta property="og:image" content="assets/img/og/og-linha-produtos-1200x630.png">
       <meta property="og:locale" content="pt_BR">
       <meta name="twitter:card" content="summary_large_image">
 
@@ -155,12 +155,12 @@
                <div class="row align-items-center">
                   <div class="col-xl-7 col-lg-12 col-md-12 col-12">
                      <div class="tp-breadcrumb">
-                        <h1 class="tp-breadcrumb__title">Lista de orçamento</h1>
+                        <h1 class="tp-breadcrumb__title">Desodorante</h1>
                      </div>
                   </div>
                   <div class="col-xl-5 col-lg-12 col-md-12 col-12">
                      <div class="tp-breadcrumb__link text-xl-end">
-                        <span><a href="index.html">Início</a> : Orçamento</span>
+                        <span><a href="catalogo.html">Catálogo</a> : <a href="catalogo.html?categoria=corporais">Produtos corporais</a></span>
                      </div>
                   </div>
                </div>
@@ -168,112 +168,129 @@
          </section>
          <!-- breadcrumb-area-end -->
 
-         <!-- lista-area -->
-         <section class="cart-area pt-120 pb-40">
+         <!-- produto-area -->
+         <section class="shop-area pt-120 pb-70">
             <div class="container">
-               <div class="row justify-content-center">
-                  <div class="col-lg-9">
-                     <div class="tp-section mb-40">
-                        <span class="tp-section__sub-title left-line mb-20">Sua lista</span>
-                        <h2 class="tp-section__title mb-25">Produtos selecionados</h2>
-                        <p>Revise os produtos que você escolheu no catálogo. Ao enviar o formulário abaixo, a lista completa segue junto com os seus dados para o nosso time comercial.</p>
-                     </div>
-                     <ul id="firetti-lista-itens" class="firetti-lista-itens" aria-label="Produtos na lista de orçamento"></ul>
-                     <div id="firetti-lista-vazia" hidden>
-                        <p class="mb-25">Sua lista ainda está vazia. Explore o catálogo e adicione os produtos que deseja para a sua linha.</p>
-                        <a class="tp-btn-second mb-40" href="catalogo.html">Explorar o catálogo</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!-- lista-area-end -->
-
-         <!-- orcamento-form-area -->
-         <section class="appoinment-area" id="orcamento">
-            <div class="container-fluid">
                <div class="row">
-                  <div class="col-xxl-6 col-xl-5 col-lg-12 col-md-12 p-0">
-                     <div class="appoinment-thumb">
-                        <img src="assets/img/conteudo/orcamento-lateral.jpg" alt="Frascos e potes de cosméticos em fundo neutro">
+                  <div class="col-lg-6 col-md-6">
+                     <div class="productthumb mb-40">
+                        <img src="assets/img/conteudo/cat-corporais.jpg" alt="Pura Desodorante com Extrato de Camomila — imagem ilustrativa da categoria">
                      </div>
                   </div>
-                  <div class="col-xxl-6 col-xl-7 col-lg-12 col-md-12 p-0">
-                     <div class="visitor-info">
-                        <h2 class="appoinment-title mb-25"><i class="fa-light fa-file-signature" aria-hidden="true"></i>Envie sua solicitação</h2>
-                        <p class="mb-30">Preencha seus dados: a mensagem abre no seu WhatsApp já formatada, com a lista de produtos incluída, pronta para enviar ao nosso time.</p>
-                        <div class="visitor-form">
-                           <form class="js-form-orcamento" action="#" novalidate>
-                              <div class="row">
-                                 <div class="col-lg-6">
-                                    <div class="visitor-form__input">
-                                       <label class="visually-hidden" for="orc-nome">Nome completo</label>
-                                       <input type="text" id="orc-nome" name="nome" placeholder="Nome completo" required autocomplete="name">
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-6">
-                                    <div class="visitor-form__input">
-                                       <label class="visually-hidden" for="orc-cidade">Cidade</label>
-                                       <input type="text" id="orc-cidade" name="cidade" placeholder="Cidade" required autocomplete="address-level2">
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-6">
-                                    <div class="visitor-form__input">
-                                       <label class="visually-hidden" for="orc-email">E-mail</label>
-                                       <input type="email" id="orc-email" name="email" placeholder="E-mail" required autocomplete="email">
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-6">
-                                    <div class="visitor-form__input">
-                                       <label class="visually-hidden" for="orc-telefone">Telefone</label>
-                                       <input type="tel" id="orc-telefone" name="telefone" placeholder="Telefone (DDD + número)" required autocomplete="tel">
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-12">
-                                    <div class="visitor-form__input">
-                                       <label class="visually-hidden" for="orc-mensagem">Conte sobre o produto que você quer criar</label>
-                                       <textarea id="orc-mensagem" name="mensagem" placeholder="Conte sobre o produto que você quer criar (opcional)"></textarea>
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-12">
-                                    <p class="firetti-form-error" role="alert" hidden>Preencha os campos obrigatórios antes de enviar.</p>
-                                 </div>
-                                 <div class="col-lg-5 col-md-5 col-12">
-                                    <div class="visit-btn mt-20">
-                                       <button class="tp-btn" type="submit">Enviar via WhatsApp</button>
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-7 col-md-7 col-12">
-                                    <div class="visit-serial mt-45">
-                                       <span>Atendimento : <a href="tel:+551732661022">(17) 3266-1022<i class="fa-regular fa-arrow-right" aria-hidden="true"></i></a></span>
-                                    </div>
-                                 </div>
+                  <div class="col-lg-6 col-md-6">
+                     <div class="product mb-40 ml-20">
+                        <div class="product__details-content mb-40">
+                           <span class="firetti-produto-card__eyebrow">Pura · Produtos corporais</span>
+                           <h2 class="product-dtitle mb-20">Desodorante com Extrato de Camomila</h2>
+                           <p>Proteção diária com fórmula suave para peles sensíveis. Disponível em diferentes sistemas de aplicação conforme o posicionamento da marca.</p>
+                           <p class="firetti-produto-card__moq mt-15">Quantidade mínima e custo por unidade: sob consulta no orçamento.</p>
+                           <div class="firetti-selos mt-20 mb-30">
+                                 <span><i class="fa-light fa-badge-check" aria-hidden="true"></i>Conforme normas Anvisa</span>
+                           </div>
+                           <form class="js-configurador" data-slug="pura-desodorante-corporal" data-nome="Pura Desodorante com Extrato de Camomila" action="#">
+                              <h3 class="product-model-title mb-15">Configure o seu produto</h3>
+
+                              <div class="firetti-config__campo">
+                                 <label for="cfg-embalagem">Embalagem</label>
+                                 <select id="cfg-embalagem" name="embalagem">
+                                    <option value="spray">Frasco spray</option>
+                                    <option value="bastao">Bastão</option>
+                                    <option value="frasco">Frasco convencional</option>
+                                 </select>
                               </div>
+
+                              <div class="firetti-config__campo">
+                                 <label for="cfg-material">Material</label>
+                                 <select id="cfg-material" name="material">
+                                    <option value="plastico">Plástico</option>
+                                    <option value="aluminio">Alumínio</option>
+                                 </select>
+                              </div>
+
+                              <div class="firetti-config__campo">
+                                 <label for="cfg-volume">Volume de envase</label>
+                                 <select id="cfg-volume" name="volume">
+                                    <option value="50ml">50ml</option>
+                                    <option value="90ml">90ml</option>
+                                    <option value="150ml">150ml</option>
+                                 </select>
+                              </div>
+
+                              <div class="firetti-config__campo">
+                                 <label for="cfg-decoracao">Decoração</label>
+                                 <select id="cfg-decoracao" name="decoracao">
+                                    <option value="rotulo">Rótulo adesivo</option>
+                                    <option value="impressao">Impressão na embalagem</option>
+                                    <option value="nenhuma">Sem decoração</option>
+                                 </select>
+                              </div>
+                              <div class="firetti-config__campo">
+                                 <label for="cfg-quantidade">Quantidade desejada</label>
+                                 <input type="number" id="cfg-quantidade" name="quantidade" min="1" placeholder="Ex.: 1000">
+                              </div>
+                              <div class="firetti-config__campo">
+                                 <label for="cfg-observacao">Requisito especial (opcional)</label>
+                                 <textarea id="cfg-observacao" name="observacao" placeholder="Fragrância, cor, público, referência de mercado…"></textarea>
+                              </div>
+                              <div class="product-button">
+                                 <button type="submit" class="tp-btn mr-20">Adicionar à lista de orçamento</button>
+                                 <a href="orcamento.html" class="tp-btn-second">Ver minha lista</a>
+                              </div>
+                              <p class="firetti-add-feedback" role="status" hidden>Produto adicionado à sua lista de orçamento.</p>
                            </form>
                         </div>
                      </div>
                   </div>
                </div>
-            </div>
-         </section>
-         <!-- orcamento-form-area-end -->
-
-         <!-- cta-area -->
-         <section class="cta-area pt-130 pb-130">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-12">
-                     <div class="cta-bg theme-light-bg pt-65 pb-70">
-                        <div class="cta-content ml-90">
-                           <h2 class="cta-title mb-35">Prefere conversar <br>primeiro?</h2>
-                           <a href="https://wa.me/5517991262215" target="_blank" rel="noopener" class="tp-cta-btn"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>WhatsApp :</span>(17) 99126-2215</a>
+               <div class="productdetails pt-35 pb-45">
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <div class="product-additional-tab">
+                           <div class="pro-details-nav mb-40">
+                              <ul class="nav nav-tabs pro-details-nav-btn" id="abasProduto" role="tablist">
+                                 <li class="nav-item" role="presentation">
+                                    <button class="nav-links active" id="aba-ativos" data-bs-toggle="tab" data-bs-target="#painel-ativos" type="button" role="tab" aria-controls="painel-ativos" aria-selected="true">Ativos principais</button>
+                                 </li>
+                                 <li class="nav-item" role="presentation">
+                                    <button class="nav-links" id="aba-como" data-bs-toggle="tab" data-bs-target="#painel-como" type="button" role="tab" aria-controls="painel-como" aria-selected="false">Como funciona o orçamento</button>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="tab-content tp-content-tab" id="abasProdutoConteudo">
+                              <div class="tab-para tab-pane fade show active" id="painel-ativos" role="tabpanel" aria-labelledby="aba-ativos">
+                                 <div class="product__details-info table-responsive">
+                                    <table class="table table-striped">
+                                       <tbody>
+                                          <tr>
+                                             <td class="add-info">Extrato de Camomila</td>
+                                             <td class="add-info-list">Ação calmante</td>
+                                          </tr>
+                                          <tr>
+                                             <td class="add-info">Bisabolol</td>
+                                             <td class="add-info-list">Conforto para pele sensível</td>
+                                          </tr>
+                                          <tr>
+                                             <td class="add-info">Agentes Desodorantes</td>
+                                             <td class="add-info-list">Controle de odor</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <p>A lista INCI completa é fornecida durante o desenvolvimento do projeto. A fórmula pode ser ajustada às necessidades da sua marca.</p>
+                              </div>
+                              <div class="tab-pane fade" id="painel-como" role="tabpanel" aria-labelledby="aba-como">
+                                 <p class="mb-30">Adicione à lista os produtos que deseja para a sua linha, com embalagem, volume e quantidade. Ao finalizar, envie a lista pelo formulário de orçamento: ela chega formatada ao nosso time comercial pelo WhatsApp, e retornamos com valores, quantidade mínima e prazos.</p>
+                                 <p>Preferir conversar antes? Fale com a gente pelo telefone <a href="tel:+551732661022">(17) 3266-1022</a> ou <a href="https://wa.me/5517991262215" target="_blank" rel="noopener">WhatsApp</a>.</p>
+                              </div>
+                           </div>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
          </section>
-         <!-- cta-area-end -->
+         <!-- produto-area-end -->
+
       </main>
       <!-- main-area-end -->
 

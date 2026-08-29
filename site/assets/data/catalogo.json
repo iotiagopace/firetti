@@ -1,0 +1,338 @@
+{
+  "observacao": "Catálogo inicial de amostra produzido para validação do cliente. Nomes fantasia, ativos, embalagens e volumes precisam ser confirmados pela Firetti. MOQ e faixa de custo: aguardando definição.",
+  "categorias": {
+    "capilares": "Produtos capilares",
+    "corporais": "Produtos corporais",
+    "faciais": "Produtos faciais"
+  },
+  "embalagens": {
+    "frasco-pump": "Frasco com pump",
+    "frasco": "Frasco convencional",
+    "conta-gotas": "Frasco conta-gotas",
+    "airless": "Frasco airless",
+    "bisnaga": "Bisnaga",
+    "pote": "Pote",
+    "spray": "Frasco spray",
+    "bastao": "Bastão"
+  },
+  "produtos": [
+    {
+      "slug": "aurora-shampoo-hidratante",
+      "nomeFantasia": "Aurora",
+      "tipo": "Shampoo Hidratante",
+      "ativoPrincipal": "com Óleo de Argan",
+      "categoria": "capilares",
+      "subcategoria": "shampoos",
+      "resumo": "Limpeza suave com reposição de emoliência para fios ressecados. Base perolada, perfumação personalizável e espuma cremosa que valoriza a experiência de uso.",
+      "ativos": [
+        { "nome": "Óleo de Argan", "funcao": "Nutrição e brilho" },
+        { "nome": "Pantenol", "funcao": "Hidratação e maciez" },
+        { "nome": "Proteína do Trigo", "funcao": "Força e proteção da fibra" }
+      ],
+      "opcoes": {
+        "embalagens": ["frasco-pump", "frasco"],
+        "materiais": ["plastico"],
+        "volumes": ["250ml", "300ml", "500ml", "1L"],
+        "decoracao": ["rotulo", "impressao", "nenhuma"]
+      },
+      "selos": ["Conforme normas Anvisa"],
+      "destaque": true
+    },
+    {
+      "slug": "iris-condicionador-nutritivo",
+      "nomeFantasia": "Íris",
+      "tipo": "Condicionador Nutritivo",
+      "ativoPrincipal": "com Manteiga de Karité",
+      "categoria": "capilares",
+      "subcategoria": "condicionadores",
+      "resumo": "Condicionamento intenso com toque leve, para desembaraço imediato sem pesar. Par ideal do shampoo da mesma linha, com fragrância coordenada.",
+      "ativos": [
+        { "nome": "Manteiga de Karité", "funcao": "Nutrição profunda" },
+        { "nome": "Óleo de Coco", "funcao": "Emoliência e selagem" },
+        { "nome": "Glicerina Vegetal", "funcao": "Retenção de umidade" }
+      ],
+      "opcoes": {
+        "embalagens": ["frasco-pump", "frasco", "bisnaga"],
+        "materiais": ["plastico"],
+        "volumes": ["250ml", "300ml", "500ml"],
+        "decoracao": ["rotulo", "impressao", "nenhuma"]
+      },
+      "selos": ["Conforme normas Anvisa"]
+    },
+    {
+      "slug": "maresia-mascara-de-tratamento",
+      "nomeFantasia": "Maresia",
+      "tipo": "Máscara de Tratamento Capilar",
+      "ativoPrincipal": "com Queratina Vegetal",
+      "categoria": "capilares",
+      "subcategoria": "mascaras",
+      "resumo": "Reconstrução para fios danificados por química ou calor. Textura densa de salão, indicada para cronograma capilar e linhas profissionais.",
+      "ativos": [
+        { "nome": "Queratina Vegetal", "funcao": "Reconstrução da fibra" },
+        { "nome": "Colágeno Vegetal", "funcao": "Corpo e resistência" },
+        { "nome": "Manteiga de Murumuru", "funcao": "Nutrição intensa" }
+      ],
+      "opcoes": {
+        "embalagens": ["pote", "bisnaga"],
+        "materiais": ["plastico"],
+        "volumes": ["250g", "500g", "1kg"],
+        "decoracao": ["rotulo", "impressao", "nenhuma"]
+      },
+      "selos": ["Conforme normas Anvisa"]
+    },
+    {
+      "slug": "brisa-leave-in-protetor",
+      "nomeFantasia": "Brisa",
+      "tipo": "Leave-in Protetor",
+      "ativoPrincipal": "com Pantenol",
+      "categoria": "capilares",
+      "subcategoria": "finalizadores",
+      "resumo": "Finalizador sem enxágue com proteção térmica e controle de frizz. Fórmula leve, de rápida absorção, para uso diário.",
+      "ativos": [
+        { "nome": "Pantenol", "funcao": "Hidratação contínua" },
+        { "nome": "Silicones Selecionados", "funcao": "Proteção térmica e brilho" },
+        { "nome": "Filtro UV", "funcao": "Proteção da cor" }
+      ],
+      "opcoes": {
+        "embalagens": ["spray", "bisnaga", "frasco-pump"],
+        "materiais": ["plastico"],
+        "volumes": ["120ml", "200ml", "300ml"],
+        "decoracao": ["rotulo", "impressao", "nenhuma"]
+      },
+      "selos": ["Conforme normas Anvisa"]
+    },
+    {
+      "slug": "luar-ativador-de-cachos",
+      "nomeFantasia": "Luar",
+      "tipo": "Ativador de Cachos",
+      "ativoPrincipal": "com Óleo de Coco",
+      "categoria": "capilares",
+      "subcategoria": "finalizadores",
+      "resumo": "Definição e memória para cachos e ondas, sem efeito craquelado. Atende ao público de curvatura 2A a 4C, um dos segmentos que mais cresce no país.",
+      "ativos": [
+        { "nome": "Óleo de Coco", "funcao": "Nutrição e definição" },
+        { "nome": "Linhaça", "funcao": "Fixação natural e leve" },
+        { "nome": "Aloe Vera", "funcao": "Hidratação e maciez" }
+      ],
+      "opcoes": {
+        "embalagens": ["bisnaga", "pote", "frasco-pump"],
+        "materiais": ["plastico"],
+        "volumes": ["250g", "300g", "500g"],
+        "decoracao": ["rotulo", "impressao", "nenhuma"]
+      },
+      "selos": ["Conforme normas Anvisa"]
+    },
+    {
+      "slug": "vera-hidratante-corporal",
+      "nomeFantasia": "Vera",
+      "tipo": "Hidratante Corporal",
+      "ativoPrincipal": "com Ureia",
+      "categoria": "corporais",
+      "subcategoria": "hidratantes",
+      "resumo": "Hidratação intensiva para peles muito secas, com toque seco e absorção rápida. Perfumação e textura personalizáveis para a identidade da sua marca.",
+      "ativos": [
+        { "nome": "Ureia", "funcao": "Hidratação profunda" },
+        { "nome": "Manteiga de Cacau", "funcao": "Emoliência e nutrição" },
+        { "nome": "Vitamina E", "funcao": "Ação antioxidante" }
+      ],
+      "opcoes": {
+        "embalagens": ["frasco-pump", "bisnaga", "pote"],
+        "materiais": ["plastico"],
+        "volumes": ["200ml", "400ml", "1L"],
+        "decoracao": ["rotulo", "impressao", "nenhuma"]
+      },
+      "selos": ["Conforme normas Anvisa"],
+      "destaque": true
+    },
+    {
+      "slug": "jade-oleo-corporal",
+      "nomeFantasia": "Jade",
+      "tipo": "Óleo Corporal",
+      "ativoPrincipal": "com Semente de Uva",
+      "categoria": "corporais",
+      "subcategoria": "oleos",
+      "resumo": "Óleo multifuncional para pele e massagem, de toque seco e brilho sutil. Posicionamento premium com excelente custo de fórmula.",
+      "ativos": [
+        { "nome": "Óleo de Semente de Uva", "funcao": "Emoliência e antioxidante" },
+        { "nome": "Óleo de Amêndoas", "funcao": "Nutrição da pele" },
+        { "nome": "Vitamina E", "funcao": "Conservação natural e cuidado" }
+      ],
+      "opcoes": {
+        "embalagens": ["conta-gotas", "spray", "frasco"],
+        "materiais": ["vidro", "plastico"],
+        "volumes": ["30ml", "60ml", "120ml"],
+        "decoracao": ["rotulo", "impressao", "nenhuma"]
+      },
+      "selos": ["Conforme normas Anvisa"]
+    },
+    {
+      "slug": "flora-esfoliante-corporal",
+      "nomeFantasia": "Flora",
+      "tipo": "Esfoliante Corporal",
+      "ativoPrincipal": "com Cristais de Açúcar",
+      "categoria": "corporais",
+      "subcategoria": "esfoliantes",
+      "resumo": "Esfoliação física delicada com base hidratante, para renovação sem agredir. Grãos, cor e fragrância configuráveis por linha.",
+      "ativos": [
+        { "nome": "Cristais de Açúcar", "funcao": "Esfoliação física suave" },
+        { "nome": "Óleo de Girassol", "funcao": "Emoliência" },
+        { "nome": "Extrato de Camomila", "funcao": "Ação calmante" }
+      ],
+      "opcoes": {
+        "embalagens": ["pote", "bisnaga"],
+        "materiais": ["plastico", "vidro"],
+        "volumes": ["200g", "350g"],
+        "decoracao": ["rotulo", "impressao", "nenhuma"]
+      },
+      "selos": ["Conforme normas Anvisa"]
+    },
+    {
+      "slug": "dunas-creme-para-maos",
+      "nomeFantasia": "Dunas",
+      "tipo": "Creme para Mãos",
+      "ativoPrincipal": "com Manteiga de Cacau",
+      "categoria": "corporais",
+      "subcategoria": "cremes",
+      "resumo": "Hidratação concentrada em formato de bolso. Item de entrada com ótimo giro para presente, balcão e ponto de venda.",
+      "ativos": [
+        { "nome": "Manteiga de Cacau", "funcao": "Nutrição e barreira" },
+        { "nome": "Glicerina Vegetal", "funcao": "Hidratação imediata" },
+        { "nome": "Alantoína", "funcao": "Regeneração da pele" }
+      ],
+      "opcoes": {
+        "embalagens": ["bisnaga", "pote"],
+        "materiais": ["plastico"],
+        "volumes": ["30g", "60g", "100g"],
+        "decoracao": ["rotulo", "impressao", "nenhuma"]
+      },
+      "selos": ["Conforme normas Anvisa"]
+    },
+    {
+      "slug": "pura-desodorante-corporal",
+      "nomeFantasia": "Pura",
+      "tipo": "Desodorante",
+      "ativoPrincipal": "com Extrato de Camomila",
+      "categoria": "corporais",
+      "subcategoria": "desodorantes",
+      "resumo": "Proteção diária com fórmula suave para peles sensíveis. Disponível em diferentes sistemas de aplicação conforme o posicionamento da marca.",
+      "ativos": [
+        { "nome": "Extrato de Camomila", "funcao": "Ação calmante" },
+        { "nome": "Bisabolol", "funcao": "Conforto para pele sensível" },
+        { "nome": "Agentes Desodorantes", "funcao": "Controle de odor" }
+      ],
+      "opcoes": {
+        "embalagens": ["spray", "bastao", "frasco"],
+        "materiais": ["plastico", "aluminio"],
+        "volumes": ["50ml", "90ml", "150ml"],
+        "decoracao": ["rotulo", "impressao", "nenhuma"]
+      },
+      "selos": ["Conforme normas Anvisa"]
+    },
+    {
+      "slug": "alba-serum-antiidade",
+      "nomeFantasia": "Alba",
+      "tipo": "Sérum Antiidade",
+      "ativoPrincipal": "com Ácido Hialurônico",
+      "categoria": "faciais",
+      "subcategoria": "seruns",
+      "resumo": "Dermocosmético de alta procura, com textura leve e rápida absorção. Preenchimento da linha premium da sua marca, com forte percepção de valor.",
+      "ativos": [
+        { "nome": "Ácido Hialurônico", "funcao": "Hidratação e preenchimento" },
+        { "nome": "Vitamina C Estabilizada", "funcao": "Uniformização e viço" },
+        { "nome": "Peptídeos", "funcao": "Firmeza da pele" }
+      ],
+      "opcoes": {
+        "embalagens": ["conta-gotas", "airless"],
+        "materiais": ["vidro", "plastico"],
+        "volumes": ["15ml", "30ml"],
+        "decoracao": ["rotulo", "impressao", "nenhuma"]
+      },
+      "selos": ["Conforme normas Anvisa"],
+      "destaque": true
+    },
+    {
+      "slug": "clara-hidratante-facial",
+      "nomeFantasia": "Clara",
+      "tipo": "Hidratante Facial",
+      "ativoPrincipal": "com Niacinamida",
+      "categoria": "faciais",
+      "subcategoria": "hidratantes",
+      "resumo": "Hidratação diária com controle de oleosidade e uniformização do tom. Ativo em alta no mercado, com público fiel e recorrente.",
+      "ativos": [
+        { "nome": "Niacinamida", "funcao": "Uniformização e controle de oleosidade" },
+        { "nome": "Ácido Hialurônico", "funcao": "Hidratação" },
+        { "nome": "Zinco PCA", "funcao": "Equilíbrio da pele" }
+      ],
+      "opcoes": {
+        "embalagens": ["airless", "pote", "bisnaga"],
+        "materiais": ["plastico", "vidro"],
+        "volumes": ["30g", "50g"],
+        "decoracao": ["rotulo", "impressao", "nenhuma"]
+      },
+      "selos": ["Conforme normas Anvisa"]
+    },
+    {
+      "slug": "veludo-mascara-facial",
+      "nomeFantasia": "Veludo",
+      "tipo": "Máscara Facial",
+      "ativoPrincipal": "com Argila Verde",
+      "categoria": "faciais",
+      "subcategoria": "mascaras",
+      "resumo": "Limpeza profunda e efeito matificante para o ritual de autocuidado. Formato versátil para kits e linhas de skincare.",
+      "ativos": [
+        { "nome": "Argila Verde", "funcao": "Purificação e matificação" },
+        { "nome": "Extrato de Chá Verde", "funcao": "Ação antioxidante" },
+        { "nome": "Mentol Suave", "funcao": "Sensação refrescante" }
+      ],
+      "opcoes": {
+        "embalagens": ["pote", "bisnaga"],
+        "materiais": ["plastico", "vidro"],
+        "volumes": ["60g", "100g"],
+        "decoracao": ["rotulo", "impressao", "nenhuma"]
+      },
+      "selos": ["Conforme normas Anvisa"]
+    },
+    {
+      "slug": "rosa-tonico-facial",
+      "nomeFantasia": "Rosa",
+      "tipo": "Tônico Facial",
+      "ativoPrincipal": "com Água de Rosas",
+      "categoria": "faciais",
+      "subcategoria": "tonicos",
+      "resumo": "Tônico refrescante que equilibra e prepara a pele para o tratamento. Apelo natural e sensorial delicado.",
+      "ativos": [
+        { "nome": "Água de Rosas", "funcao": "Tonificação e frescor" },
+        { "nome": "Hamamélis", "funcao": "Adstringência suave" },
+        { "nome": "Pantenol", "funcao": "Hidratação" }
+      ],
+      "opcoes": {
+        "embalagens": ["spray", "frasco"],
+        "materiais": ["plastico", "vidro"],
+        "volumes": ["120ml", "200ml"],
+        "decoracao": ["rotulo", "impressao", "nenhuma"]
+      },
+      "selos": ["Conforme normas Anvisa"]
+    },
+    {
+      "slug": "sol-protetor-solar-facial",
+      "nomeFantasia": "Sol",
+      "tipo": "Protetor Solar Facial",
+      "ativoPrincipal": "com Vitamina E",
+      "categoria": "faciais",
+      "subcategoria": "protetores",
+      "resumo": "Proteção solar diária com toque seco, adequada para uso sob maquiagem. FPS e variações de cor definidos junto ao projeto da marca.",
+      "ativos": [
+        { "nome": "Filtros Solares", "funcao": "Proteção UVA/UVB" },
+        { "nome": "Vitamina E", "funcao": "Ação antioxidante" },
+        { "nome": "Sílica", "funcao": "Toque seco" }
+      ],
+      "opcoes": {
+        "embalagens": ["bisnaga", "airless"],
+        "materiais": ["plastico"],
+        "volumes": ["40g", "50g", "60g"],
+        "decoracao": ["rotulo", "impressao", "nenhuma"]
+      },
+      "selos": ["Conforme normas Anvisa"]
+    }
+  ]
+}
