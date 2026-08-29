@@ -29,7 +29,7 @@ const cardProduto = (p, atraso) => `
                   <div class="col-xl-4 col-lg-4 col-md-6" data-categoria="${p.categoria}">
                      <div class="firetti-produto-card mb-30 wow fadeInUp" data-wow-delay=".${atraso}s">
                         <div class="firetti-produto-card__thumb">
-                           <a href="produto-${p.slug}.html"><img src="${IMAGEM_CATEGORIA[p.categoria]}" alt="${nomeExibicao(p)} — imagem ilustrativa da categoria"></a>
+                           <a href="produto-${p.slug}.html"><img src="${(p.imagens && p.imagens[0]) || IMAGEM_CATEGORIA[p.categoria]}" alt="Embalagem ilustrativa: ${nomeExibicao(p)}" loading="lazy" width="440" height="260"></a>
                         </div>
                         <div class="firetti-produto-card__body">
                            <span class="firetti-produto-card__eyebrow">${dados.categorias[p.categoria]}</span>
@@ -103,9 +103,12 @@ ${breadcrumb(p.tipo, `<a href="catalogo.html">Catálogo</a> : <a href="catalogo.
             <div class="container">
                <div class="row">
                   <div class="col-lg-6 col-md-6">
-                     <div class="productthumb mb-40">
-                        <img src="${IMAGEM_CATEGORIA[p.categoria]}" alt="${nome} — imagem ilustrativa da categoria">
+                     <div class="productthumb mb-20">
+                        <img id="foto-produto" src="${(p.imagens && p.imagens[0]) || IMAGEM_CATEGORIA[p.categoria]}" alt="Embalagem ilustrativa: ${nome}">
                      </div>
+                     ${p.imagens && p.imagens.length > 1 ? `<div class="firetti-galeria mb-40" role="group" aria-label="Fotos do produto">
+${p.imagens.map((im, i) => `                        <button type="button" class="firetti-galeria__thumb${i === 0 ? ' ativo' : ''}" data-img="${im}" aria-label="Ver foto ${i + 1} de ${p.imagens.length}"><img src="${im}" alt="" loading="lazy" width="96" height="96"></button>`).join('\n')}
+                     </div>` : ''}
                   </div>
                   <div class="col-lg-6 col-md-6">
                      <div class="product mb-40 ml-20">

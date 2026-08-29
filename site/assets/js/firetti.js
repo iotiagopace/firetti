@@ -233,6 +233,15 @@
 			}, 2500);
 			return;
 		}
+		var thumb = evento.target.closest('.firetti-galeria__thumb');
+		if (thumb) {
+			var principal = document.getElementById('foto-produto');
+			if (principal) principal.src = thumb.dataset.img;
+			thumb.closest('.firetti-galeria').querySelectorAll('.firetti-galeria__thumb').forEach(function (t) {
+				t.classList.toggle('ativo', t === thumb);
+			});
+			return;
+		}
 		var remover = evento.target.closest('.firetti-lista-item__remover');
 		if (remover) {
 			removerItem(parseInt(remover.dataset.indice, 10));
