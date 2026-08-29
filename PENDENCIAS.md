@@ -29,3 +29,9 @@ Itens de conteúdo produzidos durante o desenvolvimento que precisam de confirma
 
 ## Políticas
 - [ ] **Política de privacidade** e **termos de uso** não existem e precisam ser criados antes da publicação.
+
+## Vídeos (rodada de 29/08/2026)
+- [x] Removido `video-institucional.mp4` que veio no pacote de marca: tinha **marca d'água "Veo" visível** (vídeo gerado por IA). Não deve voltar ao site.
+- [ ] **`producao.mp4`** (quem-somos) é filmagem **licenciada de banco**, não da planta da Firetti. Está publicado com a legenda "Imagens ilustrativas de envase de cosméticos". Substituir por filmagem própria da planta de Cedral quando houver.
+- [x] Texturas (espuma, creme, sérum) usadas como loops decorativos nos cards de categoria da home — são abstratas, sem representar a fábrica, conforme o briefing permite.
+- [ ] Confirmar com o cliente se as 4 licenças de vídeo cobrem uso em site institucional.

@@ -248,9 +248,58 @@
 		}
 	});
 
+	/* ---------- Vídeos decorativos: só carregam ao entrar na tela ---------- */
+
+	function iniciarVideos() {
+		var videos = document.querySelectorAll('.js-video-loop');
+		if (!videos.length) return;
+
+		// Quem pediu menos movimento fica só com o poster.
+		var semMovimento = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		if (semMovimento) return;
+
+		// Em conexões lentas ou com economia de dados, o poster basta.
+		var rede = navigator.connection;
+		if (rede && (rede.saveData || /2g/.test(rede.effectiveType || ''))) return;
+
+		function carregar(video) {
+			if (video.dataset.carregado) return;
+			video.dataset.carregado = '1';
+			[['webm', 'video/webm'], ['mp4', 'video/mp4']].forEach(function (par) {
+				var url = video.dataset[par[0]];
+				if (!url) return;
+				var source = document.createElement('source');
+				source.src = url;
+				source.type = par[1];
+				video.appendChild(source);
+			});
+			video.load();
+			var tocar = video.play();
+			if (tocar && tocar.catch) tocar.catch(function () { /* autoplay bloqueado: fica o poster */ });
+			video.classList.add('pronto');
+		}
+
+		if (!('IntersectionObserver' in window)) return;
+		var observador = new IntersectionObserver(function (entradas) {
+			entradas.forEach(function (entrada) {
+				if (!entrada.isIntersecting) {
+					if (entrada.target.dataset.carregado) entrada.target.pause();
+					return;
+				}
+				carregar(entrada.target);
+				if (entrada.target.paused && entrada.target.dataset.carregado) {
+					var r = entrada.target.play();
+					if (r && r.catch) r.catch(function () {});
+				}
+			});
+		}, { rootMargin: '200px' });
+		videos.forEach(function (v) { observador.observe(v); });
+	}
+
 	document.addEventListener('DOMContentLoaded', function () {
 		atualizarContadores();
 		renderizarLista();
 		iniciarFiltro();
+		iniciarVideos();
 	});
 })();

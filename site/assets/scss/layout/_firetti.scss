@@ -353,3 +353,50 @@ textarea:focus-visible {
     height: auto;
     border-radius: 10px;
 }
+
+// Vídeos decorativos sobre a foto do card (entram só quando carregam)
+.firetti-loop {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity .6s ease-out;
+    pointer-events: none;
+    &.pronto { opacity: 1; }
+}
+
+// Quem pede menos movimento não recebe vídeo nenhum
+@media (prefers-reduced-motion: reduce) {
+    .firetti-loop { display: none; }
+    *,
+    *::before,
+    *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.firetti-video__legenda {
+    font-size: 13px;
+    color: var(--tp-text-2);
+    margin: 12px 0 0;
+    text-align: center;
+}
+
+// Cards de categoria da home: reserva de espaço evita salto de layout (CLS)
+.tp-gallery__img {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 10px;
+    & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
