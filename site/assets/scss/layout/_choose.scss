@@ -58,6 +58,14 @@
             }
         }
     }
+    &__item:hover {
+        & .tp-choose__icon.pink-icon {
+            box-shadow: inset 0 0 0 60px var(--tp-common-white);
+            & i {
+                color: var(--tp-icon-pink);
+            }
+        }
+    }
     &__content {
         & p {
             color: var(--tp-text-1);
