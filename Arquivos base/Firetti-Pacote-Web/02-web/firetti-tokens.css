@@ -1,0 +1,11 @@
+:root {
+  --firetti-blue: #07375E;
+  --firetti-green: #59C7B1;
+  --firetti-teal: #137C96;
+  --firetti-white: #FFFFFF;
+  --firetti-text: #07375E;
+  --firetti-focus: #59C7B1;
+}
+
+body { color: var(--firetti-text); }
+a, button { accent-color: var(--firetti-green); }

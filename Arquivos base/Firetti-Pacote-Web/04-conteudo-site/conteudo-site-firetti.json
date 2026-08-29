@@ -1,0 +1,463 @@
+{
+  "brand": "Firetti",
+  "source_url": "https://www.maxup.com.br/bst/",
+  "captured_at": "2026-08-29",
+  "global": {
+    "menu": [
+      "Início",
+      "Quem somos",
+      "Terceirize sua Produção",
+      "Linha de Produtos",
+      "Fale Conosco"
+    ],
+    "telefone": "(17) 3266-1022",
+    "whatsapp": "+55 17 99126-2215",
+    "whatsapp_url": "https://wa.me/5517991262215",
+    "endereco": "Rua Luiz Vitoretti, 485 - Cedral/SP - CEP 15895-000",
+    "maps_url": "https://maps.app.goo.gl/TPQcMniH4i4BLasX9",
+    "email": "[E-MAIL INSTITUCIONAL DA FIRETTI A CONFIRMAR]",
+    "horario": [
+      "Segunda a sexta: 8h às 18h",
+      "Sábado: 8h às 12h",
+      "Domingo: fechado"
+    ],
+    "rodape": "Somos especializados em terceirização de cosméticos, com mais de 20 anos de experiência acumulada na operação. Desenvolvemos fórmulas únicas e exclusivas para realizar seu sonho de ter sua própria marca.",
+    "copyright": "© 2026 Firetti. Todos os direitos reservados."
+  },
+  "pages": [
+    {
+      "slug": "inicio",
+      "menu": "Início",
+      "seo_title": "Firetti | Terceirização e fabricação de cosméticos",
+      "seo_description": "Transforme sua ideia em uma linha de cosméticos com formulação, registros, produção e envase conduzidos por uma operação especializada.",
+      "hero": {
+        "title": "Excelência em cosméticos, com ciência, responsabilidade e alma brasileira.",
+        "body": [
+          "A Firetti é uma indústria cosmética 100% brasileira, especializada na terceirização de cosméticos capilares, corporais e faciais. Unimos inovação, qualidade rigorosa e atendimento humanizado para transformar ideias em produtos de alta performance.",
+          "Descubra como nossa estrutura, equipe e propósito se alinham para entregar beleza com segurança e valor."
+        ],
+        "cta": "Fale com nossos especialistas",
+        "media": "media/video-institucional.mp4"
+      },
+      "sections": [
+        {
+          "title": "Ter seu produto é mais fácil do que imagina!",
+          "items": [
+            {
+              "title": "1. Escolha o seu produto",
+              "body": "Através do nosso catálogo, você pode escolher o produto que deseja e dar o primeiro passo para o seu sonho.",
+              "icon": "media/processo-1b.png"
+            },
+            {
+              "title": "2. Aprovação da fórmula e design",
+              "body": "Você seleciona os ingredientes disponíveis e define o tipo de embalagem para que nossos designers possam elaborar a identidade visual do seu produto.",
+              "icon": "media/processo-2b.png"
+            },
+            {
+              "title": "3. Registros (Anvisa e órgãos competentes)",
+              "body": "Você não precisa se preocupar com o protocolo junto aos órgãos competentes: nosso time cuida disso para você.",
+              "icon": "media/processo-3b.png"
+            },
+            {
+              "title": "4. Produção e envase",
+              "body": "Produzimos o seu produto em nossa indústria, com agilidade e foco em qualidade.",
+              "icon": "media/processo-4b.png"
+            }
+          ]
+        },
+        {
+          "title": "Faça seu orçamento",
+          "body": [
+            "Possuímos um acervo com mais de 500 fórmulas prontas para fabricação, dentro de todas as normas regulatórias da Anvisa."
+          ],
+          "form": [
+            "Nome completo",
+            "Cidade",
+            "E-mail",
+            "Telefone"
+          ],
+          "cta": "Enviar via WhatsApp"
+        },
+        {
+          "title": "O que está esperando?",
+          "body": [
+            "Possuímos um acervo com mais de 500 fórmulas prontas para fabricação, dentro de todas as normas regulatórias da Anvisa.",
+            "Está cansado de simplesmente sonhar com sua própria linha de cosméticos? Você deseja um propósito mais profundo por trás de sua paixão pela beleza e autocuidado? Nós entendemos que lançar sua própria linha de produtos é mais do que apenas criar cuidados com a pele ou maquiagem. Trata-se de descobrir o seu “porquê” e se conectar com um propósito maior."
+          ],
+          "cta": "Fale com nossos especialistas"
+        }
+      ]
+    },
+    {
+      "slug": "quem-somos",
+      "menu": "Quem somos",
+      "seo_title": "Quem somos | Firetti",
+      "seo_description": "Conheça a estrutura, a experiência, os valores e o compromisso da Firetti com inovação, qualidade e fabricação responsável de cosméticos.",
+      "hero": {
+        "title": "Conheça a Firetti",
+        "body": [
+          "Uma indústria apaixonada por criar produtos excepcionais e inovadores para atender às necessidades de nossos clientes."
+        ],
+        "media": "media/missao.jpg"
+      },
+      "sections": [
+        {
+          "title": "Vídeo institucional da empresa",
+          "body": [
+            "Em breve disponível."
+          ]
+        },
+        {
+          "title": "Missão da empresa",
+          "body": [
+            "Proporcionar bem-estar, autoestima e confiança a nossos clientes, oferecendo produtos cosméticos de alta qualidade e inovação, que atendem às suas necessidades e superam suas expectativas, promovendo uma experiência de cuidado e transformação."
+          ]
+        },
+        {
+          "title": "Nossos valores",
+          "subtitle": "O que nos move todos os dias",
+          "items": [
+            {
+              "title": "Mais de 20 anos de experiência",
+              "body": "Experiência acumulada e liderança no mercado de fabricação de cosméticos."
+            },
+            {
+              "title": "Equipe especializada",
+              "body": "Químicos, formuladores e profissionais de pesquisa e desenvolvimento."
+            },
+            {
+              "title": "Qualidade garantida",
+              "body": "Produtos desenvolvidos para superar expectativas."
+            },
+            {
+              "title": "Sustentabilidade",
+              "body": "Práticas ambientalmente responsáveis."
+            }
+          ]
+        },
+        {
+          "title": "Visão",
+          "body": [
+            "Ser reconhecida como líder em soluções inovadoras e de excelência para a terceirização de cosméticos na região Noroeste Paulista, proporcionando aos nossos clientes qualidade, segurança e resultados excepcionais, com compromisso constante com a inovação e a sustentabilidade."
+          ]
+        },
+        {
+          "title": "Política de qualidade e compromisso",
+          "body": [
+            "A Firetti está comprometida com a excelência na fabricação de cosméticos, buscando sempre garantir a mais alta qualidade em seus produtos.",
+            "Para isso, contamos com uma equipe altamente qualificada e profissionais de pesquisa e desenvolvimento, constantemente atualizados com as inovações do mercado. Nossa missão é oferecer aos nossos clientes as melhores soluções em cosméticos faciais e corporais, com foco na melhoria contínua e no cumprimento dos mais rigorosos padrões de qualidade."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "terceirize-sua-producao",
+      "menu": "Terceirize sua Produção",
+      "seo_title": "Terceirize sua produção de cosméticos | Firetti",
+      "seo_description": "Crie sua marca de cosméticos com uma operação completa: pesquisa, formulação, produção, controle de qualidade, envase e suporte.",
+      "hero": {
+        "title": "Terceirize sua produção",
+        "body": [
+          "Iremos produzir um mix de produtos com a sua marca e ajudar a realizar seu sonho de empreender no mercado cosmético."
+        ],
+        "cta": "Fale com nossos especialistas",
+        "media": "media/linha-producao.jpg"
+      },
+      "sections": [
+        {
+          "title": "Faça seu orçamento",
+          "body": [
+            "Possuímos um acervo com mais de 500 fórmulas prontas para fabricação, dentro de todas as normas regulatórias da Anvisa."
+          ],
+          "form": [
+            "Nome completo",
+            "Cidade",
+            "E-mail",
+            "Telefone"
+          ],
+          "cta": "Enviar via WhatsApp"
+        },
+        {
+          "title": "Como funciona?",
+          "body": [
+            "Desenvolvemos a sua marca e a sua linha de produtos. A Firetti oferece matérias-primas de alta qualidade e uma estrutura de produção eficiente para você alcançar o sucesso."
+          ],
+          "items": [
+            {
+              "title": "Atendimento",
+              "body": "Ao entrar em contato, nosso time de suporte estará pronto para esclarecer suas dúvidas sobre o procedimento e obter as informações indispensáveis para a elaboração de um resumo detalhado, ampliando a precisão da produção."
+            },
+            {
+              "title": "Pesquisa",
+              "body": "Nosso time pesquisa as informações necessárias para a criação da sua marca: mercado, parcerias, concorrentes, insumos e outros elementos relevantes."
+            },
+            {
+              "title": "Desenvolvimento do produto",
+              "body": "A linha é estruturada a partir dos objetivos da marca, das necessidades do público e das possibilidades de formulação, embalagem e posicionamento."
+            },
+            {
+              "title": "Produção",
+              "body": "Com as definições aprovadas, conduzimos a fabricação e o envase com rastreabilidade, agilidade e foco em qualidade."
+            },
+            {
+              "title": "Controle de qualidade",
+              "body": "Todo o processo é supervisionado lote a lote, seguindo procedimentos operacionais elaborados pela equipe de gestão da qualidade."
+            },
+            {
+              "title": "Contrato",
+              "body": "Cada cliente da Firetti tem seu produto desenvolvido de forma exclusiva. Para essa garantia, fornecemos contrato de fabricação e confidencialidade."
+            }
+          ]
+        },
+        {
+          "eyebrow": "Empresa qualificada",
+          "title": "Reconhecimento nacional",
+          "body": [
+            "A Firetti conta com uma equipe qualificada e reconhecida nacionalmente por suas competências, selecionada de forma criteriosa para atuar na produção do seu produto. Todo o processo atende às normas da Anvisa e às boas práticas de fabricação."
+          ],
+          "items": [
+            {
+              "title": "Mais de 20 anos de experiência",
+              "body": "A operação da Firetti reúne mais de 20 anos de experiência no mercado da beleza e na fabricação de cosméticos capilares, corporais e faciais."
+            },
+            {
+              "title": "Full service",
+              "body": "Cuidamos de todo o processo: formulação, produção, envase e rotulagem, deixando o produto pronto para entrega ao cliente."
+            },
+            {
+              "title": "Sustentabilidade",
+              "body": "Acompanhamos tendências e inovações que buscam reduzir impactos ambientais. As matérias-primas passam por inspeção rigorosa para atender parâmetros de qualidade e segurança."
+            },
+            {
+              "title": "Agilidade",
+              "body": "Integramos desenvolvimento, produção e entrega para transformar projetos em produtos com velocidade e responsabilidade."
+            },
+            {
+              "title": "Suporte",
+              "body": "Oferecemos atendimento humano e personalizado. Nosso time acompanha cada etapa e responde às dúvidas que surgirem ao longo do projeto."
+            }
+          ]
+        },
+        {
+          "title": "Crie sua marca de cosméticos",
+          "body": [
+            "Inicie agora o seu próprio negócio, com potencial de lucro de mais de 200%."
+          ],
+          "cta": "Fale com nossos especialistas"
+        }
+      ]
+    },
+    {
+      "slug": "linha-de-produtos",
+      "menu": "Linha de Produtos",
+      "seo_title": "Linha de produtos cosméticos | Firetti",
+      "seo_description": "Conheça possibilidades de produtos faciais, corporais e capilares para desenvolver uma linha própria com a Firetti.",
+      "hero": {
+        "title": "Linha de produtos",
+        "body": [
+          "Descubra nossa ampla gama de produtos cosméticos para diferentes necessidades."
+        ],
+        "media": "media/linha-produtos.jpg"
+      },
+      "sections": [
+        {
+          "title": "Categorias de produtos",
+          "subtitle": "Soluções completas para beleza e cuidados pessoais",
+          "items": [
+            {
+              "title": "Produtos faciais",
+              "body": "A Firetti conta com uma categoria reservada especialmente para produtos faciais. Fale com nossos especialistas e conheça dermocosméticos com alta procura no mercado.",
+              "examples": [
+                "Cremes hidratantes",
+                "Séruns anti-idade",
+                "Protetores solares",
+                "Tônicos faciais",
+                "Máscaras de tratamento"
+              ]
+            },
+            {
+              "title": "Produtos corporais",
+              "body": "Assim como a pele do rosto, a pele do corpo também precisa de cuidados para se manter saudável e equilibrada. A cosmética corporal atende a essa necessidade.",
+              "examples": [
+                "Hidratantes corporais",
+                "Óleos corporais",
+                "Cremes para mãos",
+                "Esfoliantes",
+                "Desodorantes"
+              ]
+            },
+            {
+              "title": "Produtos capilares",
+              "body": "Linhas para diferentes tipos de fio, cuidados pós-química, máscaras para todas as etapas do cronograma capilar e cosméticos de finalização.",
+              "examples": [
+                "Shampoo",
+                "Condicionadores",
+                "Máscaras capilares",
+                "Leave-in",
+                "Finalizadores"
+              ]
+            }
+          ]
+        },
+        {
+          "eyebrow": "Qualidade premium",
+          "title": "Produtos de alta qualidade",
+          "body": [
+            "Cada item é projetado para proporcionar uma experiência única e satisfatória. As matérias-primas passam por inspeção rigorosa para que os parâmetros de qualidade e segurança sejam seguidos."
+          ],
+          "highlights": [
+            "Mais de 500 fórmulas disponíveis",
+            "Conformidade com normas Anvisa",
+            "Ingredientes premium selecionados"
+          ]
+        },
+        {
+          "title": "Vantagens de produzir com a gente",
+          "subtitle": "Por que escolher a Firetti para sua linha de produtos",
+          "items": [
+            {
+              "title": "20+ anos de experiência",
+              "body": "Experiência acumulada na indústria nacional de fabricação de cosméticos."
+            },
+            {
+              "title": "Full service",
+              "body": "Cuidamos de todo o processo, da formulação ao envase."
+            },
+            {
+              "title": "Sustentabilidade",
+              "body": "Acompanhamos tendências e inovações para reduzir impactos ambientais."
+            },
+            {
+              "title": "Agilidade",
+              "body": "Do desenvolvimento à entrega, oferecemos velocidade sem comprometer a qualidade."
+            },
+            {
+              "title": "Suporte",
+              "body": "Atendimento personalizado e treinado para cada etapa do projeto."
+            }
+          ]
+        },
+        {
+          "title": "Padrões de qualidade",
+          "body": [
+            "Estamos comprometidos em manter uma relação próxima com clientes e parceiros, ouvindo suas necessidades e colaborando para criar soluções personalizadas. Nossa paixão pela inovação impulsiona o desenvolvimento de novos produtos, acompanhando tendências e mantendo a marca competitiva."
+          ],
+          "counters": [
+            {
+              "value": 500,
+              "suffix": "+",
+              "label": "Fórmulas disponíveis"
+            },
+            {
+              "value": 20,
+              "suffix": "+",
+              "label": "Anos de experiência da operação"
+            },
+            {
+              "value": 100,
+              "suffix": "%",
+              "label": "Conforme Anvisa"
+            }
+          ]
+        },
+        {
+          "title": "Crie sua marca de cosméticos",
+          "body": [
+            "Inicie agora o seu próprio negócio, com potencial de lucro de mais de 200%."
+          ],
+          "cta": "Fale com nossos especialistas"
+        },
+        {
+          "title": "Faça seu orçamento",
+          "body": [
+            "Possuímos um acervo com mais de 500 fórmulas prontas para fabricação, dentro de todas as normas regulatórias da Anvisa."
+          ],
+          "form": [
+            "Nome completo",
+            "Cidade",
+            "E-mail",
+            "Telefone"
+          ],
+          "cta": "Enviar via WhatsApp"
+        }
+      ]
+    },
+    {
+      "slug": "fale-conosco",
+      "menu": "Fale Conosco",
+      "seo_title": "Fale com a Firetti | Orçamento para cosméticos",
+      "seo_description": "Entre em contato para tirar dúvidas, solicitar um orçamento ou iniciar o desenvolvimento da sua linha de cosméticos.",
+      "hero": {
+        "title": "Fale conosco",
+        "body": [
+          "Entre em contato com nossos especialistas. Estamos aqui para ouvir, orientar e atender com excelência."
+        ]
+      },
+      "sections": [
+        {
+          "title": "Como podemos ajudar?",
+          "body": [
+            "A comunicação transparente e ágil é um dos pilares do nosso relacionamento com o cliente. Seja para tirar dúvidas, iniciar um projeto ou relatar algo importante, nosso time está pronto para atender com respeito, prontidão e profissionalismo."
+          ],
+          "contact": {
+            "email": "[E-MAIL INSTITUCIONAL DA FIRETTI A CONFIRMAR]",
+            "telefone": "(17) 3266-1022",
+            "endereco": "Rua Luiz Vitoretti, 485 - Cedral/SP - CEP 15895-000"
+          }
+        },
+        {
+          "title": "Solicite um orçamento",
+          "body": [
+            "Possuímos um acervo com mais de 500 fórmulas prontas para fabricação, dentro de todas as normas regulatórias da Anvisa. Preencha o formulário e nossos especialistas entrarão em contato com você."
+          ],
+          "form": [
+            "Nome completo",
+            "Cidade",
+            "E-mail",
+            "Telefone"
+          ],
+          "cta": "Enviar via WhatsApp"
+        },
+        {
+          "title": "Horário de atendimento",
+          "items": [
+            "Segunda a sexta: 8h às 18h",
+            "Sábado: 8h às 12h",
+            "Domingo: fechado"
+          ]
+        },
+        {
+          "title": "Por que escolher a Firetti?",
+          "highlights": [
+            "Mais de 20 anos de experiência acumulada na operação",
+            "Mais de 500 fórmulas disponíveis",
+            "Conformidade com normas Anvisa",
+            "Atendimento personalizado",
+            "Processo completo de terceirização"
+          ]
+        },
+        {
+          "title": "O que está esperando?",
+          "body": [
+            "Possuímos um acervo com mais de 500 fórmulas prontas para fabricação, dentro de todas as normas regulatórias da Anvisa.",
+            "Está cansado de simplesmente sonhar com sua própria linha de cosméticos? Você deseja um propósito mais profundo por trás de sua paixão pela beleza e autocuidado? Nós entendemos que lançar sua própria linha de produtos é mais do que apenas criar cuidados com a pele ou maquiagem. Trata-se de descobrir o seu “porquê” e se conectar com um propósito maior."
+          ],
+          "cta": "Comece sua jornada agora"
+        },
+        {
+          "title": "Nossa localização",
+          "body": [
+            "Rua Luiz Vitoretti, 485 - Cedral/SP - CEP 15895-000"
+          ],
+          "maps_url": "https://maps.app.goo.gl/TPQcMniH4i4BLasX9"
+        }
+      ]
+    }
+  ],
+  "publication_checks": [
+    "Confirmar o e-mail institucional da Firetti; o endereço da marca anterior foi removido.",
+    "Confirmar se telefone, WhatsApp, endereço e horário permanecem válidos após a transição da operação.",
+    "Validar documentalmente as alegações: mais de 20 anos, mais de 500 fórmulas, 100% conforme Anvisa e potencial de lucro superior a 200%.",
+    "Definir o domínio final para completar URLs canônicas, sitemap, robots.txt e dados estruturados."
+  ]
+}
