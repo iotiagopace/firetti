@@ -35,3 +35,7 @@ Itens de conteúdo produzidos durante o desenvolvimento que precisam de confirma
 - [ ] **`producao.mp4`** (quem-somos) é filmagem **licenciada de banco**, não da planta da Firetti. Está publicado com a legenda "Imagens ilustrativas de envase de cosméticos". Substituir por filmagem própria da planta de Cedral quando houver.
 - [x] Texturas (espuma, creme, sérum) usadas como loops decorativos nos cards de categoria da home — são abstratas, sem representar a fábrica, conforme o briefing permite.
 - [ ] Confirmar com o cliente se as 4 licenças de vídeo cobrem uso em site institucional.
+
+## Fotos do catálogo — consistência visual
+- [ ] As 45 fotos vêm de bancos diferentes e têm **fundos inconsistentes** (branco, cinza, rosa, marrom, salmão). Na grade isso quebra a leitura de vitrine.
+  Caminhos possíveis, do mais barato ao melhor: (a) recorte de fundo e recomposição sobre um fundo neutro único; (b) nova seleção priorizando fotos de fundo claro; (c) ensaio próprio com um único set. Recomendado (c) junto com as fotos da planta.

@@ -25,23 +25,48 @@ const nomeExibicao = (p) => `${p.nomeFantasia} ${p.tipo} ${p.ativoPrincipal}`;
 
 /* ---------- grade do catálogo ---------- */
 
-const cardProduto = (p, atraso) => `
-                  <div class="col-xl-4 col-lg-4 col-md-6" data-categoria="${p.categoria}">
-                     <div class="firetti-produto-card mb-30 wow fadeInUp" data-wow-delay=".${atraso}s">
-                        <div class="firetti-produto-card__thumb">
-                           <a href="produto-${p.slug}.html"><img src="${(p.imagens && p.imagens[0]) || IMAGEM_CATEGORIA[p.categoria]}" alt="Embalagem ilustrativa: ${nomeExibicao(p)}" loading="lazy" width="440" height="260"></a>
+const cardProduto = (p, atraso) => {
+  const fotos = (p.imagens && p.imagens.length ? p.imagens : [IMAGEM_CATEGORIA[p.categoria]]);
+  const nome = nomeExibicao(p);
+  const slides = fotos
+    .map(
+      (src, i) => `                              <li class="firetti-carrossel__slide">
+                                 <img src="${src}" alt="${i === 0 ? `Embalagem ilustrativa: ${nome}` : ''}" loading="lazy" decoding="async" width="440" height="550">
+                              </li>`
+    )
+    .join('\n');
+  const pontos = fotos
+    .map(
+      (_, i) => `                              <button type="button" class="firetti-carrossel__ponto${i === 0 ? ' ativo' : ''}" data-indice="${i}" aria-label="Ver foto ${i + 1} de ${fotos.length}"></button>`
+    )
+    .join('\n');
+  const ativos = p.ativos.slice(0, 3).map((a) => `<li>${a.nome}</li>`).join('');
+
+  return `
+                  <div class="col-xl-4 col-lg-6 col-md-6" data-categoria="${p.categoria}">
+                     <article class="firetti-produto-card mb-30 wow fadeInUp" data-wow-delay=".${atraso}s">
+                        <div class="firetti-carrossel" data-total="${fotos.length}">
+                           <ul class="firetti-carrossel__trilha">
+${slides}
+                           </ul>
+                           ${fotos.length > 1 ? `<button type="button" class="firetti-carrossel__seta anterior" aria-label="Foto anterior"><i class="fal fa-angle-left" aria-hidden="true"></i></button>
+                           <button type="button" class="firetti-carrossel__seta proxima" aria-label="Próxima foto"><i class="fal fa-angle-right" aria-hidden="true"></i></button>
+                           <div class="firetti-carrossel__pontos">
+${pontos}
+                           </div>` : ''}
                         </div>
                         <div class="firetti-produto-card__body">
-                           <span class="firetti-produto-card__eyebrow">${dados.categorias[p.categoria]}</span>
-                           <h3 class="firetti-produto-card__titulo"><a href="produto-${p.slug}.html">${nomeExibicao(p)}</a></h3>
-                           <span class="firetti-produto-card__moq">Quantidade mínima: sob consulta</span>
-                           <div class="d-flex flex-wrap align-items-center" style="gap:10px;">
-                              <button type="button" class="firetti-add-btn js-adicionar-rapido" data-slug="${p.slug}" data-nome="${nomeExibicao(p)}"><i class="fal fa-plus" aria-hidden="true"></i> Adicionar à lista</button>
-                              <a class="btn-hexa" href="produto-${p.slug}.html"><i aria-hidden="true"></i>Configurar</a>
+                           <span class="firetti-produto-card__nome">${p.nomeFantasia}</span>
+                           <h3 class="firetti-produto-card__titulo"><a href="produto-${p.slug}.html">${p.tipo} <em>${p.ativoPrincipal}</em></a></h3>
+                           <ul class="firetti-produto-card__ativos">${ativos}</ul>
+                           <div class="firetti-produto-card__acoes">
+                              <button type="button" class="firetti-add-btn js-adicionar-rapido" data-slug="${p.slug}" data-nome="${nome}"><i class="fal fa-plus" aria-hidden="true"></i> Adicionar à lista</button>
+                              <a class="firetti-produto-card__link" href="produto-${p.slug}.html">Configurar<i class="fal fa-arrow-right" aria-hidden="true"></i></a>
                            </div>
                         </div>
-                     </div>
+                     </article>
                   </div>`;
+};
 
 const grade = dados.produtos.map((p, i) => cardProduto(p, (i % 4) + 2)).join('\n');
 

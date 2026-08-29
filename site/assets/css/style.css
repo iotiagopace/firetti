@@ -2061,7 +2061,8 @@ input[type=color] {
   padding-bottom: 0px;
 }
 .tp-home-one.header-sticky .main-menu nav > ul > li > a {
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .tp-mobile-header-area.header-sticky {
@@ -8477,43 +8478,178 @@ p.checkout-coupon input[type=text]:focus {
 }
 
 .firetti-produto-card {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 30px);
   background-color: var(--tp-common-white);
   border: 1px solid var(--tp-border-primary);
-  border-radius: 10px;
+  border-radius: 14px;
   overflow: hidden;
+  transition: box-shadow 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out;
 }
-.firetti-produto-card .firetti-produto-card__thumb img {
+.firetti-produto-card:hover {
+  border-color: var(--tp-border-secondary);
+  box-shadow: 0 18px 34px -22px rgba(7, 55, 94, 0.38);
+  transform: translateY(-3px);
+}
+.firetti-produto-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 26px 26px 24px;
+}
+.firetti-produto-card__nome {
+  display: block;
+  font-family: var(--tp-ff-heading);
+  font-size: 20px;
+  line-height: 1.1;
+  color: var(--tp-theme-primary);
+  margin-bottom: 6px;
+}
+.firetti-produto-card__titulo {
+  font-family: var(--tp-ff-body);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+  margin-bottom: 16px;
+}
+.firetti-produto-card__titulo a {
+  color: var(--tp-text-2);
+}
+.firetti-produto-card__titulo a:hover {
+  color: var(--tp-theme-blue);
+}
+.firetti-produto-card__titulo em {
+  font-style: normal;
+  color: var(--tp-theme-blue);
+}
+.firetti-produto-card__ativos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px;
+}
+.firetti-produto-card__ativos li {
+  font-size: 12px;
+  line-height: 1;
+  padding: 7px 12px;
+  border-radius: 20px;
+  color: var(--tp-theme-primary);
+  background-color: var(--tp-icon-green-light);
+}
+.firetti-produto-card__acoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+}
+.firetti-produto-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tp-theme-primary);
+}
+.firetti-produto-card__link i {
+  transition: transform 0.2s ease-out;
+}
+.firetti-produto-card__link:hover {
+  color: var(--tp-theme-blue);
+}
+.firetti-produto-card__link:hover i {
+  transform: translateX(3px);
+}
+
+.firetti-carrossel {
+  position: relative;
+  background-color: var(--tp-grey-1);
+}
+.firetti-carrossel__trilha {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.firetti-carrossel__trilha::-webkit-scrollbar {
+  display: none;
+}
+.firetti-carrossel__slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+}
+.firetti-carrossel__slide img {
+  display: block;
   width: 100%;
-  height: 260px;
+  aspect-ratio: 4/5;
+  height: auto;
   object-fit: cover;
 }
-.firetti-produto-card .firetti-produto-card__body {
-  padding: 24px;
+.firetti-carrossel__seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.92);
+  color: var(--tp-theme-primary);
+  font-size: 16px;
+  box-shadow: 0 4px 12px -4px rgba(7, 55, 94, 0.35);
+  opacity: 0;
+  transition: opacity 0.2s ease-out, background-color 0.2s ease-out;
 }
-.firetti-produto-card .firetti-produto-card__eyebrow {
-  display: block;
-  text-transform: uppercase;
-  letter-spacing: 0.7px;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--tp-theme-blue);
-  margin-bottom: 8px;
+.firetti-carrossel__seta.anterior {
+  left: 14px;
 }
-.firetti-produto-card .firetti-produto-card__titulo {
-  font-size: 18px;
-  margin-bottom: 12px;
+.firetti-carrossel__seta.proxima {
+  right: 14px;
 }
-.firetti-produto-card .firetti-produto-card__titulo a {
-  color: var(--tp-heading-primary);
+.firetti-carrossel__seta:hover {
+  background-color: var(--tp-common-white);
 }
-.firetti-produto-card .firetti-produto-card__titulo a:hover {
-  color: var(--tp-theme-blue);
+.firetti-carrossel__seta:focus-visible {
+  opacity: 1;
 }
-.firetti-produto-card .firetti-produto-card__moq {
-  display: block;
-  font-size: 13px;
-  color: var(--tp-text-2);
-  margin-bottom: 18px;
+@media (max-width: 767px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .firetti-carrossel__seta {
+    opacity: 1;
+  }
+}
+.firetti-carrossel:hover .firetti-carrossel__seta {
+  opacity: 1;
+}
+.firetti-carrossel__pontos {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+.firetti-carrossel__ponto {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(7, 55, 94, 0.28);
+  transition: background-color 0.2s ease-out, width 0.2s ease-out;
+}
+.firetti-carrossel__ponto.ativo {
+  width: 20px;
+  border-radius: 4px;
+  background-color: var(--tp-theme-primary);
 }
 
 .firetti-add-btn {

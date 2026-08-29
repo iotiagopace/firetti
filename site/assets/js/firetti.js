@@ -233,6 +233,17 @@
 			}, 2500);
 			return;
 		}
+		var seta = evento.target.closest('.firetti-carrossel__seta');
+		if (seta) {
+			var car = seta.closest('.firetti-carrossel');
+			irPara(car, indiceAtual(car) + (seta.classList.contains('proxima') ? 1 : -1));
+			return;
+		}
+		var ponto = evento.target.closest('.firetti-carrossel__ponto');
+		if (ponto) {
+			irPara(ponto.closest('.firetti-carrossel'), parseInt(ponto.dataset.indice, 10));
+			return;
+		}
 		var thumb = evento.target.closest('.firetti-galeria__thumb');
 		if (thumb) {
 			var principal = document.getElementById('foto-produto');
@@ -247,6 +258,44 @@
 			removerItem(parseInt(remover.dataset.indice, 10));
 		}
 	});
+
+	/* ---------- Carrossel de fotos do produto ---------- */
+
+	function irPara(carrossel, indice) {
+		var trilha = carrossel.querySelector('.firetti-carrossel__trilha');
+		var slides = trilha.children;
+		var total = slides.length;
+		if (!total) return;
+		var i = (indice + total) % total;
+		// A suavidade vem do CSS (scroll-behavior), que respeita prefers-reduced-motion.
+		trilha.scrollTo({ left: slides[i].offsetLeft - trilha.offsetLeft });
+	}
+
+	function indiceAtual(carrossel) {
+		var trilha = carrossel.querySelector('.firetti-carrossel__trilha');
+		var largura = trilha.clientWidth || 1;
+		return Math.round(trilha.scrollLeft / largura);
+	}
+
+	function sincronizarPontos(carrossel) {
+		var atual = indiceAtual(carrossel);
+		carrossel.querySelectorAll('.firetti-carrossel__ponto').forEach(function (ponto, i) {
+			ponto.classList.toggle('ativo', i === atual);
+			ponto.setAttribute('aria-current', i === atual ? 'true' : 'false');
+		});
+	}
+
+	function iniciarCarrosseis() {
+		document.querySelectorAll('.firetti-carrossel').forEach(function (carrossel) {
+			var trilha = carrossel.querySelector('.firetti-carrossel__trilha');
+			if (!trilha || trilha.children.length < 2) return;
+			var aguardando;
+			trilha.addEventListener('scroll', function () {
+				window.cancelAnimationFrame(aguardando);
+				aguardando = window.requestAnimationFrame(function () { sincronizarPontos(carrossel); });
+			}, { passive: true });
+		});
+	}
 
 	/* ---------- Vídeos decorativos: só carregam ao entrar na tela ---------- */
 
@@ -301,5 +350,6 @@
 		renderizarLista();
 		iniciarFiltro();
 		iniciarVideos();
+		iniciarCarrosseis();
 	});
 })();

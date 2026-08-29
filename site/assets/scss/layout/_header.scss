@@ -941,7 +941,9 @@
                 & ul > {
                     & li > {
                         & a {
-                            padding: 40px 0;
+                            // vertical apenas: o shorthand zerava o respiro lateral do menu
+                            padding-top: 40px;
+                            padding-bottom: 40px;
                         }
                     }
                 }
