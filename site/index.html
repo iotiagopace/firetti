@@ -37,6 +37,7 @@
       <link rel="stylesheet" href="assets/css/style.css">
    </head>
    <body>
+      <a class="firetti-skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
 
       <!-- Scroll-top -->
       <button class="scroll-top scroll-to-target" data-target="html" aria-label="Voltar ao topo">
@@ -123,7 +124,7 @@
                         <span class="firetti-lista-count">0</span>
                         <span class="visually-hidden">Ver lista de orçamento</span>
                      </a>
-                     <button class="tp-menu-toggle" aria-label="Abrir menu"><i class="far fa-bars" aria-hidden="true"></i></button>
+                     <button class="tp-menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="painel-menu-mobile"><i class="far fa-bars" aria-hidden="true"></i></button>
                   </div>
                </div>
             </div>
@@ -132,7 +133,7 @@
       <!-- tp-mobile-header-area end -->
 
       <!-- sidebar-info -->
-      <div class="tpsideinfo tp-side-info-area">
+      <div id="painel-menu-mobile" class="tpsideinfo tp-side-info-area" aria-label="Menu mobile" aria-hidden="true">
          <button class="tpsideinfo__close" aria-label="Fechar menu"><i class="fal fa-times" aria-hidden="true"></i></button>
          <div class="tpsideinfo__logo mb-40">
             <a href="index.html"><img src="assets/img/logo/logo-firetti-negativa.svg" alt="Firetti" width="160" height="53"></a>
@@ -154,7 +155,7 @@
 
 
       <!-- main-area -->
-      <main>
+      <main id="conteudo-principal">
 
          <!-- banner-area -->
          <section class="banner-area p-relative pt-90">

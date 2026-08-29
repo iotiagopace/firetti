@@ -67,14 +67,31 @@
 	$(".tp-menu-toggle").on("click", function () {
 		$(".tp-side-info-area").addClass("tp-sidebar-opened");
 		$(".body-overlay").addClass("opened");
+		$(this).attr("aria-expanded", "true");
+		$("#painel-menu-mobile").attr("aria-hidden", "false");
 	});
 	$(".tpsideinfo__close").on("click", function () {
 		$(".tp-side-info-area").removeClass("tp-sidebar-opened");
 		$(".body-overlay").removeClass("opened");
+		$(".tp-menu-toggle").attr("aria-expanded", "false");
+		$("#painel-menu-mobile").attr("aria-hidden", "true");
+		$(".tp-menu-toggle").focus();
 	});
 	$(".body-overlay").on("click", function () {
 		$(".tp-side-info-area").removeClass("tp-sidebar-opened");
 		$(".body-overlay").removeClass("opened");
+		$(".tp-menu-toggle").attr("aria-expanded", "false");
+		$("#painel-menu-mobile").attr("aria-hidden", "true");
+		$(".tp-menu-toggle").focus();
+	});
+	$(document).on("keydown", function (event) {
+		if (event.key === "Escape") {
+			$(".tp-side-info-area").removeClass("tp-sidebar-opened");
+			$(".body-overlay").removeClass("opened");
+			$(".tp-menu-toggle").attr("aria-expanded", "false");
+			$("#painel-menu-mobile").attr("aria-hidden", "true");
+			$(".tp-menu-toggle").focus();
+		}
 	});
 
 
@@ -88,7 +105,7 @@
 	
 	////////////////////////////////////////////////////
 	// 07. Data CSS Js
-	$("[data-background").each(function () {
+	$("[data-background]").each(function () {
 		$(this).css("background-image", "url( " + $(this).attr("data-background") + "  )");
 	});
 

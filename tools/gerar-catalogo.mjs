@@ -96,7 +96,7 @@ ${opcoes.map((o) => `                                    <option value="${o}">${
 ${header('catalogo')}
 
       <!-- main-area -->
-      <main>
+      <main id="conteudo-principal">
 ${breadcrumb(p.tipo, `<a href="catalogo.html">Catálogo</a> : <a href="catalogo.html?categoria=${p.categoria}">${dados.categorias[p.categoria]}</a>`, 'assets/img/conteudo/linha-produtos.jpg')}
          <!-- produto-area -->
          <section class="shop-area pt-120 pb-70">

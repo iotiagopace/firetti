@@ -85,15 +85,21 @@ h6 {
 }
 
 h1 {
-	font-size: 40px;
+	font-family: var(--tp-ff-display);
+	font-size: clamp(2.5rem, 4.5vw, 4.75rem);
+	font-weight: var(--tp-fw-sbold);
+	letter-spacing: -0.025em;
+	line-height: 1.04;
 }
-  
+
 h2 {
-font-size: 32px;
+	font-size: clamp(1.8rem, 3vw, 2.75rem);
+	font-weight: var(--tp-fw-sbold);
+	letter-spacing: -0.02em;
 }
 
 h3 {
-font-size: 28px;
+	font-size: clamp(1.35rem, 2vw, 1.75rem);
 }
 
 h4 {

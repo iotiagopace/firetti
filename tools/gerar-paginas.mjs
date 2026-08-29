@@ -112,7 +112,7 @@ paginas.push({
 ${header('quem-somos')}
 
       <!-- main-area -->
-      <main>
+      <main id="conteudo-principal">
 ${breadcrumb('Conheça a Firetti', '<a href="index.html">Início</a> : Quem somos', BG_PLANTA)}
          <!-- missao-area -->
          <section class="about-area pt-120 pb-70">
@@ -275,7 +275,7 @@ paginas.push({
 ${header('como-funciona')}
 
       <!-- main-area -->
-      <main>
+      <main id="conteudo-principal">
 ${breadcrumb('Terceirize sua produção', '<a href="index.html">Início</a> : Como funciona', BG_PLANTA)}
          <!-- intro-area -->
          <section class="about-area pt-120 pb-40">
@@ -437,7 +437,7 @@ paginas.push({
 ${header('contato')}
 
       <!-- main-area -->
-      <main>
+      <main id="conteudo-principal">
 ${breadcrumb('Fale conosco', '<a href="index.html">Início</a> : Contato', BG_PLANTA)}
          <!-- contact-area -->
          <section class="contact-area pt-130 pb-115">
@@ -614,7 +614,7 @@ paginas.push({
 ${header('como-funciona')}
 
       <!-- main-area -->
-      <main>
+      <main id="conteudo-principal">
 ${breadcrumb('Perguntas frequentes', '<a href="index.html">Início</a> : <a href="como-funciona.html">Como funciona</a> : FAQ', BG_PLANTA)}
          <!-- faq-area -->
          <section class="faq-area pt-125 pb-100">
@@ -654,7 +654,7 @@ paginas.push({
 ${header('catalogo')}
 
       <!-- main-area -->
-      <main>
+      <main id="conteudo-principal">
 ${breadcrumb('Lista de orçamento', '<a href="index.html">Início</a> : Orçamento', BG_PRODUTOS)}
          <!-- lista-area -->
          <section class="cart-area pt-120 pb-40">

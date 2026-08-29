@@ -264,3 +264,61 @@ textarea:focus-visible {
 .tp-mobile-header-area {
     background-color: var(--tp-common-white);
 }
+
+// Navegação: transição e foco consistentes com a marca
+.firetti-skip-link {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 10000000;
+    padding: 10px 16px;
+    border-radius: 4px;
+    background: var(--tp-theme-primary);
+    color: var(--tp-common-white);
+    transform: translateY(-160%);
+    transition: transform .2s ease;
+    &:focus { transform: translateY(0); color: var(--tp-common-white); }
+}
+
+.tp-menu-toggle {
+    color: var(--tp-theme-primary);
+    transition: color .2s ease, transform .2s ease;
+    &:hover { color: var(--tp-theme-blue); transform: rotate(4deg); }
+}
+
+.tpsideinfo .mobile-menu {
+    margin: 30px -30px 42px;
+    padding: 0 30px;
+    border-top: 1px solid rgba(255, 255, 255, .16);
+}
+
+.tpsideinfo .mean-container .mean-nav {
+    margin-top: 0;
+    background: transparent;
+}
+
+.tpsideinfo .mean-container .mean-nav ul li a {
+    width: 90%;
+    padding: 15px 5%;
+    border-top-color: rgba(255, 255, 255, .16);
+    color: var(--tp-common-white);
+    font-family: var(--tp-ff-body);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .045em;
+    text-transform: none;
+}
+
+.tpsideinfo .mean-container .mean-nav ul li a:hover,
+.tpsideinfo .mean-container .mean-nav ul li a:focus {
+    color: var(--tp-theme-secondary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

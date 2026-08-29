@@ -39,7 +39,8 @@ export const head = (titulo, descricao, og) => `<!doctype html>
       <link rel="stylesheet" href="assets/css/spacing.css">
       <link rel="stylesheet" href="assets/css/style.css">
    </head>
-   <body>`;
+   <body>
+      <a class="firetti-skip-link" href="#conteudo-principal">Pular para o conteúdo</a>`;
 
 export const header = (ativa) => {
   const cls = (chave) => (chave === ativa ? ' class="active"' : '');
@@ -122,7 +123,7 @@ export const header = (ativa) => {
                         <span class="firetti-lista-count">0</span>
                         <span class="visually-hidden">Ver lista de orçamento</span>
                      </a>
-                     <button class="tp-menu-toggle" aria-label="Abrir menu"><i class="far fa-bars" aria-hidden="true"></i></button>
+                     <button class="tp-menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="painel-menu-mobile"><i class="far fa-bars" aria-hidden="true"></i></button>
                   </div>
                </div>
             </div>
@@ -131,7 +132,7 @@ export const header = (ativa) => {
       <!-- tp-mobile-header-area end -->
 
       <!-- sidebar-info -->
-      <div class="tpsideinfo tp-side-info-area">
+      <div id="painel-menu-mobile" class="tpsideinfo tp-side-info-area" aria-label="Menu mobile" aria-hidden="true">
          <button class="tpsideinfo__close" aria-label="Fechar menu"><i class="fal fa-times" aria-hidden="true"></i></button>
          <div class="tpsideinfo__logo mb-40">
             <a href="index.html"><img src="assets/img/logo/logo-firetti-negativa.svg" alt="Firetti" width="160" height="53"></a>
@@ -262,4 +263,3 @@ export const rodape = () => `
    </body>
 </html>
 `;
-
