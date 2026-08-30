@@ -36,6 +36,11 @@ Itens de conteúdo produzidos durante o desenvolvimento que precisam de confirma
 - [x] Texturas (espuma, creme, sérum) usadas como loops decorativos nos cards de categoria da home — são abstratas, sem representar a fábrica, conforme o briefing permite.
 - [ ] Confirmar com o cliente se as 4 licenças de vídeo cobrem uso em site institucional.
 
+## Fotos do catálogo — aviso de imagem ilustrativa
+- [x] **Todas as imagens do catálogo levam o selo visível "Imagem meramente ilustrativa"** (15 cards, 15 fichas e 3 cards de categoria da home), reforçado no texto `alt`.
+  Motivo: as fotos são de banco e **não representam os produtos realmente fabricados pela Firetti**. O selo evita que o visitante entenda a foto como o produto que vai receber.
+- [ ] Quando houver ensaio dos produtos reais, remover o selo das fotos substituídas (o texto sai do gerador em `tools/gerar-catalogo.mjs` e de `site/index.html`).
+
 ## Fotos do catálogo — consistência visual
 - [ ] As 45 fotos vêm de bancos diferentes e têm **fundos inconsistentes** (branco, cinza, rosa, marrom, salmão). Na grade isso quebra a leitura de vitrine.
   Caminhos possíveis, do mais barato ao melhor: (a) recorte de fundo e recomposição sobre um fundo neutro único; (b) nova seleção priorizando fotos de fundo claro; (c) ensaio próprio com um único set. Recomendado (c) junto com as fotos da planta.
