@@ -346,26 +346,39 @@
       "slug": "creme-de-massagem",
       "nome": "Creme de massagem",
       "subcategoria": "cremes-corporais",
-      "resumo": "Textura de deslizamento prolongado, para uso profissional em clínicas e spas ou para a linha de autocuidado da sua marca."
+      "resumo": "Textura de deslizamento prolongado, para uso profissional em clínicas e spas ou para a linha de autocuidado da sua marca.",
+      "fotos": [
+        "creme-massagem-1"
+      ]
     },
     {
       "slug": "creme-para-estrias",
       "nome": "Creme para estrias",
       "subcategoria": "cremes-corporais",
       "resumo": "Cuidado diário para áreas propensas a estrias, com textura e fragrância definidas junto à sua marca.",
-      "regulado": true
+      "regulado": true,
+      "fotos": [
+        "creme-estrias-1"
+      ]
     },
     {
       "slug": "creme-para-as-maos",
       "nome": "Creme para as mãos",
       "subcategoria": "cremes-corporais",
-      "resumo": "Hidratação em formato de bolso. Item de entrada com bom giro em balcão, kits e presentes."
+      "resumo": "Hidratação em formato de bolso. Item de entrada com bom giro em balcão, kits e presentes.",
+      "fotos": [
+        "creme-maos-1",
+        "creme-maos-2"
+      ]
     },
     {
       "slug": "creme-para-os-pes",
       "nome": "Creme para os pés",
       "subcategoria": "cremes-corporais",
-      "resumo": "Cuidado específico para a pele dos pés, com textura mais encorpada pensada para uso diário."
+      "resumo": "Cuidado específico para a pele dos pés, com textura mais encorpada pensada para uso diário.",
+      "fotos": [
+        "creme-pes-1"
+      ]
     },
     {
       "slug": "creme-pos-tatuagem",
@@ -374,9 +387,7 @@
       "resumo": "Cuidado para a pele tatuada. Nicho de público fiel, com distribuição direta em estúdios.",
       "regulado": true,
       "fotos": [
-        "creme-corporal-tatuagem",
-        "creme-corporal-2",
-        "creme-corporal-4"
+        "creme-tatuagem-1"
       ]
     },
     {
@@ -384,14 +395,21 @@
       "nome": "Creme redutor de celulite",
       "subcategoria": "cremes-corporais",
       "resumo": "Creme corporal para a linha de cuidados com celulite, com sensorial e ativos definidos no projeto.",
-      "regulado": true
+      "regulado": true,
+      "fotos": [
+        "creme-celulite-1"
+      ]
     },
     {
       "slug": "creme-redutor-de-gordura",
       "nome": "Creme redutor de gordura",
       "subcategoria": "cremes-corporais",
       "resumo": "Creme corporal para a linha de modelagem da sua marca, com ativos definidos no projeto.",
-      "regulado": true
+      "regulado": true,
+      "fotos": [
+        "creme-gordura-1",
+        "creme-gordura-2"
+      ]
     },
     {
       "slug": "creme-hidratante-corporal",
@@ -404,20 +422,31 @@
       "slug": "creme-esfoliante-corporal",
       "nome": "Creme esfoliante corporal",
       "subcategoria": "cremes-corporais",
-      "resumo": "Esfoliação em base cremosa, que limpa sem ressecar. Grânulos, cor e fragrância definidos para a sua linha."
+      "resumo": "Esfoliação em base cremosa, que limpa sem ressecar. Grânulos, cor e fragrância definidos para a sua linha.",
+      "fotos": [
+        "creme-esfoliante-1",
+        "creme-esfoliante-2"
+      ]
     },
     {
       "slug": "gel-esfoliante-corporal",
       "nome": "Gel esfoliante corporal",
       "subcategoria": "geis-corporais",
-      "resumo": "Esfoliação em base gel, de enxágue fácil e sensação refrescante."
+      "resumo": "Esfoliação em base gel, de enxágue fácil e sensação refrescante.",
+      "fotos": [
+        "gel-esfoliante-1",
+        "gel-esfoliante-2"
+      ]
     },
     {
       "slug": "gel-redutor-de-celulite",
       "nome": "Gel redutor de celulite",
       "subcategoria": "geis-corporais",
       "resumo": "Gel de rápida absorção para a linha de cuidados com celulite.",
-      "regulado": true
+      "regulado": true,
+      "fotos": [
+        "gel-celulite-1"
+      ]
     },
     {
       "slug": "sabonete-liquido-corporal",

@@ -14,6 +14,7 @@ Itens de conteúdo produzidos durante o desenvolvimento que precisam de confirma
 - [ ] **Faixa de custo por unidade** — não exibida. Definir se será publicada.
 - [ ] **Selos** — hoje apenas "Conforme normas Anvisa". Confirmar se há selos adicionais (vegano, cruelty free, sem parabeno) e para quais fórmulas.
 - [x] **Fotos novas (01/10/2026)**: 30 fotos de uso (lifestyle) enviadas por linha substituíram os packshots de banco. Fotos específicas viraram capa de pós-tatuagem, demaquilante, gel para barba, gel hidratante e gloss.
+- [x] **Fotos corretas da linha corporal (Drive, 01/10/2026)**: 14 fotos, uma por produto, substituíram as genéricas em 10 produtos (massagem, estrias, mãos, pés, pós-tatuagem, redutores de celulite e de gordura, esfoliantes em creme e em gel, gel para celulite). Creme hidratante corporal não teve foto própria e segue com as da linha.
 - [ ] **Progressiva não recebeu foto**: está usando a foto da máscara capilar que mostra o cabelo coberto de produto. Enviar uma específica, se houver.
 - [ ] As fotos continuam sendo de banco (não são os produtos da Firetti), por isso o selo "Imagem meramente ilustrativa" permanece. Produção fotográfica própria segue recomendada.
 
