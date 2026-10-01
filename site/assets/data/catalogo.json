@@ -231,8 +231,8 @@
       "singular": "condicionador",
       "categoria": "capilares",
       "fotos": [
-        "condicionador-1",
-        "condicionador-2"
+        "condicionador-2",
+        "condicionador-danificados-1"
       ],
       "opcoes": {
         "embalagens": [
@@ -756,26 +756,39 @@
       "slug": "condicionador-para-cabelos-danificados",
       "nome": "Condicionador para cabelos danificados",
       "subcategoria": "condicionador",
-      "resumo": "Condicionamento intenso para fios fragilizados. Par do shampoo da mesma linha."
+      "resumo": "Condicionamento intenso para fios fragilizados. Par do shampoo da mesma linha.",
+      "fotos": [
+        "condicionador-danificados-1"
+      ]
     },
     {
       "slug": "condicionador-para-cabelos-cacheados",
       "nome": "Condicionador para cabelos cacheados",
       "subcategoria": "condicionador",
-      "resumo": "Desembaraço e definição para cabelos cacheados e crespos."
+      "resumo": "Desembaraço e definição para cabelos cacheados e crespos.",
+      "fotos": [
+        "condicionador-cacheados-1",
+        "condicionador-cacheados-2"
+      ]
     },
     {
       "slug": "condicionador-para-cabelos-lisos",
       "nome": "Condicionador para cabelos lisos",
       "subcategoria": "condicionador",
-      "resumo": "Condicionamento leve, que mantém o movimento natural dos fios lisos."
+      "resumo": "Condicionamento leve, que mantém o movimento natural dos fios lisos.",
+      "fotos": [
+        "condicionador-2"
+      ]
     },
     {
       "slug": "condicionador-para-crescimento",
       "nome": "Condicionador para crescimento",
       "subcategoria": "condicionador",
       "resumo": "Complemento da linha de crescimento capilar.",
-      "regulado": true
+      "regulado": true,
+      "fotos": [
+        "condicionador-crescimento-1"
+      ]
     },
     {
       "slug": "mascara-para-cabelos-danificados",
