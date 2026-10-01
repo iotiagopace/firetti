@@ -111,7 +111,14 @@
 	}
 
 	function enviarConfigurador(form) {
+		// Progressiva exige o ativo; o pedido sob medida exige a descrição.
+		if (!validarForm(form)) return;
+
 		var detalhes = [];
+		var ativo = valor(form, 'ativo');
+		if (ativo) detalhes.push('Ativo: ' + ativo);
+		var descricao = valor(form, 'descricao');
+		if (descricao) detalhes.push('Descrição: ' + descricao);
 		['embalagem', 'material', 'volume', 'decoracao'].forEach(function (nome) {
 			var sel = form.querySelector('[name="' + nome + '"]');
 			if (sel && sel.value) detalhes.push(textoSelecionado(sel));
@@ -121,9 +128,13 @@
 		var obs = valor(form, 'observacao');
 		if (obs) detalhes.push('Obs.: ' + obs);
 
+		// No pedido sob medida, o nome do item vem da linha escolhida.
+		var tipo = form.querySelector('[name="tipo"]');
+		var nome = tipo ? 'Sob medida: ' + textoSelecionado(tipo) : (form.dataset.nome || 'Produto');
+
 		adicionarItem({
 			slug: form.dataset.slug || '',
-			nome: form.dataset.nome || 'Produto',
+			nome: nome,
 			detalhes: detalhes.join(', ')
 		});
 
@@ -345,11 +356,24 @@
 		videos.forEach(function (v) { observador.observe(v); });
 	}
 
+	/* ---------- Pedido sob medida: linha vinda do catálogo ---------- */
+
+	function preSelecionarTipo() {
+		var sel = document.querySelector('.js-configurador [name="tipo"]');
+		if (!sel) return;
+		var tipo = new URLSearchParams(window.location.search).get('tipo');
+		if (!tipo || !sel.querySelector('option[value="' + tipo + '"]')) return;
+		sel.value = tipo;
+		// O template troca os selects pelo plugin nice-select; ele precisa ser avisado.
+		if (window.jQuery && window.jQuery.fn.niceSelect) window.jQuery(sel).niceSelect('update');
+	}
+
 	document.addEventListener('DOMContentLoaded', function () {
 		atualizarContadores();
 		renderizarLista();
 		iniciarFiltro();
 		iniciarVideos();
 		iniciarCarrosseis();
+		preSelecionarTipo();
 	});
 })();

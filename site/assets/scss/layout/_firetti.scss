@@ -115,29 +115,37 @@
         flex: 1 1 auto;
         padding: 26px 26px 24px;
     }
-    // Nome fantasia: o que faz o item parecer produto de prateleira
-    &__nome {
+    // Linha do produto (ex.: "Séruns faciais") acima do nome
+    &__sub {
         display: block;
-        font-family: var(--tp-ff-heading);
-        font-size: 20px;
-        line-height: 1.1;
-        color: var(--tp-theme-primary);
-        margin-bottom: 6px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        color: var(--tp-theme-blue);
+        margin-bottom: 8px;
     }
     &__titulo {
-        font-family: var(--tp-ff-body);
-        font-size: 15px;
-        font-weight: 600;
-        line-height: 1.45;
-        margin-bottom: 16px;
+        font-family: var(--tp-ff-heading);
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 1.2;
+        text-wrap: balance;
+        margin-bottom: 10px;
         & a {
-            color: var(--tp-text-2);
+            color: var(--tp-theme-primary);
             &:hover { color: var(--tp-theme-blue); }
         }
-        & em {
-            font-style: normal;
-            color: var(--tp-theme-blue);
-        }
+    }
+    &__resumo {
+        font-size: 14px;
+        line-height: 1.55;
+        color: var(--tp-text-2);
+        margin-bottom: 18px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
     &__ativos {
         display: flex;
@@ -539,4 +547,134 @@ textarea:focus-visible {
 }
 .productthumb {
     position: relative;
+}
+
+
+// Olho e linha de quantidade mínima da ficha de produto (ficam fora do card)
+.firetti-produto-card__eyebrow {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--tp-theme-blue);
+    margin-bottom: 12px;
+}
+.firetti-produto-card__moq {
+    display: block;
+    font-size: 13px;
+    color: var(--tp-text-2);
+}
+
+// Grupos do catálogo, um por linha de produto da Firetti
+.firetti-grupo {
+    margin-bottom: 40px;
+    &[hidden] { display: none !important; }
+    &__topo {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        padding-bottom: 14px;
+        margin-bottom: 26px;
+        border-bottom: 1px solid var(--tp-border-primary);
+    }
+    &__titulo {
+        font-size: 28px;
+        font-weight: 400;
+        color: var(--tp-theme-primary);
+        margin: 0;
+    }
+    &__qtd {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--tp-text-2);
+        white-space: nowrap;
+    }
+}
+
+// "Outro ..." da lista do cliente: pedido de fórmula sob medida
+.firetti-sob-medida {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 30px);
+    min-height: 240px;
+    padding: 30px 28px;
+    border: 1.5px dashed var(--tp-border-secondary);
+    border-radius: 14px;
+    background-color: var(--tp-grey-1);
+    color: var(--tp-text-2);
+    transition: border-color .25s ease-out, background-color .25s ease-out;
+    &__icone {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background-color: var(--tp-common-white);
+        color: var(--tp-theme-blue);
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    &__titulo {
+        font-family: var(--tp-ff-heading);
+        font-size: 21px;
+        line-height: 1.2;
+        color: var(--tp-theme-primary);
+        margin-bottom: 10px;
+    }
+    &__texto {
+        font-size: 14px;
+        line-height: 1.55;
+        margin-bottom: 22px;
+    }
+    &__cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: auto;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--tp-theme-primary);
+        & i { transition: transform .2s ease-out; }
+    }
+    &:hover {
+        border-color: var(--tp-theme-secondary);
+        background-color: var(--tp-icon-green-light);
+        color: var(--tp-text-2);
+        .firetti-sob-medida__cta i { transform: translateX(3px); }
+    }
+}
+
+// Configurador: o nice-select do template flutua à esquerda e puxava o rótulo
+// do campo seguinte para o lado. Aqui cada campo ocupa a linha inteira.
+.firetti-config__campo {
+    & .nice-select {
+        float: none;
+        width: 100%;
+        height: 50px;
+        line-height: 48px;
+        padding-left: 16px;
+        border: 1px solid var(--tp-border-secondary);
+        border-radius: 5px;
+        color: var(--tp-text-body);
+        font-size: 15px;
+        &:hover,
+        &.open,
+        &:focus { border-color: var(--tp-theme-secondary); }
+        & .list {
+            width: 100%;
+            max-height: 260px;
+            overflow-y: auto;
+        }
+    }
+}
+.js-configurador .product-model-title {
+    font-family: var(--tp-ff-heading);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--tp-theme-primary);
+    margin-bottom: 20px;
 }

@@ -1,9 +1,9 @@
 {
-  "observacao": "Catálogo inicial de amostra produzido para validação do cliente. Nomes fantasia, ativos, embalagens e volumes precisam ser confirmados pela Firetti. MOQ e faixa de custo: aguardando definição.",
+  "observacao": "Catálogo conforme a lista enviada pela Firetti em 01/10/2026 (PRODUTOS_site_FIRETTI.docx). Nomes e agrupamento são do cliente. Descrições e opções de embalagem/volume foram propostas por nós e precisam de validação.",
   "categorias": {
-    "capilares": "Produtos capilares",
     "corporais": "Produtos corporais",
-    "faciais": "Produtos faciais"
+    "faciais": "Produtos faciais",
+    "capilares": "Produtos capilares"
   },
   "embalagens": {
     "frasco-pump": "Frasco com pump",
@@ -13,31 +13,171 @@
     "bisnaga": "Bisnaga",
     "pote": "Pote",
     "spray": "Frasco spray",
-    "bastao": "Bastão"
+    "tubo-aplicador": "Tubo com aplicador",
+    "galao": "Galão"
   },
-  "produtos": [
-    {
-      "slug": "aurora-shampoo-hidratante",
-      "nomeFantasia": "Aurora",
-      "tipo": "Shampoo Hidratante",
-      "ativoPrincipal": "com Óleo de Argan",
+  "selos": [
+    "Conforme normas Anvisa"
+  ],
+  "subcategorias": {
+    "cremes-corporais": {
+      "nome": "Cremes corporais",
+      "singular": "creme corporal",
+      "categoria": "corporais",
+      "fotos": "hidratante-corporal",
+      "opcoes": {
+        "embalagens": [
+          "pote",
+          "bisnaga",
+          "frasco-pump"
+        ],
+        "materiais": [
+          "plastico"
+        ],
+        "volumes": [
+          "100g",
+          "200g",
+          "500g",
+          "1kg"
+        ],
+        "decoracao": [
+          "rotulo",
+          "impressao",
+          "nenhuma"
+        ]
+      }
+    },
+    "geis-corporais": {
+      "nome": "Géis corporais",
+      "singular": "gel corporal",
+      "categoria": "corporais",
+      "fotos": "esfoliante",
+      "opcoes": {
+        "embalagens": [
+          "pote",
+          "bisnaga"
+        ],
+        "materiais": [
+          "plastico"
+        ],
+        "volumes": [
+          "150g",
+          "250g",
+          "500g"
+        ],
+        "decoracao": [
+          "rotulo",
+          "impressao",
+          "nenhuma"
+        ]
+      }
+    },
+    "sabonetes-corporais": {
+      "nome": "Sabonetes corporais",
+      "singular": "sabonete corporal",
+      "categoria": "corporais",
+      "fotos": "oleo-corporal",
+      "opcoes": {
+        "embalagens": [
+          "frasco-pump",
+          "frasco"
+        ],
+        "materiais": [
+          "plastico"
+        ],
+        "volumes": [
+          "250ml",
+          "500ml",
+          "1L"
+        ],
+        "decoracao": [
+          "rotulo",
+          "impressao",
+          "nenhuma"
+        ]
+      }
+    },
+    "locoes-faciais": {
+      "nome": "Loções faciais",
+      "singular": "loção facial",
+      "categoria": "faciais",
+      "fotos": "tonico-facial",
+      "opcoes": {
+        "embalagens": [
+          "frasco",
+          "spray"
+        ],
+        "materiais": [
+          "plastico",
+          "vidro"
+        ],
+        "volumes": [
+          "100ml",
+          "200ml"
+        ],
+        "decoracao": [
+          "rotulo",
+          "impressao",
+          "nenhuma"
+        ]
+      }
+    },
+    "serum-facial": {
+      "nome": "Séruns faciais",
+      "singular": "sérum facial",
+      "categoria": "faciais",
+      "fotos": "serum-antiidade",
+      "opcoes": {
+        "embalagens": [
+          "conta-gotas",
+          "airless"
+        ],
+        "materiais": [
+          "vidro",
+          "plastico"
+        ],
+        "volumes": [
+          "15ml",
+          "30ml"
+        ],
+        "decoracao": [
+          "rotulo",
+          "impressao",
+          "nenhuma"
+        ]
+      }
+    },
+    "gel-facial": {
+      "nome": "Géis faciais",
+      "singular": "gel facial",
+      "categoria": "faciais",
+      "fotos": "cremes-hidratantes",
+      "opcoes": {
+        "embalagens": [
+          "bisnaga",
+          "airless",
+          "pote"
+        ],
+        "materiais": [
+          "plastico"
+        ],
+        "volumes": [
+          "15g",
+          "30g",
+          "50g"
+        ],
+        "decoracao": [
+          "rotulo",
+          "impressao",
+          "nenhuma"
+        ]
+      }
+    },
+    "shampoo": {
+      "nome": "Shampoos",
+      "singular": "shampoo",
       "categoria": "capilares",
-      "subcategoria": "shampoos",
-      "resumo": "Limpeza suave com reposição de emoliência para fios ressecados. Base perolada, perfumação personalizável e espuma cremosa que valoriza a experiência de uso.",
-      "ativos": [
-        {
-          "nome": "Óleo de Argan",
-          "funcao": "Nutrição e brilho"
-        },
-        {
-          "nome": "Pantenol",
-          "funcao": "Hidratação e maciez"
-        },
-        {
-          "nome": "Proteína do Trigo",
-          "funcao": "Força e proteção da fibra"
-        }
-      ],
+      "fotos": "shampoo",
       "opcoes": {
         "embalagens": [
           "frasco-pump",
@@ -57,39 +197,13 @@
           "impressao",
           "nenhuma"
         ]
-      },
-      "selos": [
-        "Conforme normas Anvisa"
-      ],
-      "destaque": true,
-      "imagens": [
-        "assets/img/catalogo/shampoo-01.webp",
-        "assets/img/catalogo/shampoo-02.webp",
-        "assets/img/catalogo/shampoo-03.webp"
-      ]
+      }
     },
-    {
-      "slug": "iris-condicionador-nutritivo",
-      "nomeFantasia": "Íris",
-      "tipo": "Condicionador Nutritivo",
-      "ativoPrincipal": "com Manteiga de Karité",
+    "condicionador": {
+      "nome": "Condicionadores",
+      "singular": "condicionador",
       "categoria": "capilares",
-      "subcategoria": "condicionadores",
-      "resumo": "Condicionamento intenso com toque leve, para desembaraço imediato sem pesar. Par ideal do shampoo da mesma linha, com fragrância coordenada.",
-      "ativos": [
-        {
-          "nome": "Manteiga de Karité",
-          "funcao": "Nutrição profunda"
-        },
-        {
-          "nome": "Óleo de Coco",
-          "funcao": "Emoliência e selagem"
-        },
-        {
-          "nome": "Glicerina Vegetal",
-          "funcao": "Retenção de umidade"
-        }
-      ],
+      "fotos": "condicionador",
       "opcoes": {
         "embalagens": [
           "frasco-pump",
@@ -102,45 +216,21 @@
         "volumes": [
           "250ml",
           "300ml",
-          "500ml"
+          "500ml",
+          "1L"
         ],
         "decoracao": [
           "rotulo",
           "impressao",
           "nenhuma"
         ]
-      },
-      "selos": [
-        "Conforme normas Anvisa"
-      ],
-      "imagens": [
-        "assets/img/catalogo/condicionador-01.webp",
-        "assets/img/catalogo/condicionador-02.webp",
-        "assets/img/catalogo/condicionador-03.webp"
-      ]
+      }
     },
-    {
-      "slug": "maresia-mascara-de-tratamento",
-      "nomeFantasia": "Maresia",
-      "tipo": "Máscara de Tratamento Capilar",
-      "ativoPrincipal": "com Queratina Vegetal",
+    "mascara-capilar": {
+      "nome": "Máscaras capilares",
+      "singular": "máscara capilar",
       "categoria": "capilares",
-      "subcategoria": "mascaras",
-      "resumo": "Reconstrução para fios danificados por química ou calor. Textura densa de salão, indicada para cronograma capilar e linhas profissionais.",
-      "ativos": [
-        {
-          "nome": "Queratina Vegetal",
-          "funcao": "Reconstrução da fibra"
-        },
-        {
-          "nome": "Colágeno Vegetal",
-          "funcao": "Corpo e resistência"
-        },
-        {
-          "nome": "Manteiga de Murumuru",
-          "funcao": "Nutrição intensa"
-        }
-      ],
+      "fotos": "mascara-capilar",
       "opcoes": {
         "embalagens": [
           "pote",
@@ -159,43 +249,18 @@
           "impressao",
           "nenhuma"
         ]
-      },
-      "selos": [
-        "Conforme normas Anvisa"
-      ],
-      "imagens": [
-        "assets/img/catalogo/mascara-capilar-01.webp",
-        "assets/img/catalogo/mascara-capilar-02.webp",
-        "assets/img/catalogo/mascara-capilar-03.webp"
-      ]
+      }
     },
-    {
-      "slug": "brisa-leave-in-protetor",
-      "nomeFantasia": "Brisa",
-      "tipo": "Leave-in Protetor",
-      "ativoPrincipal": "com Pantenol",
+    "leave-in": {
+      "nome": "Leave-in",
+      "singular": "leave-in",
       "categoria": "capilares",
-      "subcategoria": "finalizadores",
-      "resumo": "Finalizador sem enxágue com proteção térmica e controle de frizz. Fórmula leve, de rápida absorção, para uso diário.",
-      "ativos": [
-        {
-          "nome": "Pantenol",
-          "funcao": "Hidratação contínua"
-        },
-        {
-          "nome": "Silicones Selecionados",
-          "funcao": "Proteção térmica e brilho"
-        },
-        {
-          "nome": "Filtro UV",
-          "funcao": "Proteção da cor"
-        }
-      ],
+      "fotos": "leave-in",
       "opcoes": {
         "embalagens": [
-          "spray",
           "bisnaga",
-          "frasco-pump"
+          "frasco-pump",
+          "spray"
         ],
         "materiais": [
           "plastico"
@@ -210,101 +275,23 @@
           "impressao",
           "nenhuma"
         ]
-      },
-      "selos": [
-        "Conforme normas Anvisa"
-      ],
-      "imagens": [
-        "assets/img/catalogo/leave-in-01.webp",
-        "assets/img/catalogo/leave-in-02.webp",
-        "assets/img/catalogo/leave-in-03.webp"
-      ]
+      }
     },
-    {
-      "slug": "luar-ativador-de-cachos",
-      "nomeFantasia": "Luar",
-      "tipo": "Ativador de Cachos",
-      "ativoPrincipal": "com Óleo de Coco",
+    "progressiva": {
+      "nome": "Progressiva",
+      "singular": "progressiva",
       "categoria": "capilares",
-      "subcategoria": "finalizadores",
-      "resumo": "Definição e memória para cachos e ondas, sem efeito craquelado. Atende ao público de curvatura 2A a 4C, um dos segmentos que mais cresce no país.",
-      "ativos": [
-        {
-          "nome": "Óleo de Coco",
-          "funcao": "Nutrição e definição"
-        },
-        {
-          "nome": "Linhaça",
-          "funcao": "Fixação natural e leve"
-        },
-        {
-          "nome": "Aloe Vera",
-          "funcao": "Hidratação e maciez"
-        }
-      ],
+      "fotos": "finalizador",
+      "semSobMedida": true,
       "opcoes": {
         "embalagens": [
-          "bisnaga",
-          "pote",
-          "frasco-pump"
+          "frasco"
         ],
         "materiais": [
           "plastico"
         ],
         "volumes": [
-          "250g",
-          "300g",
-          "500g"
-        ],
-        "decoracao": [
-          "rotulo",
-          "impressao",
-          "nenhuma"
-        ]
-      },
-      "selos": [
-        "Conforme normas Anvisa"
-      ],
-      "imagens": [
-        "assets/img/catalogo/finalizador-01.webp",
-        "assets/img/catalogo/finalizador-02.webp",
-        "assets/img/catalogo/finalizador-03.webp"
-      ]
-    },
-    {
-      "slug": "vera-hidratante-corporal",
-      "nomeFantasia": "Vera",
-      "tipo": "Hidratante Corporal",
-      "ativoPrincipal": "com Ureia",
-      "categoria": "corporais",
-      "subcategoria": "hidratantes",
-      "resumo": "Hidratação intensiva para peles muito secas, com toque seco e absorção rápida. Perfumação e textura personalizáveis para a identidade da sua marca.",
-      "ativos": [
-        {
-          "nome": "Ureia",
-          "funcao": "Hidratação profunda"
-        },
-        {
-          "nome": "Manteiga de Cacau",
-          "funcao": "Emoliência e nutrição"
-        },
-        {
-          "nome": "Vitamina E",
-          "funcao": "Ação antioxidante"
-        }
-      ],
-      "opcoes": {
-        "embalagens": [
-          "frasco-pump",
-          "bisnaga",
-          "pote"
-        ],
-        "materiais": [
-          "plastico"
-        ],
-        "volumes": [
-          "200ml",
-          "400ml",
+          "500ml",
           "1L"
         ],
         "decoracao": [
@@ -312,472 +299,454 @@
           "impressao",
           "nenhuma"
         ]
-      },
-      "selos": [
-        "Conforme normas Anvisa"
-      ],
-      "destaque": true,
-      "imagens": [
-        "assets/img/catalogo/hidratante-corporal-01.webp",
-        "assets/img/catalogo/hidratante-corporal-02.webp",
-        "assets/img/catalogo/hidratante-corporal-03.webp"
-      ]
+      }
+    }
+  },
+  "produtos": [
+    {
+      "slug": "creme-de-massagem",
+      "nome": "Creme de massagem",
+      "subcategoria": "cremes-corporais",
+      "resumo": "Textura de deslizamento prolongado, para uso profissional em clínicas e spas ou para a linha de autocuidado da sua marca."
     },
     {
-      "slug": "jade-oleo-corporal",
-      "nomeFantasia": "Jade",
-      "tipo": "Óleo Corporal",
-      "ativoPrincipal": "com Semente de Uva",
-      "categoria": "corporais",
-      "subcategoria": "oleos",
-      "resumo": "Óleo multifuncional para pele e massagem, de toque seco e brilho sutil. Posicionamento premium com excelente custo de fórmula.",
-      "ativos": [
-        {
-          "nome": "Óleo de Semente de Uva",
-          "funcao": "Emoliência e antioxidante"
-        },
-        {
-          "nome": "Óleo de Amêndoas",
-          "funcao": "Nutrição da pele"
-        },
-        {
-          "nome": "Vitamina E",
-          "funcao": "Conservação natural e cuidado"
-        }
-      ],
-      "opcoes": {
-        "embalagens": [
-          "conta-gotas",
-          "spray",
-          "frasco"
-        ],
-        "materiais": [
-          "vidro",
-          "plastico"
-        ],
-        "volumes": [
-          "30ml",
-          "60ml",
-          "120ml"
-        ],
-        "decoracao": [
-          "rotulo",
-          "impressao",
-          "nenhuma"
-        ]
-      },
-      "selos": [
-        "Conforme normas Anvisa"
-      ],
-      "imagens": [
-        "assets/img/catalogo/oleo-corporal-01.webp",
-        "assets/img/catalogo/oleo-corporal-02.webp",
-        "assets/img/catalogo/oleo-corporal-03.webp"
-      ]
+      "slug": "creme-para-estrias",
+      "nome": "Creme para estrias",
+      "subcategoria": "cremes-corporais",
+      "resumo": "Cuidado diário para áreas propensas a estrias, com textura e fragrância definidas junto à sua marca.",
+      "regulado": true
     },
     {
-      "slug": "flora-esfoliante-corporal",
-      "nomeFantasia": "Flora",
-      "tipo": "Esfoliante Corporal",
-      "ativoPrincipal": "com Cristais de Açúcar",
-      "categoria": "corporais",
-      "subcategoria": "esfoliantes",
-      "resumo": "Esfoliação física delicada com base hidratante, para renovação sem agredir. Grãos, cor e fragrância configuráveis por linha.",
-      "ativos": [
-        {
-          "nome": "Cristais de Açúcar",
-          "funcao": "Esfoliação física suave"
-        },
-        {
-          "nome": "Óleo de Girassol",
-          "funcao": "Emoliência"
-        },
-        {
-          "nome": "Extrato de Camomila",
-          "funcao": "Ação calmante"
-        }
-      ],
-      "opcoes": {
-        "embalagens": [
-          "pote",
-          "bisnaga"
-        ],
-        "materiais": [
-          "plastico",
-          "vidro"
-        ],
-        "volumes": [
-          "200g",
-          "350g"
-        ],
-        "decoracao": [
-          "rotulo",
-          "impressao",
-          "nenhuma"
-        ]
-      },
-      "selos": [
-        "Conforme normas Anvisa"
-      ],
-      "imagens": [
-        "assets/img/catalogo/esfoliante-01.webp",
-        "assets/img/catalogo/esfoliante-02.webp",
-        "assets/img/catalogo/esfoliante-03.webp"
-      ]
+      "slug": "creme-para-as-maos",
+      "nome": "Creme para as mãos",
+      "subcategoria": "cremes-corporais",
+      "resumo": "Hidratação em formato de bolso. Item de entrada com bom giro em balcão, kits e presentes.",
+      "fotos": "creme-maos"
     },
     {
-      "slug": "dunas-creme-para-maos",
-      "nomeFantasia": "Dunas",
-      "tipo": "Creme para Mãos",
-      "ativoPrincipal": "com Manteiga de Cacau",
-      "categoria": "corporais",
-      "subcategoria": "cremes",
-      "resumo": "Hidratação concentrada em formato de bolso. Item de entrada com ótimo giro para presente, balcão e ponto de venda.",
-      "ativos": [
-        {
-          "nome": "Manteiga de Cacau",
-          "funcao": "Nutrição e barreira"
-        },
-        {
-          "nome": "Glicerina Vegetal",
-          "funcao": "Hidratação imediata"
-        },
-        {
-          "nome": "Alantoína",
-          "funcao": "Regeneração da pele"
-        }
-      ],
-      "opcoes": {
-        "embalagens": [
-          "bisnaga",
-          "pote"
-        ],
-        "materiais": [
-          "plastico"
-        ],
-        "volumes": [
-          "30g",
-          "60g",
-          "100g"
-        ],
-        "decoracao": [
-          "rotulo",
-          "impressao",
-          "nenhuma"
-        ]
-      },
-      "selos": [
-        "Conforme normas Anvisa"
-      ],
-      "imagens": [
-        "assets/img/catalogo/creme-maos-01.webp",
-        "assets/img/catalogo/creme-maos-02.webp",
-        "assets/img/catalogo/creme-maos-03.webp"
-      ]
+      "slug": "creme-para-os-pes",
+      "nome": "Creme para os pés",
+      "subcategoria": "cremes-corporais",
+      "resumo": "Cuidado específico para a pele dos pés, com textura mais encorpada pensada para uso diário.",
+      "fotos": "creme-maos"
     },
     {
-      "slug": "pura-desodorante-corporal",
-      "nomeFantasia": "Pura",
-      "tipo": "Desodorante",
-      "ativoPrincipal": "com Extrato de Camomila",
-      "categoria": "corporais",
-      "subcategoria": "desodorantes",
-      "resumo": "Proteção diária com fórmula suave para peles sensíveis. Disponível em diferentes sistemas de aplicação conforme o posicionamento da marca.",
-      "ativos": [
-        {
-          "nome": "Extrato de Camomila",
-          "funcao": "Ação calmante"
-        },
-        {
-          "nome": "Bisabolol",
-          "funcao": "Conforto para pele sensível"
-        },
-        {
-          "nome": "Agentes Desodorantes",
-          "funcao": "Controle de odor"
-        }
-      ],
+      "slug": "creme-pos-tatuagem",
+      "nome": "Creme pós-tatuagem",
+      "subcategoria": "cremes-corporais",
+      "resumo": "Cuidado para a pele tatuada. Nicho de público fiel, com distribuição direta em estúdios.",
+      "regulado": true
+    },
+    {
+      "slug": "creme-redutor-de-celulite",
+      "nome": "Creme redutor de celulite",
+      "subcategoria": "cremes-corporais",
+      "resumo": "Creme corporal para a linha de cuidados com celulite, com sensorial e ativos definidos no projeto.",
+      "regulado": true
+    },
+    {
+      "slug": "creme-redutor-de-gordura",
+      "nome": "Creme redutor de gordura",
+      "subcategoria": "cremes-corporais",
+      "resumo": "Creme corporal para a linha de modelagem da sua marca, com ativos definidos no projeto.",
+      "regulado": true
+    },
+    {
+      "slug": "creme-hidratante-corporal",
+      "nome": "Creme hidratante corporal",
+      "subcategoria": "cremes-corporais",
+      "resumo": "O produto que mais gira em uma linha corporal: hidratação diária com textura, cor e fragrância personalizáveis.",
+      "destaque": true
+    },
+    {
+      "slug": "creme-esfoliante-corporal",
+      "nome": "Creme esfoliante corporal",
+      "subcategoria": "cremes-corporais",
+      "resumo": "Esfoliação em base cremosa, que limpa sem ressecar. Grânulos, cor e fragrância definidos para a sua linha.",
+      "fotos": "esfoliante"
+    },
+    {
+      "slug": "gel-esfoliante-corporal",
+      "nome": "Gel esfoliante corporal",
+      "subcategoria": "geis-corporais",
+      "resumo": "Esfoliação em base gel, de enxágue fácil e sensação refrescante."
+    },
+    {
+      "slug": "gel-redutor-de-celulite",
+      "nome": "Gel redutor de celulite",
+      "subcategoria": "geis-corporais",
+      "resumo": "Gel de rápida absorção para a linha de cuidados com celulite.",
+      "regulado": true,
+      "fotos": "hidratante-corporal"
+    },
+    {
+      "slug": "sabonete-liquido-corporal",
+      "nome": "Sabonete líquido para o corpo",
+      "subcategoria": "sabonetes-corporais",
+      "resumo": "Limpeza diária com espuma cremosa e fragrância exclusiva da sua marca."
+    },
+    {
+      "slug": "sabonete-intimo",
+      "nome": "Sabonete íntimo",
+      "subcategoria": "sabonetes-corporais",
+      "resumo": "Higiene íntima formulada conforme as exigências da ANVISA para a categoria, com fragrância suave definida para a sua marca.",
+      "regulado": true
+    },
+    {
+      "slug": "locao-demaquilante",
+      "nome": "Loção demaquilante",
+      "subcategoria": "locoes-faciais",
+      "resumo": "Remove maquiagem e impurezas sem esfregar. O primeiro passo de qualquer rotina de skincare."
+    },
+    {
+      "slug": "agua-termal",
+      "nome": "Água termal",
+      "subcategoria": "locoes-faciais",
+      "resumo": "Bruma facial para refrescar e preparar a pele, em spray para usar ao longo do dia.",
       "opcoes": {
         "embalagens": [
-          "spray",
-          "bastao",
-          "frasco"
+          "spray"
         ],
         "materiais": [
           "plastico",
           "aluminio"
         ],
         "volumes": [
-          "50ml",
-          "90ml",
-          "150ml"
+          "100ml",
+          "150ml",
+          "300ml"
         ],
         "decoracao": [
           "rotulo",
           "impressao",
           "nenhuma"
         ]
-      },
-      "selos": [
-        "Conforme normas Anvisa"
+      }
+    },
+    {
+      "slug": "locao-adstringente-facial",
+      "nome": "Loção adstringente facial",
+      "subcategoria": "locoes-faciais",
+      "resumo": "Para peles oleosas e mistas: limpa e deixa a pele com toque seco."
+    },
+    {
+      "slug": "locao-tonica",
+      "nome": "Loção tônica",
+      "subcategoria": "locoes-faciais",
+      "resumo": "Equilibra a pele depois da limpeza e prepara para o tratamento."
+    },
+    {
+      "slug": "serum-facial-hidratante",
+      "nome": "Sérum facial hidratante",
+      "subcategoria": "serum-facial",
+      "resumo": "Sérum leve e de absorção rápida para a rotina diária de hidratação."
+    },
+    {
+      "slug": "serum-acido-hialuronico-com-resveratrol",
+      "nome": "Sérum de ácido hialurônico com resveratrol",
+      "subcategoria": "serum-facial",
+      "resumo": "Ácido hialurônico e resveratrol em textura leve, com forte apelo para a linha antiidade.",
+      "ativos": [
+        "Ácido hialurônico",
+        "Resveratrol"
       ],
-      "imagens": [
-        "assets/img/catalogo/desodorante-01.webp",
-        "assets/img/catalogo/desodorante-02.webp",
-        "assets/img/catalogo/desodorante-03.webp"
+      "destaque": true
+    },
+    {
+      "slug": "serum-acido-hialuronico-q10",
+      "nome": "Sérum de ácido hialurônico com Q10",
+      "subcategoria": "serum-facial",
+      "resumo": "Ácido hialurônico associado à coenzima Q10, combinação conhecida do público de skincare.",
+      "ativos": [
+        "Ácido hialurônico",
+        "Coenzima Q10"
       ]
     },
     {
-      "slug": "alba-serum-antiidade",
-      "nomeFantasia": "Alba",
-      "tipo": "Sérum Antiidade",
-      "ativoPrincipal": "com Ácido Hialurônico",
-      "categoria": "faciais",
-      "subcategoria": "seruns",
-      "resumo": "Dermocosmético de alta procura, com textura leve e rápida absorção. Preenchimento da linha premium da sua marca, com forte percepção de valor.",
+      "slug": "serum-acido-hialuronico-10",
+      "nome": "Sérum de ácido hialurônico 10%",
+      "subcategoria": "serum-facial",
+      "resumo": "Versão de alta concentração para um produto de destaque na linha facial.",
       "ativos": [
-        {
-          "nome": "Ácido Hialurônico",
-          "funcao": "Hidratação e preenchimento"
-        },
-        {
-          "nome": "Vitamina C Estabilizada",
-          "funcao": "Uniformização e viço"
-        },
-        {
-          "nome": "Peptídeos",
-          "funcao": "Firmeza da pele"
-        }
-      ],
-      "opcoes": {
-        "embalagens": [
-          "conta-gotas",
-          "airless"
-        ],
-        "materiais": [
-          "vidro",
-          "plastico"
-        ],
-        "volumes": [
-          "15ml",
-          "30ml"
-        ],
-        "decoracao": [
-          "rotulo",
-          "impressao",
-          "nenhuma"
-        ]
-      },
-      "selos": [
-        "Conforme normas Anvisa"
-      ],
-      "destaque": true,
-      "imagens": [
-        "assets/img/catalogo/serum-antiidade-01.webp",
-        "assets/img/catalogo/serum-antiidade-02.webp",
-        "assets/img/catalogo/serum-antiidade-03.webp"
+        "Ácido hialurônico 10%"
       ]
     },
     {
-      "slug": "clara-hidratante-facial",
-      "nomeFantasia": "Clara",
-      "tipo": "Hidratante Facial",
-      "ativoPrincipal": "com Niacinamida",
-      "categoria": "faciais",
-      "subcategoria": "hidratantes",
-      "resumo": "Hidratação diária com controle de oleosidade e uniformização do tom. Ativo em alta no mercado, com público fiel e recorrente.",
+      "slug": "serum-acido-hialuronico-5",
+      "nome": "Sérum de ácido hialurônico 5%",
+      "subcategoria": "serum-facial",
+      "resumo": "Concentração para uso diário e para compor kits com outros itens da linha.",
       "ativos": [
-        {
-          "nome": "Niacinamida",
-          "funcao": "Uniformização e controle de oleosidade"
-        },
-        {
-          "nome": "Ácido Hialurônico",
-          "funcao": "Hidratação"
-        },
-        {
-          "nome": "Zinco PCA",
-          "funcao": "Equilíbrio da pele"
-        }
-      ],
-      "opcoes": {
-        "embalagens": [
-          "airless",
-          "pote",
-          "bisnaga"
-        ],
-        "materiais": [
-          "plastico",
-          "vidro"
-        ],
-        "volumes": [
-          "30g",
-          "50g"
-        ],
-        "decoracao": [
-          "rotulo",
-          "impressao",
-          "nenhuma"
-        ]
-      },
-      "selos": [
-        "Conforme normas Anvisa"
-      ],
-      "imagens": [
-        "assets/img/catalogo/cremes-hidratantes-01.webp",
-        "assets/img/catalogo/cremes-hidratantes-02.webp",
-        "assets/img/catalogo/cremes-hidratantes-03.webp"
+        "Ácido hialurônico 5%"
       ]
     },
     {
-      "slug": "veludo-mascara-facial",
-      "nomeFantasia": "Veludo",
-      "tipo": "Máscara Facial",
-      "ativoPrincipal": "com Argila Verde",
-      "categoria": "faciais",
-      "subcategoria": "mascaras",
-      "resumo": "Limpeza profunda e efeito matificante para o ritual de autocuidado. Formato versátil para kits e linhas de skincare.",
+      "slug": "serum-blend-de-acido-hialuronico",
+      "nome": "Sérum blend de ácido hialurônico",
+      "subcategoria": "serum-facial",
+      "resumo": "Mais de um tipo de ácido hialurônico em uma só fórmula, com composição definida no projeto.",
       "ativos": [
-        {
-          "nome": "Argila Verde",
-          "funcao": "Purificação e matificação"
-        },
-        {
-          "nome": "Extrato de Chá Verde",
-          "funcao": "Ação antioxidante"
-        },
-        {
-          "nome": "Mentol Suave",
-          "funcao": "Sensação refrescante"
-        }
-      ],
-      "opcoes": {
-        "embalagens": [
-          "pote",
-          "bisnaga"
-        ],
-        "materiais": [
-          "plastico",
-          "vidro"
-        ],
-        "volumes": [
-          "60g",
-          "100g"
-        ],
-        "decoracao": [
-          "rotulo",
-          "impressao",
-          "nenhuma"
-        ]
-      },
-      "selos": [
-        "Conforme normas Anvisa"
-      ],
-      "imagens": [
-        "assets/img/catalogo/mascara-tratamento-01.webp",
-        "assets/img/catalogo/mascara-tratamento-02.webp",
-        "assets/img/catalogo/mascara-tratamento-03.webp"
+        "Blend de ácido hialurônico"
       ]
     },
     {
-      "slug": "rosa-tonico-facial",
-      "nomeFantasia": "Rosa",
-      "tipo": "Tônico Facial",
-      "ativoPrincipal": "com Água de Rosas",
-      "categoria": "faciais",
-      "subcategoria": "tonicos",
-      "resumo": "Tônico refrescante que equilibra e prepara a pele para o tratamento. Apelo natural e sensorial delicado.",
+      "slug": "serum-vitamina-c",
+      "nome": "Sérum de vitamina C",
+      "subcategoria": "serum-facial",
+      "resumo": "Um dos ativos mais procurados do skincare, com concentração definida no projeto.",
       "ativos": [
-        {
-          "nome": "Água de Rosas",
-          "funcao": "Tonificação e frescor"
-        },
-        {
-          "nome": "Hamamélis",
-          "funcao": "Adstringência suave"
-        },
-        {
-          "nome": "Pantenol",
-          "funcao": "Hidratação"
-        }
+        "Vitamina C"
       ],
-      "opcoes": {
-        "embalagens": [
-          "spray",
-          "frasco"
-        ],
-        "materiais": [
-          "plastico",
-          "vidro"
-        ],
-        "volumes": [
-          "120ml",
-          "200ml"
-        ],
-        "decoracao": [
-          "rotulo",
-          "impressao",
-          "nenhuma"
-        ]
-      },
-      "selos": [
-        "Conforme normas Anvisa"
-      ],
-      "imagens": [
-        "assets/img/catalogo/tonico-facial-01.webp",
-        "assets/img/catalogo/tonico-facial-02.webp",
-        "assets/img/catalogo/tonico-facial-03.webp"
-      ]
+      "destaque": true
     },
     {
-      "slug": "sol-protetor-solar-facial",
-      "nomeFantasia": "Sol",
-      "tipo": "Protetor Solar Facial",
-      "ativoPrincipal": "com Vitamina E",
-      "categoria": "faciais",
-      "subcategoria": "protetores",
-      "resumo": "Proteção solar diária com toque seco, adequada para uso sob maquiagem. FPS e variações de cor definidos junto ao projeto da marca.",
-      "ativos": [
-        {
-          "nome": "Filtros Solares",
-          "funcao": "Proteção UVA/UVB"
-        },
-        {
-          "nome": "Vitamina E",
-          "funcao": "Ação antioxidante"
-        },
-        {
-          "nome": "Sílica",
-          "funcao": "Toque seco"
-        }
+      "slug": "gel-para-area-dos-olhos",
+      "nome": "Gel para a área dos olhos",
+      "subcategoria": "gel-facial",
+      "resumo": "Textura fresca e leve para a região delicada dos olhos.",
+      "fotos": [
+        "tubo-01",
+        "tubo-02",
+        "mascara-tratamento-01"
       ],
       "opcoes": {
         "embalagens": [
           "bisnaga",
+          "tubo-aplicador",
           "airless"
         ],
         "materiais": [
           "plastico"
         ],
         "volumes": [
-          "40g",
-          "50g",
-          "60g"
+          "15g",
+          "20g",
+          "30g"
         ],
         "decoracao": [
           "rotulo",
           "impressao",
           "nenhuma"
         ]
-      },
-      "selos": [
-        "Conforme normas Anvisa"
+      }
+    },
+    {
+      "slug": "gel-para-crescimento-de-cilios",
+      "nome": "Gel para crescimento de cílios",
+      "subcategoria": "gel-facial",
+      "resumo": "Produto de nicho com alto valor percebido, aplicado com pincel.",
+      "regulado": true,
+      "fotos": [
+        "tubo-01",
+        "tubo-02",
+        "mascara-tratamento-01"
       ],
-      "imagens": [
-        "assets/img/catalogo/protetor-solar-01.webp",
-        "assets/img/catalogo/protetor-solar-02.webp",
-        "assets/img/catalogo/protetor-solar-03.webp"
-      ]
+      "opcoes": {
+        "embalagens": [
+          "tubo-aplicador"
+        ],
+        "materiais": [
+          "plastico"
+        ],
+        "volumes": [
+          "5ml",
+          "8ml",
+          "10ml"
+        ],
+        "decoracao": [
+          "rotulo",
+          "impressao",
+          "nenhuma"
+        ]
+      }
+    },
+    {
+      "slug": "gel-facial-hidratante",
+      "nome": "Gel facial hidratante",
+      "subcategoria": "gel-facial",
+      "resumo": "Hidratação em gel de toque seco, indicada para peles oleosas e climas quentes."
+    },
+    {
+      "slug": "gel-para-crescimento-de-barba",
+      "nome": "Gel para crescimento de barba",
+      "subcategoria": "gel-facial",
+      "resumo": "Para a linha masculina, um dos segmentos que mais crescem no cuidado pessoal.",
+      "regulado": true
+    },
+    {
+      "slug": "gloss-labial",
+      "nome": "Gloss labial",
+      "subcategoria": "gel-facial",
+      "resumo": "Brilho labial com aplicador, para completar kits faciais ou abrir uma linha de maquiagem.",
+      "fotos": [
+        "tubo-01",
+        "tubo-02",
+        "mascara-tratamento-01"
+      ],
+      "opcoes": {
+        "embalagens": [
+          "tubo-aplicador"
+        ],
+        "materiais": [
+          "plastico"
+        ],
+        "volumes": [
+          "5ml",
+          "8ml",
+          "10ml"
+        ],
+        "decoracao": [
+          "rotulo",
+          "impressao",
+          "nenhuma"
+        ]
+      }
+    },
+    {
+      "slug": "shampoo-lavatorio",
+      "nome": "Shampoo lavatório",
+      "subcategoria": "shampoo",
+      "resumo": "Formato profissional para salões, em embalagens de alto rendimento.",
+      "opcoes": {
+        "embalagens": [
+          "frasco",
+          "galao"
+        ],
+        "materiais": [
+          "plastico"
+        ],
+        "volumes": [
+          "1L",
+          "5L"
+        ],
+        "decoracao": [
+          "rotulo",
+          "impressao",
+          "nenhuma"
+        ]
+      }
+    },
+    {
+      "slug": "shampoo-antirresiduo",
+      "nome": "Shampoo antirresíduo",
+      "subcategoria": "shampoo",
+      "resumo": "Limpeza profunda que prepara o fio para tratamentos e química. Essencial em linhas profissionais."
+    },
+    {
+      "slug": "shampoo-diario",
+      "nome": "Shampoo de uso diário",
+      "subcategoria": "shampoo",
+      "resumo": "Limpeza suave para lavagens frequentes. O item de maior giro de uma linha capilar.",
+      "destaque": true
+    },
+    {
+      "slug": "shampoo-para-cabelos-danificados",
+      "nome": "Shampoo para cabelos danificados",
+      "subcategoria": "shampoo",
+      "resumo": "Limpeza com cuidado para fios fragilizados por química, calor ou coloração."
+    },
+    {
+      "slug": "shampoo-para-cachos",
+      "nome": "Shampoo para cachos",
+      "subcategoria": "shampoo",
+      "resumo": "Limpeza que respeita a curvatura dos fios, para cabelos cacheados e crespos."
+    },
+    {
+      "slug": "shampoo-para-crescimento",
+      "nome": "Shampoo para crescimento",
+      "subcategoria": "shampoo",
+      "resumo": "Para a linha capilar voltada a quem busca fortalecimento e crescimento dos fios.",
+      "regulado": true
+    },
+    {
+      "slug": "condicionador-para-cabelos-danificados",
+      "nome": "Condicionador para cabelos danificados",
+      "subcategoria": "condicionador",
+      "resumo": "Condicionamento intenso para fios fragilizados. Par do shampoo da mesma linha."
+    },
+    {
+      "slug": "condicionador-para-cabelos-cacheados",
+      "nome": "Condicionador para cabelos cacheados",
+      "subcategoria": "condicionador",
+      "resumo": "Desembaraço e definição para cabelos cacheados e crespos."
+    },
+    {
+      "slug": "condicionador-para-cabelos-lisos",
+      "nome": "Condicionador para cabelos lisos",
+      "subcategoria": "condicionador",
+      "resumo": "Condicionamento leve, que mantém o movimento natural dos fios lisos."
+    },
+    {
+      "slug": "condicionador-para-crescimento",
+      "nome": "Condicionador para crescimento",
+      "subcategoria": "condicionador",
+      "resumo": "Complemento da linha de crescimento capilar.",
+      "regulado": true
+    },
+    {
+      "slug": "mascara-para-cabelos-danificados",
+      "nome": "Máscara para cabelos danificados",
+      "subcategoria": "mascara-capilar",
+      "resumo": "Tratamento intensivo para fios danificados, com textura densa de salão."
+    },
+    {
+      "slug": "mascara-para-cabelos-cacheados",
+      "nome": "Máscara para cabelos cacheados",
+      "subcategoria": "mascara-capilar",
+      "resumo": "Nutrição para cachos e crespos, pensada para o cronograma capilar."
+    },
+    {
+      "slug": "mascara-para-cabelos-lisos",
+      "nome": "Máscara para cabelos lisos",
+      "subcategoria": "mascara-capilar",
+      "resumo": "Tratamento que nutre sem tirar o balanço dos fios lisos."
+    },
+    {
+      "slug": "mascara-para-crescimento",
+      "nome": "Máscara para crescimento",
+      "subcategoria": "mascara-capilar",
+      "resumo": "Tratamento da linha de crescimento capilar.",
+      "regulado": true
+    },
+    {
+      "slug": "leave-in-em-creme",
+      "nome": "Leave-in em creme",
+      "subcategoria": "leave-in",
+      "resumo": "Finalizador sem enxágue em creme, que desembaraça e facilita a modelagem."
+    },
+    {
+      "slug": "leave-in-em-serum",
+      "nome": "Leave-in em sérum",
+      "subcategoria": "leave-in",
+      "resumo": "Finalizador sem enxágue em sérum, de textura leve, para brilho e controle do frizz.",
+      "opcoes": {
+        "embalagens": [
+          "conta-gotas",
+          "frasco-pump"
+        ],
+        "materiais": [
+          "plastico",
+          "vidro"
+        ],
+        "volumes": [
+          "30ml",
+          "60ml"
+        ],
+        "decoracao": [
+          "rotulo",
+          "impressao",
+          "nenhuma"
+        ]
+      }
+    },
+    {
+      "slug": "progressiva",
+      "nome": "Progressiva",
+      "subcategoria": "progressiva",
+      "resumo": "Alisamento progressivo com o ativo definido pela sua marca, sempre dentro das restrições da ANVISA para alisantes.",
+      "regulado": true,
+      "especificarAtivo": true
     }
-  ]
+  ],
+  "anvisaNota": "As alegações de uso seguem as regras da ANVISA para a categoria e são definidas com o nosso time regulatório."
 }

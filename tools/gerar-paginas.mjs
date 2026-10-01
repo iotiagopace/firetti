@@ -224,10 +224,10 @@ ${breadcrumb('Conheça a Firetti', '<a href="index.html">Início</a> : Quem somo
                   <div class="col-lg-6">
                      <div class="tp-about__content mb-50 wow fadeInUp" data-wow-delay=".4s">
                         <div class="tp-section">
-                           <span class="tp-section__sub-title left-line mb-25">Política de qualidade</span>
+                           <span class="tp-section__sub-title left-line mb-25">Política da empresa</span>
                            <h2 class="tp-section__title tp-ab-sm-title mb-35">Nosso compromisso</h2>
-                           <p class="mb-20">A Firetti está comprometida com a excelência na fabricação de cosméticos, buscando sempre garantir a mais alta qualidade em seus produtos.</p>
-                           <p>Para isso, contamos com uma equipe altamente qualificada e profissionais de pesquisa e desenvolvimento, constantemente atualizados com as inovações do mercado, com foco na melhoria contínua e no cumprimento dos mais rigorosos padrões de qualidade.</p>
+                           <!-- Texto oficial enviado pela Firetti (Firetti_Política da empresa.docx). Não editar sem aprovação do cliente. -->
+                           <p>A Firetti compromete-se em desenvolver, fabricar e fornecer produtos cosméticos seguros, eficazes e em conformidade com requisitos regulatórios e expectativas dos clientes, promovendo a melhoria contínua dos processos, valorização das pessoas, sustentabilidade e fortalecimento do sistema de gestão da qualidade.</p>
                         </div>
                      </div>
                   </div>

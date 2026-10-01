@@ -154,14 +154,15 @@ export const header = (ativa) => {
 `;
 };
 
-export const breadcrumb = (titulo, trilhaHtml, bg) => `
+// tag: "h1" nas páginas em que o título da faixa é o assunto da página; "div" quando o H1 está no conteúdo.
+export const breadcrumb = (titulo, trilhaHtml, bg, tag = 'h1') => `
          <!-- breadcrumb-area -->
          <section class="breadcrumb__area pt-100 pb-120 breadcrumb__overlay" data-background="${bg}">
             <div class="container">
                <div class="row align-items-center">
                   <div class="col-xl-7 col-lg-12 col-md-12 col-12">
                      <div class="tp-breadcrumb">
-                        <h1 class="tp-breadcrumb__title">${titulo}</h1>
+                        <${tag} class="tp-breadcrumb__title">${titulo}</${tag}>
                      </div>
                   </div>
                   <div class="col-xl-5 col-lg-12 col-md-12 col-12">

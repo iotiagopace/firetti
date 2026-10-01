@@ -3,11 +3,17 @@
 Itens de conteúdo produzidos durante o desenvolvimento que precisam de confirmação da Firetti antes da publicação.
 
 ## Catálogo (`site/assets/data/catalogo.json`)
-- [ ] **15 produtos de amostra** criados com nome fantasia + tipo + ativo (ex.: "Alba Sérum Antiidade com Ácido Hialurônico"). Validar nomes, ativos, embalagens e volumes disponíveis.
+- [x] **Lista real recebida em 01/10/2026** (`PRODUTOS_site_FIRETTI.docx`): 11 linhas, 46 produtos. Substituiu os 15 produtos de amostra. Nomes e agrupamento são os do cliente; os nomes fantasia (Aurora, Alba…) saíram.
+- [x] Removidos do site produtos que **não estão na linha da Firetti** e estavam anunciados: protetor solar, desodorante, óleo corporal, ativador de cachos, máscara facial de argila.
+- [x] O item **"OUTRO"** de cada linha virou o cartão "Outro [produto] sob medida", que leva a um pedido de fórmula exclusiva (`produto-sob-medida.html`).
+- [x] **Progressiva — "especificar ativo"**: a ficha exige o campo "Ativo desejado" antes de entrar na lista.
+- [ ] **Descrições dos 46 produtos** foram redigidas por nós a partir só do nome — sem ativos nem promessas de resultado que o cliente não informou. Validar.
+- [ ] **Embalagens, materiais e volumes** oferecidos no configurador são proposta nossa, por linha. Confirmar o que a fábrica envasa de fato.
+- [ ] **Produtos com alegação sensível na ANVISA** (12): cremes e gel redutores de celulite e de gordura, creme para estrias, pós-tatuagem, sabonete íntimo, géis para crescimento de cílios e de barba, linha de crescimento capilar (shampoo, condicionador, máscara) e progressiva. Os nomes são os do cliente; as descrições evitam prometer resultado de propósito. Confirmar com o regulatório a classificação (grau 1 ou 2) e quais alegações podem ir ao ar.
 - [ ] **Quantidade mínima (MOQ)** por produto/categoria — hoje exibida como "sob consulta". Definir se será publicada.
 - [ ] **Faixa de custo por unidade** — não exibida. Definir se será publicada.
 - [ ] **Selos** — hoje apenas "Conforme normas Anvisa". Confirmar se há selos adicionais (vegano, cruelty free, sem parabeno) e para quais fórmulas.
-- [ ] **Fotos reais dos produtos** — hoje as fichas usam imagem ilustrativa por categoria (mesma imagem repetida). Produção fotográfica recomendada.
+- [ ] **Fotos reais dos produtos** — hoje cada linha usa 3 fotos ilustrativas de banco, compartilhadas entre os produtos da linha (a foto de capa alterna para a grade não repetir). Produção fotográfica recomendada.
 
 ## FAQ (`site/faq.html`)
 - [ ] 8 perguntas e respostas **redigidas por nós** com base no processo descrito no conteúdo herdado. Validar cada resposta (especialmente: visitas à fábrica, exigência de CNPJ, condução do registro Anvisa).
@@ -28,7 +34,11 @@ Itens de conteúdo produzidos durante o desenvolvimento que precisam de confirma
 - Depoimentos, logos de clientes e blog — sem material real; não publicados.
 
 ## Políticas
-- [ ] **Política de privacidade** e **termos de uso** não existem e precisam ser criados antes da publicação.
+- [x] **Política da empresa** recebida em 01/10/2026 e publicada em Quem somos com o **texto literal** do cliente, no lugar do texto herdado.
+- [ ] **Atenção:** o documento enviado é a política de qualidade da empresa, **não** a política de privacidade. A **política de privacidade (LGPD)** e os **termos de uso** continuam faltando — o site coleta nome, e-mail e telefone.
+
+## Ata da reunião
+- [ ] Mencionada no envio de 01/10/2026, mas **não chegou**: o arquivo de produtos veio anexado duas vezes. Pedir o reenvio — decisões da reunião podem alterar o catálogo.
 
 ## Vídeos (rodada de 29/08/2026)
 - [x] Removido `video-institucional.mp4` que veio no pacote de marca: tinha **marca d'água "Veo" visível** (vídeo gerado por IA). Não deve voltar ao site.
