@@ -13,7 +13,9 @@ Itens de conteúdo produzidos durante o desenvolvimento que precisam de confirma
 - [ ] **Quantidade mínima (MOQ)** por produto/categoria — hoje exibida como "sob consulta". Definir se será publicada.
 - [ ] **Faixa de custo por unidade** — não exibida. Definir se será publicada.
 - [ ] **Selos** — hoje apenas "Conforme normas Anvisa". Confirmar se há selos adicionais (vegano, cruelty free, sem parabeno) e para quais fórmulas.
-- [ ] **Fotos reais dos produtos** — hoje cada linha usa 3 fotos ilustrativas de banco, compartilhadas entre os produtos da linha (a foto de capa alterna para a grade não repetir). Produção fotográfica recomendada.
+- [x] **Fotos novas (01/10/2026)**: 30 fotos de uso (lifestyle) enviadas por linha substituíram os packshots de banco. Fotos específicas viraram capa de pós-tatuagem, demaquilante, gel para barba, gel hidratante e gloss.
+- [ ] **Progressiva não recebeu foto**: está usando a foto da máscara capilar que mostra o cabelo coberto de produto. Enviar uma específica, se houver.
+- [ ] As fotos continuam sendo de banco (não são os produtos da Firetti), por isso o selo "Imagem meramente ilustrativa" permanece. Produção fotográfica própria segue recomendada.
 
 ## FAQ (`site/faq.html`)
 - [ ] 8 perguntas e respostas **redigidas por nós** com base no processo descrito no conteúdo herdado. Validar cada resposta (especialmente: visitas à fábrica, exigência de CNPJ, condução do registro Anvisa).
@@ -52,5 +54,4 @@ Itens de conteúdo produzidos durante o desenvolvimento que precisam de confirma
 - [ ] Quando houver ensaio dos produtos reais, remover o selo das fotos substituídas (o texto sai do gerador em `tools/gerar-catalogo.mjs` e de `site/index.html`).
 
 ## Fotos do catálogo — consistência visual
-- [ ] As 45 fotos vêm de bancos diferentes e têm **fundos inconsistentes** (branco, cinza, rosa, marrom, salmão). Na grade isso quebra a leitura de vitrine.
-  Caminhos possíveis, do mais barato ao melhor: (a) recorte de fundo e recomposição sobre um fundo neutro único; (b) nova seleção priorizando fotos de fundo claro; (c) ensaio próprio com um único set. Recomendado (c) junto com as fotos da planta.
+- [x] Resolvido com as fotos novas: todas no mesmo estilo (pessoas usando o produto, luz natural), o que acabou com a mistura de fundos dos packshots antigos.

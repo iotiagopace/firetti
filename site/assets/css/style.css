@@ -8597,7 +8597,7 @@ p.checkout-coupon input[type=text]:focus {
 .firetti-carrossel__slide img {
   display: block;
   width: 100%;
-  aspect-ratio: 4/5;
+  aspect-ratio: 4/3;
   height: auto;
   object-fit: cover;
 }

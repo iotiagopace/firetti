@@ -24,7 +24,12 @@
       "nome": "Cremes corporais",
       "singular": "creme corporal",
       "categoria": "corporais",
-      "fotos": "hidratante-corporal",
+      "fotos": [
+        "creme-corporal-1",
+        "creme-corporal-2",
+        "creme-corporal-3",
+        "creme-corporal-4"
+      ],
       "opcoes": {
         "embalagens": [
           "pote",
@@ -51,7 +56,11 @@
       "nome": "Géis corporais",
       "singular": "gel corporal",
       "categoria": "corporais",
-      "fotos": "esfoliante",
+      "fotos": [
+        "gel-corporal-1",
+        "gel-corporal-2",
+        "gel-corporal-3"
+      ],
       "opcoes": {
         "embalagens": [
           "pote",
@@ -76,7 +85,10 @@
       "nome": "Sabonetes corporais",
       "singular": "sabonete corporal",
       "categoria": "corporais",
-      "fotos": "oleo-corporal",
+      "fotos": [
+        "sabonete-corporal-1",
+        "sabonete-corporal-2"
+      ],
       "opcoes": {
         "embalagens": [
           "frasco-pump",
@@ -101,7 +113,11 @@
       "nome": "Loções faciais",
       "singular": "loção facial",
       "categoria": "faciais",
-      "fotos": "tonico-facial",
+      "fotos": [
+        "locao-facial-1",
+        "locao-demaquilante-2",
+        "locao-demaquilante-1"
+      ],
       "opcoes": {
         "embalagens": [
           "frasco",
@@ -126,7 +142,11 @@
       "nome": "Séruns faciais",
       "singular": "sérum facial",
       "categoria": "faciais",
-      "fotos": "serum-antiidade",
+      "fotos": [
+        "serum-facial-1",
+        "serum-facial-2",
+        "serum-facial-3"
+      ],
       "opcoes": {
         "embalagens": [
           "conta-gotas",
@@ -151,7 +171,10 @@
       "nome": "Géis faciais",
       "singular": "gel facial",
       "categoria": "faciais",
-      "fotos": "cremes-hidratantes",
+      "fotos": [
+        "gel-facial-1",
+        "gel-facial-hidratante"
+      ],
       "opcoes": {
         "embalagens": [
           "bisnaga",
@@ -177,7 +200,12 @@
       "nome": "Shampoos",
       "singular": "shampoo",
       "categoria": "capilares",
-      "fotos": "shampoo",
+      "fotos": [
+        "shampoo-1",
+        "shampoo-2",
+        "shampoo-3",
+        "shampoo-4"
+      ],
       "opcoes": {
         "embalagens": [
           "frasco-pump",
@@ -203,7 +231,10 @@
       "nome": "Condicionadores",
       "singular": "condicionador",
       "categoria": "capilares",
-      "fotos": "condicionador",
+      "fotos": [
+        "condicionador-1",
+        "condicionador-2"
+      ],
       "opcoes": {
         "embalagens": [
           "frasco-pump",
@@ -230,7 +261,10 @@
       "nome": "Máscaras capilares",
       "singular": "máscara capilar",
       "categoria": "capilares",
-      "fotos": "mascara-capilar",
+      "fotos": [
+        "mascara-capilar-1",
+        "mascara-capilar-2"
+      ],
       "opcoes": {
         "embalagens": [
           "pote",
@@ -255,7 +289,10 @@
       "nome": "Leave-in",
       "singular": "leave-in",
       "categoria": "capilares",
-      "fotos": "leave-in",
+      "fotos": [
+        "leave-in-1",
+        "leave-in-2"
+      ],
       "opcoes": {
         "embalagens": [
           "bisnaga",
@@ -281,7 +318,9 @@
       "nome": "Progressiva",
       "singular": "progressiva",
       "categoria": "capilares",
-      "fotos": "finalizador",
+      "fotos": [
+        "mascara-capilar-2"
+      ],
       "semSobMedida": true,
       "opcoes": {
         "embalagens": [
@@ -320,22 +359,25 @@
       "slug": "creme-para-as-maos",
       "nome": "Creme para as mãos",
       "subcategoria": "cremes-corporais",
-      "resumo": "Hidratação em formato de bolso. Item de entrada com bom giro em balcão, kits e presentes.",
-      "fotos": "creme-maos"
+      "resumo": "Hidratação em formato de bolso. Item de entrada com bom giro em balcão, kits e presentes."
     },
     {
       "slug": "creme-para-os-pes",
       "nome": "Creme para os pés",
       "subcategoria": "cremes-corporais",
-      "resumo": "Cuidado específico para a pele dos pés, com textura mais encorpada pensada para uso diário.",
-      "fotos": "creme-maos"
+      "resumo": "Cuidado específico para a pele dos pés, com textura mais encorpada pensada para uso diário."
     },
     {
       "slug": "creme-pos-tatuagem",
       "nome": "Creme pós-tatuagem",
       "subcategoria": "cremes-corporais",
       "resumo": "Cuidado para a pele tatuada. Nicho de público fiel, com distribuição direta em estúdios.",
-      "regulado": true
+      "regulado": true,
+      "fotos": [
+        "creme-corporal-tatuagem",
+        "creme-corporal-2",
+        "creme-corporal-4"
+      ]
     },
     {
       "slug": "creme-redutor-de-celulite",
@@ -362,8 +404,7 @@
       "slug": "creme-esfoliante-corporal",
       "nome": "Creme esfoliante corporal",
       "subcategoria": "cremes-corporais",
-      "resumo": "Esfoliação em base cremosa, que limpa sem ressecar. Grânulos, cor e fragrância definidos para a sua linha.",
-      "fotos": "esfoliante"
+      "resumo": "Esfoliação em base cremosa, que limpa sem ressecar. Grânulos, cor e fragrância definidos para a sua linha."
     },
     {
       "slug": "gel-esfoliante-corporal",
@@ -376,8 +417,7 @@
       "nome": "Gel redutor de celulite",
       "subcategoria": "geis-corporais",
       "resumo": "Gel de rápida absorção para a linha de cuidados com celulite.",
-      "regulado": true,
-      "fotos": "hidratante-corporal"
+      "regulado": true
     },
     {
       "slug": "sabonete-liquido-corporal",
@@ -396,7 +436,12 @@
       "slug": "locao-demaquilante",
       "nome": "Loção demaquilante",
       "subcategoria": "locoes-faciais",
-      "resumo": "Remove maquiagem e impurezas sem esfregar. O primeiro passo de qualquer rotina de skincare."
+      "resumo": "Remove maquiagem e impurezas sem esfregar. O primeiro passo de qualquer rotina de skincare.",
+      "fotos": [
+        "locao-demaquilante-1",
+        "locao-demaquilante-2",
+        "locao-facial-1"
+      ]
     },
     {
       "slug": "agua-termal",
@@ -504,11 +549,6 @@
       "nome": "Gel para a área dos olhos",
       "subcategoria": "gel-facial",
       "resumo": "Textura fresca e leve para a região delicada dos olhos.",
-      "fotos": [
-        "tubo-01",
-        "tubo-02",
-        "mascara-tratamento-01"
-      ],
       "opcoes": {
         "embalagens": [
           "bisnaga",
@@ -536,11 +576,6 @@
       "subcategoria": "gel-facial",
       "resumo": "Produto de nicho com alto valor percebido, aplicado com pincel.",
       "regulado": true,
-      "fotos": [
-        "tubo-01",
-        "tubo-02",
-        "mascara-tratamento-01"
-      ],
       "opcoes": {
         "embalagens": [
           "tubo-aplicador"
@@ -564,25 +599,28 @@
       "slug": "gel-facial-hidratante",
       "nome": "Gel facial hidratante",
       "subcategoria": "gel-facial",
-      "resumo": "Hidratação em gel de toque seco, indicada para peles oleosas e climas quentes."
+      "resumo": "Hidratação em gel de toque seco, indicada para peles oleosas e climas quentes.",
+      "fotos": [
+        "gel-facial-hidratante",
+        "gel-facial-1"
+      ]
     },
     {
       "slug": "gel-para-crescimento-de-barba",
       "nome": "Gel para crescimento de barba",
       "subcategoria": "gel-facial",
       "resumo": "Para a linha masculina, um dos segmentos que mais crescem no cuidado pessoal.",
-      "regulado": true
+      "regulado": true,
+      "fotos": [
+        "gel-facial-barba",
+        "gel-facial-1"
+      ]
     },
     {
       "slug": "gloss-labial",
       "nome": "Gloss labial",
       "subcategoria": "gel-facial",
       "resumo": "Brilho labial com aplicador, para completar kits faciais ou abrir uma linha de maquiagem.",
-      "fotos": [
-        "tubo-01",
-        "tubo-02",
-        "mascara-tratamento-01"
-      ],
       "opcoes": {
         "embalagens": [
           "tubo-aplicador"
@@ -600,7 +638,10 @@
           "impressao",
           "nenhuma"
         ]
-      }
+      },
+      "fotos": [
+        "gel-facial-gloss"
+      ]
     },
     {
       "slug": "shampoo-lavatorio",
