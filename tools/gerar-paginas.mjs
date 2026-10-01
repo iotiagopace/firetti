@@ -92,7 +92,7 @@ const ctaFinal = (tituloHtml) => `
                      <div class="cta-bg theme-light-bg pt-65 pb-70">
                         <div class="cta-content ml-90">
                            <h2 class="cta-title mb-35">${tituloHtml}</h2>
-                           <a href="https://wa.me/5517991262215" target="_blank" rel="noopener" class="tp-cta-btn"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>WhatsApp :</span>(17) 99126-2215</a>
+                           <a href="https://wa.me/5517981642219" target="_blank" rel="noopener" class="tp-cta-btn"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>WhatsApp :</span>(17) 98164-2219</a>
                         </div>
                      </div>
                   </div>
@@ -474,7 +474,7 @@ ${breadcrumb('Fale conosco', '<a href="index.html">Início</a> : Contato', BG_PL
                            <div class="tpcontact__address">
                               <h3 class="tpcontact__title mb-15">Telefone e WhatsApp</h3>
                               <span><a href="tel:+551732661022">(17) 3266-1022</a></span>
-                              <span><a href="https://wa.me/5517991262215" target="_blank" rel="noopener">(17) 99126-2215</a></span>
+                              <span><a href="https://wa.me/5517981642219" target="_blank" rel="noopener">(17) 98164-2219</a></span>
                            </div>
                         </div>
                      </div>

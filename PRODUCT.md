@@ -7,7 +7,7 @@ Site institucional da **Firetti**, indústria de terceirização de cosméticos 
 Capacidade fabril: fórmula, envase, rotulagem, regulatório ANVISA e produto pronto para empreendedores que querem lançar a própria marca de cosmético. **Não vende ao consumidor final** — sem carrinho, preço público, checkout ou frete.
 
 ## Objetivo único
-Gerar solicitação de orçamento qualificada. Fluxo: visitante navega → monta lista de orçamento (catálogo) ou preenche formulário → mensagem formatada via WhatsApp (`wa.me/5517991262215`). CTA primário único por dobra.
+Gerar solicitação de orçamento qualificada. Fluxo: visitante navega → monta lista de orçamento (catálogo) ou preenche formulário → mensagem formatada via WhatsApp (`wa.me/5517981642219`). CTA primário único por dobra.
 
 ## Público
 Empreendedor(a) que quer lançar marca própria de cosmético e não tem fábrica, química nem registro ANVISA. Leitor leigo em regulatório — tom técnico e acolhedor, sem jargão e sem infantilizar.

@@ -145,7 +145,7 @@ export const header = (ativa) => {
             <span>Fale conosco</span>
             <a href="https://maps.app.goo.gl/TPQcMniH4i4BLasX9" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Rua Luiz Vitoretti, 485 – Cedral/SP</a>
             <a href="tel:+551732661022"><i class="fa-solid fa-phone" aria-hidden="true"></i>(17) 3266-1022</a>
-            <a href="https://wa.me/5517991262215" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i>(17) 99126-2215</a>
+            <a href="https://wa.me/5517981642219" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i>(17) 98164-2219</a>
          </div>
       </div>
       <!-- sidebar-info-end -->
@@ -212,7 +212,7 @@ export const rodape = () => `
                            <ul>
                               <li><a href="https://maps.app.goo.gl/TPQcMniH4i4BLasX9" target="_blank" rel="noopener">Rua Luiz Vitoretti, 485 – Cedral/SP<br>CEP 15895-000</a></li>
                               <li><a href="tel:+551732661022">(17) 3266-1022</a></li>
-                              <li><a href="https://wa.me/5517991262215" target="_blank" rel="noopener">WhatsApp: (17) 99126-2215</a></li>
+                              <li><a href="https://wa.me/5517981642219" target="_blank" rel="noopener">WhatsApp: (17) 98164-2219</a></li>
                            </ul>
                         </div>
                      </div>

@@ -22,7 +22,8 @@ Itens de conteúdo produzidos durante o desenvolvimento que precisam de confirma
 
 ## Dados institucionais
 - [ ] **E-mail institucional** — ainda não definido; não aparece no site.
-- [ ] Telefone (17) 3266-1022, WhatsApp (17) 99126-2215, endereço e horários herdados da operação anterior — confirmar pós-transição.
+- [x] **WhatsApp atualizado em 01/10/2026** para +55 17 98164-2219 (informado pelo cliente). Vale para todos os botões e para o envio da lista de orçamento.
+- [ ] Telefone (17) 3266-1022, endereço e horários herdados da operação anterior — confirmar pós-transição.
 - [ ] Alegações numéricas: **+20 anos**, **+500 fórmulas**, **conformidade Anvisa** — validar documentalmente.
 - [ ] **Domínio final** — necessário para canonical, sitemap, robots.txt, OG absoluto e schema.org.
 

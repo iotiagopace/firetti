@@ -4,7 +4,7 @@
 (function () {
 	'use strict';
 
-	var WHATSAPP = '5517991262215';
+	var WHATSAPP = '5517981642219';
 	var CHAVE = 'firettiLista';
 
 	/* ---------- Lista de orçamento (localStorage) ---------- */

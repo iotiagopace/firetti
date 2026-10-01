@@ -159,7 +159,7 @@ const botoesConfigurador = `
 const abaOrcamento = `
                               <div class="tab-pane fade" id="painel-como" role="tabpanel" aria-labelledby="aba-como">
                                  <p class="mb-30">Adicione à lista os produtos que deseja para a sua linha, com embalagem, volume e quantidade. Ao finalizar, envie a lista pelo formulário de orçamento: ela chega formatada ao nosso time comercial pelo WhatsApp, e retornamos com valores, quantidade mínima e prazos.</p>
-                                 <p>Prefere conversar antes? Fale com a gente pelo telefone <a href="tel:+551732661022">(17) 3266-1022</a> ou <a href="https://wa.me/5517991262215" target="_blank" rel="noopener">WhatsApp</a>.</p>
+                                 <p>Prefere conversar antes? Fale com a gente pelo telefone <a href="tel:+551732661022">(17) 3266-1022</a> ou <a href="https://wa.me/5517981642219" target="_blank" rel="noopener">WhatsApp</a>.</p>
                               </div>`;
 
 const selos = dados.selos

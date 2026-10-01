@@ -23,7 +23,7 @@ Documento de rastreabilidade para auditoria. Atualizado em 2026-08-29 (commit `6
 **Adotados e entregues:**
 - Objetivo único (orçamento qualificado) com CTA primário único por dobra ✅
 - **Lista de orçamento** no lugar de carrinho: `localStorage`, contador no header de todas as páginas, remoção/estado vazio, envio formatado ✅
-- **Formulário → WhatsApp** (`wa.me/5517991262215`) com validação inline e `aria` ✅
+- **Formulário → WhatsApp** (`wa.me/5517981642219`) com validação inline e `aria` ✅
 - **Ficha de produto como configurador** (embalagem, material, volume, decoração, quantidade, requisito especial) ✅
 - Padrão de nome "fantasia + tipo + ativo" ✅
 - Catálogo em arquivo de dados versionado (`assets/data/catalogo.json`) ✅
