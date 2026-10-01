@@ -57,9 +57,9 @@
       "singular": "gel corporal",
       "categoria": "corporais",
       "fotos": [
-        "gel-corporal-1",
-        "gel-corporal-2",
-        "gel-corporal-3"
+        "gel-esfoliante-1",
+        "gel-celulite-1",
+        "gel-esfoliante-2"
       ],
       "opcoes": {
         "embalagens": [
@@ -201,10 +201,9 @@
       "singular": "shampoo",
       "categoria": "capilares",
       "fotos": [
-        "shampoo-1",
-        "shampoo-2",
-        "shampoo-3",
-        "shampoo-4"
+        "shampoo-diario-1",
+        "shampoo-cachos-1",
+        "shampoo-lavatorio-1"
       ],
       "opcoes": {
         "embalagens": [
@@ -262,8 +261,9 @@
       "singular": "máscara capilar",
       "categoria": "capilares",
       "fotos": [
-        "mascara-capilar-1",
-        "mascara-capilar-2"
+        "mascara-lisos-1",
+        "mascara-danificados-1",
+        "mascara-crescimento-1"
       ],
       "opcoes": {
         "embalagens": [
@@ -319,7 +319,8 @@
       "singular": "progressiva",
       "categoria": "capilares",
       "fotos": [
-        "mascara-capilar-2"
+        "progressiva-1",
+        "progressiva-2"
       ],
       "semSobMedida": true,
       "opcoes": {
@@ -694,39 +695,62 @@
           "impressao",
           "nenhuma"
         ]
-      }
+      },
+      "fotos": [
+        "shampoo-lavatorio-1",
+        "shampoo-lavatorio-2"
+      ]
     },
     {
       "slug": "shampoo-antirresiduo",
       "nome": "Shampoo antirresíduo",
       "subcategoria": "shampoo",
-      "resumo": "Limpeza profunda que prepara o fio para tratamentos e química. Essencial em linhas profissionais."
+      "resumo": "Limpeza profunda que prepara o fio para tratamentos e química. Essencial em linhas profissionais.",
+      "fotos": [
+        "shampoo-antirresiduo-1",
+        "shampoo-antirresiduo-2"
+      ]
     },
     {
       "slug": "shampoo-diario",
       "nome": "Shampoo de uso diário",
       "subcategoria": "shampoo",
       "resumo": "Limpeza suave para lavagens frequentes. O item de maior giro de uma linha capilar.",
-      "destaque": true
+      "destaque": true,
+      "fotos": [
+        "shampoo-diario-1"
+      ]
     },
     {
       "slug": "shampoo-para-cabelos-danificados",
       "nome": "Shampoo para cabelos danificados",
       "subcategoria": "shampoo",
-      "resumo": "Limpeza com cuidado para fios fragilizados por química, calor ou coloração."
+      "resumo": "Limpeza com cuidado para fios fragilizados por química, calor ou coloração.",
+      "fotos": [
+        "shampoo-danificados-1",
+        "shampoo-danificados-2",
+        "shampoo-danificados-3"
+      ]
     },
     {
       "slug": "shampoo-para-cachos",
       "nome": "Shampoo para cachos",
       "subcategoria": "shampoo",
-      "resumo": "Limpeza que respeita a curvatura dos fios, para cabelos cacheados e crespos."
+      "resumo": "Limpeza que respeita a curvatura dos fios, para cabelos cacheados e crespos.",
+      "fotos": [
+        "shampoo-cachos-1",
+        "shampoo-cachos-2"
+      ]
     },
     {
       "slug": "shampoo-para-crescimento",
       "nome": "Shampoo para crescimento",
       "subcategoria": "shampoo",
       "resumo": "Para a linha capilar voltada a quem busca fortalecimento e crescimento dos fios.",
-      "regulado": true
+      "regulado": true,
+      "fotos": [
+        "shampoo-crescimento-1"
+      ]
     },
     {
       "slug": "condicionador-para-cabelos-danificados",
@@ -757,26 +781,39 @@
       "slug": "mascara-para-cabelos-danificados",
       "nome": "Máscara para cabelos danificados",
       "subcategoria": "mascara-capilar",
-      "resumo": "Tratamento intensivo para fios danificados, com textura densa de salão."
+      "resumo": "Tratamento intensivo para fios danificados, com textura densa de salão.",
+      "fotos": [
+        "mascara-danificados-1"
+      ]
     },
     {
       "slug": "mascara-para-cabelos-cacheados",
       "nome": "Máscara para cabelos cacheados",
       "subcategoria": "mascara-capilar",
-      "resumo": "Nutrição para cachos e crespos, pensada para o cronograma capilar."
+      "resumo": "Nutrição para cachos e crespos, pensada para o cronograma capilar.",
+      "fotos": [
+        "mascara-cacheados-1"
+      ]
     },
     {
       "slug": "mascara-para-cabelos-lisos",
       "nome": "Máscara para cabelos lisos",
       "subcategoria": "mascara-capilar",
-      "resumo": "Tratamento que nutre sem tirar o balanço dos fios lisos."
+      "resumo": "Tratamento que nutre sem tirar o balanço dos fios lisos.",
+      "fotos": [
+        "mascara-lisos-1",
+        "mascara-lisos-2"
+      ]
     },
     {
       "slug": "mascara-para-crescimento",
       "nome": "Máscara para crescimento",
       "subcategoria": "mascara-capilar",
       "resumo": "Tratamento da linha de crescimento capilar.",
-      "regulado": true
+      "regulado": true,
+      "fotos": [
+        "mascara-crescimento-1"
+      ]
     },
     {
       "slug": "leave-in-em-creme",
