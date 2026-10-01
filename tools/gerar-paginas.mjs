@@ -123,7 +123,7 @@ ${breadcrumb('Conheça a Firetti', '<a href="index.html">Início</a> : Quem somo
                         <div class="about__img">
                            <img src="${BG_PLANTA}" alt="Vista aérea da planta industrial da Firetti em Cedral, São Paulo">
                            <div class="about__exprience">
-                              <h3 class="counter">20</h3>
+                              <h3 class="counter">24</h3>
                               <i>Anos de <br>experiência</i>
                            </div>
                         </div>
@@ -165,7 +165,7 @@ ${breadcrumb('Conheça a Firetti', '<a href="index.html">Início</a> : Quem somo
                            <i class="flaticon-premium-badge" aria-hidden="true"></i>
                         </div>
                         <div class="services-item__content">
-                           <h3 class="services-item__tp-title mb-30">Mais de 20 anos de experiência</h3>
+                           <h3 class="services-item__tp-title mb-30">24 anos de experiência</h3>
                            <p>Experiência acumulada e liderança no mercado de fabricação de cosméticos.</p>
                         </div>
                      </div>

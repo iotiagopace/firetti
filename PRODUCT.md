@@ -13,7 +13,7 @@ Gerar solicitação de orçamento qualificada. Fluxo: visitante navega → monta
 Empreendedor(a) que quer lançar marca própria de cosmético e não tem fábrica, química nem registro ANVISA. Leitor leigo em regulatório — tom técnico e acolhedor, sem jargão e sem infantilizar.
 
 ## Números-argumento
-+500 fórmulas prontas · +20 anos de operação · conformidade ANVISA. **Nunca** prometer resultado financeiro (ex.: "lucro de 200%" — removido do conteúdo herdado).
++500 fórmulas prontas · 24 anos de operação · conformidade ANVISA. **Nunca** prometer resultado financeiro (ex.: "lucro de 200%" — removido do conteúdo herdado).
 
 ## Base técnica (decisão do usuário)
 Template HTML estático **Bioxlab** (Home 01) rebrandizado — sem CMS, sem painel admin, sem framework JS. SCSS compilado, JS puro + `localStorage` para a lista de orçamento. Fonte de conteúdo: `Arquivos base/Firetti-Pacote-Web/04-conteudo-site/`.
