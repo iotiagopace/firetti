@@ -9082,3 +9082,53 @@ textarea:focus-visible {
   color: var(--tp-theme-primary);
   margin-bottom: 20px;
 }
+
+.about__img img {
+  border-radius: 0 0 50% 50%/0 0 22% 22%;
+}
+.about__img .about__exprience {
+  width: 210px;
+  height: 210px;
+  padding: 42px 20px;
+  left: 24px;
+  right: auto;
+  bottom: -150px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 12px 30px -14px rgba(7, 55, 94, 0.45);
+}
+.about__img .about__exprience h3 {
+  font-size: 76px;
+}
+.about__img .about__exprience i {
+  font-size: 16px;
+  line-height: 1.3;
+}
+@media (max-width: 767px) {
+  .about__img .about__exprience {
+    width: 150px;
+    height: 150px;
+    padding: 24px 12px;
+    left: 12px;
+    bottom: -95px;
+  }
+  .about__img .about__exprience h3 {
+    font-size: 54px;
+  }
+  .about__img .about__exprience i {
+    font-size: 13px;
+  }
+}
+
+.about__thumb {
+  margin-bottom: 170px;
+}
+
+@media (max-width: 767px) {
+  .about__thumb {
+    margin-bottom: 115px;
+  }
+}
