@@ -172,8 +172,8 @@
       "singular": "gel facial",
       "categoria": "faciais",
       "fotos": [
-        "gel-facial-1",
-        "gel-facial-hidratante"
+        "gel-rosto-1",
+        "gel-rosto-2"
       ],
       "opcoes": {
         "embalagens": [
@@ -460,7 +460,11 @@
       "nome": "Sabonete íntimo",
       "subcategoria": "sabonetes-corporais",
       "resumo": "Higiene íntima formulada conforme as exigências da ANVISA para a categoria, com fragrância suave definida para a sua marca.",
-      "regulado": true
+      "regulado": true,
+      "fotos": [
+        "sabonete-intimo-1",
+        "sabonete-intimo-2"
+      ]
     },
     {
       "slug": "locao-demaquilante",
@@ -496,7 +500,11 @@
           "impressao",
           "nenhuma"
         ]
-      }
+      },
+      "fotos": [
+        "agua-termal-1",
+        "agua-termal-2"
+      ]
     },
     {
       "slug": "locao-adstringente-facial",
@@ -598,7 +606,11 @@
           "impressao",
           "nenhuma"
         ]
-      }
+      },
+      "fotos": [
+        "gel-olhos-1",
+        "gel-olhos-2"
+      ]
     },
     {
       "slug": "gel-para-crescimento-de-cilios",
@@ -623,7 +635,12 @@
           "impressao",
           "nenhuma"
         ]
-      }
+      },
+      "fotos": [
+        "gel-cilios-1",
+        "gel-cilios-2",
+        "gel-cilios-3"
+      ]
     },
     {
       "slug": "gel-facial-hidratante",
@@ -631,8 +648,10 @@
       "subcategoria": "gel-facial",
       "resumo": "Hidratação em gel de toque seco, indicada para peles oleosas e climas quentes.",
       "fotos": [
-        "gel-facial-hidratante",
-        "gel-facial-1"
+        "gel-rosto-1",
+        "gel-rosto-2",
+        "gel-rosto-3",
+        "gel-rosto-4"
       ]
     },
     {
@@ -642,8 +661,7 @@
       "resumo": "Para a linha masculina, um dos segmentos que mais crescem no cuidado pessoal.",
       "regulado": true,
       "fotos": [
-        "gel-facial-barba",
-        "gel-facial-1"
+        "gel-facial-barba"
       ]
     },
     {
