@@ -9132,3 +9132,25 @@ textarea:focus-visible {
     margin-bottom: 115px;
   }
 }
+.firetti-rodape-base {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+
+.firetti-creditos a {
+  color: var(--tp-theme-secondary);
+  font-weight: 600;
+}
+.firetti-creditos a:hover {
+  color: var(--tp-common-white);
+  text-decoration: underline;
+}
+
+@media (max-width: 1399px) {
+  .firetti-rodape-base {
+    padding-right: 72px;
+  }
+}

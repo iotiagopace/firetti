@@ -714,3 +714,24 @@ textarea:focus-visible {
 }
 .about__thumb { margin-bottom: 170px; }
 @media #{$xs} { .about__thumb { margin-bottom: 115px; } }
+
+// Linha final do rodapé: copyright à esquerda, créditos à direita
+.firetti-rodape-base {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 24px;
+}
+.firetti-creditos {
+    & a {
+        color: var(--tp-theme-secondary);
+        font-weight: 600;
+        &:hover { color: var(--tp-common-white); text-decoration: underline; }
+    }
+}
+// O botão fixo "voltar ao topo" fica no canto inferior direito; abre espaço
+// para ele não cobrir os créditos quando a página chega ao fim.
+@media (max-width: 1399px) {
+    .firetti-rodape-base { padding-right: 72px; }
+}
