@@ -735,3 +735,11 @@ textarea:focus-visible {
 @media (max-width: 1399px) {
     .firetti-rodape-base { padding-right: 72px; }
 }
+
+// Página 404
+.firetti-404__acoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}

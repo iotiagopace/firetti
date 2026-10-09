@@ -7,7 +7,8 @@
 import { writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { head, header, breadcrumb, rodape } from './blocos.mjs';
+import { head, header, breadcrumb, rodape, SITE, ORGANIZACAO, trilha } from './blocos.mjs';
+import { gerarSitemap } from './sitemap.mjs';
 
 const RAIZ = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'site');
 const BG_PLANTA = 'assets/img/conteudo/missao.jpg';
@@ -101,6 +102,18 @@ const ctaFinal = (tituloHtml) => `
          </section>
          <!-- cta-area-end -->`;
 
+// Unidade física (página de contato). Horários conforme publicados no site.
+const CONTATO_LD = {
+  '@context': 'https://schema.org',
+  ...ORGANIZACAO,
+  '@type': 'LocalBusiness',
+  telephone: '+55-17-3266-1022',
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '18:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '08:00', closes: '12:00' }
+  ]
+};
+
 const paginas = [];
 
 /* ============================================================
@@ -108,12 +121,12 @@ const paginas = [];
 ============================================================ */
 paginas.push({
   arquivo: 'quem-somos.html',
-  html: `${head('Quem somos | Firetti', 'Conheça a estrutura, a experiência, os valores e o compromisso da Firetti com inovação, qualidade e fabricação responsável de cosméticos.', 'assets/img/og/og-quem-somos-1200x630.png')}
+  html: `${head('Quem somos | Firetti', 'Conheça a estrutura, a experiência, os valores e o compromisso da Firetti com inovação, qualidade e fabricação responsável de cosméticos.', 'assets/img/og/og-quem-somos-1200x630.png', '/quem-somos', [{ '@context': 'https://schema.org', '@type': 'AboutPage', url: `${SITE}/quem-somos`, mainEntity: ORGANIZACAO }, trilha([['Início', '/'], ['Quem somos', '/quem-somos']])])}
 ${header('quem-somos')}
 
       <!-- main-area -->
       <main id="conteudo-principal">
-${breadcrumb('Conheça a Firetti', '<a href="index.html">Início</a> : Quem somos', BG_PLANTA)}
+${breadcrumb('Conheça a Firetti', '<a href="/">Início</a> : Quem somos', BG_PLANTA)}
          <!-- missao-area -->
          <section class="about-area pt-120 pb-70">
             <div class="container">
@@ -138,7 +151,7 @@ ${breadcrumb('Conheça a Firetti', '<a href="index.html">Início</a> : Quem somo
                            <p class="mr-20 mb-45">Nossa planta fica em Cedral, no interior de São Paulo, e reúne estrutura de produção, envase e controle de qualidade para atender marcas de todo o Brasil.</p>
                         </div>
                         <div class="tp-about__btn">
-                           <a class="tp-btn" href="como-funciona.html">Como funciona a terceirização</a>
+                           <a class="tp-btn" href="/como-funciona">Como funciona a terceirização</a>
                         </div>
                      </div>
                   </div>
@@ -273,12 +286,12 @@ ${rodape()}`
 ============================================================ */
 paginas.push({
   arquivo: 'como-funciona.html',
-  html: `${head('Terceirize sua produção de cosméticos | Firetti', 'Crie sua marca de cosméticos com uma operação completa: pesquisa, formulação, produção, controle de qualidade, envase e suporte.', 'assets/img/og/og-terceirize-producao-1200x630.png')}
+  html: `${head('Terceirize sua produção de cosméticos | Firetti', 'Crie sua marca de cosméticos com uma operação completa: pesquisa, formulação, produção, controle de qualidade, envase e suporte.', 'assets/img/og/og-terceirize-producao-1200x630.png', '/como-funciona', [trilha([['Início', '/'], ['Como funciona', '/como-funciona']])])}
 ${header('como-funciona')}
 
       <!-- main-area -->
       <main id="conteudo-principal">
-${breadcrumb('Terceirize sua produção', '<a href="index.html">Início</a> : Como funciona', BG_PLANTA)}
+${breadcrumb('Terceirize sua produção', '<a href="/">Início</a> : Como funciona', BG_PLANTA)}
          <!-- intro-area -->
          <section class="about-area pt-120 pb-40">
             <div class="container">
@@ -435,12 +448,12 @@ ${rodape()}`
 ============================================================ */
 paginas.push({
   arquivo: 'contato.html',
-  html: `${head('Fale com a Firetti | Orçamento para cosméticos', 'Entre em contato para tirar dúvidas, solicitar um orçamento ou iniciar o desenvolvimento da sua linha de cosméticos.', 'assets/img/og/og-fale-conosco-1200x630.png')}
+  html: `${head('Fale com a Firetti | Orçamento para cosméticos', 'Entre em contato para tirar dúvidas, solicitar um orçamento ou iniciar o desenvolvimento da sua linha de cosméticos.', 'assets/img/og/og-fale-conosco-1200x630.png', '/contato', [CONTATO_LD, trilha([['Início', '/'], ['Contato', '/contato']])])}
 ${header('contato')}
 
       <!-- main-area -->
       <main id="conteudo-principal">
-${breadcrumb('Fale conosco', '<a href="index.html">Início</a> : Contato', BG_PLANTA)}
+${breadcrumb('Fale conosco', '<a href="/">Início</a> : Contato', BG_PLANTA)}
          <!-- contact-area -->
          <section class="contact-area pt-130 pb-115">
             <div class="container">
@@ -595,6 +608,15 @@ const faqItens = [
   }
 ];
 
+// Mesmo conteúdo visível na página; o schema não pode prometer nada além dele.
+const FAQ_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItens.map((item) => ({
+    '@type': 'Question', name: item.p, acceptedAnswer: { '@type': 'Answer', text: item.r }
+  }))
+};
+
 const accordion = faqItens
   .map((item, i) => {
     const n = i + 1;
@@ -612,12 +634,12 @@ const accordion = faqItens
 
 paginas.push({
   arquivo: 'faq.html',
-  html: `${head('Perguntas frequentes | Firetti', 'Respostas sobre terceirização de cosméticos: quantidade mínima, registro na Anvisa, exclusividade de fórmula, prazos e orçamento.', 'assets/img/og/og-firetti-1200x630.png')}
+  html: `${head('Perguntas frequentes | Firetti', 'Respostas sobre terceirização de cosméticos: quantidade mínima, registro na Anvisa, exclusividade de fórmula, prazos e orçamento.', 'assets/img/og/og-firetti-1200x630.png', '/faq', [FAQ_LD, trilha([['Início', '/'], ['Perguntas frequentes', '/faq']])])}
 ${header('como-funciona')}
 
       <!-- main-area -->
       <main id="conteudo-principal">
-${breadcrumb('Perguntas frequentes', '<a href="index.html">Início</a> : <a href="como-funciona.html">Como funciona</a> : FAQ', BG_PLANTA)}
+${breadcrumb('Perguntas frequentes', '<a href="/">Início</a> : <a href="/como-funciona">Como funciona</a> : FAQ', BG_PLANTA)}
          <!-- faq-area -->
          <section class="faq-area pt-125 pb-100">
             <div class="container">
@@ -634,7 +656,7 @@ ${accordion}
                      </div>
                      <div class="text-center mt-60">
                         <p class="mb-25">Não encontrou a sua dúvida?</p>
-                        <a class="tp-btn" href="contato.html">Fale com nossos especialistas</a>
+                        <a class="tp-btn" href="/contato">Fale com nossos especialistas</a>
                      </div>
                   </div>
                </div>
@@ -652,12 +674,12 @@ ${rodape()}`
 ============================================================ */
 paginas.push({
   arquivo: 'orcamento.html',
-  html: `${head('Solicitar orçamento | Firetti', 'Monte sua lista de produtos e envie para o time comercial da Firetti pelo WhatsApp. Retornamos com valores, quantidades mínimas e prazos.', 'assets/img/og/og-firetti-1200x630.png')}
+  html: `${head('Solicitar orçamento | Firetti', 'Monte sua lista de produtos e envie para o time comercial da Firetti pelo WhatsApp. Retornamos com valores, quantidades mínimas e prazos.', 'assets/img/og/og-firetti-1200x630.png', '/orcamento', [trilha([['Início', '/'], ['Orçamento', '/orcamento']])])}
 ${header('catalogo')}
 
       <!-- main-area -->
       <main id="conteudo-principal">
-${breadcrumb('Lista de orçamento', '<a href="index.html">Início</a> : Orçamento', BG_PRODUTOS)}
+${breadcrumb('Lista de orçamento', '<a href="/">Início</a> : Orçamento', BG_PRODUTOS)}
          <!-- lista-area -->
          <section class="cart-area pt-120 pb-40">
             <div class="container">
@@ -671,7 +693,7 @@ ${breadcrumb('Lista de orçamento', '<a href="index.html">Início</a> : Orçamen
                      <ul id="firetti-lista-itens" class="firetti-lista-itens" aria-label="Produtos na lista de orçamento"></ul>
                      <div id="firetti-lista-vazia" hidden>
                         <p class="mb-25">Sua lista ainda está vazia. Explore o catálogo e adicione os produtos que deseja para a sua linha.</p>
-                        <a class="tp-btn-second mb-40" href="catalogo.html">Explorar o catálogo</a>
+                        <a class="tp-btn-second mb-40" href="/catalogo">Explorar o catálogo</a>
                      </div>
                   </div>
                </div>
@@ -685,7 +707,41 @@ ${ctaFinal('Prefere conversar <br>primeiro?')}
 ${rodape()}`
 });
 
+/* ============================================================
+   404 (a Vercel serve este arquivo para endereços inexistentes)
+============================================================ */
+paginas.push({
+  arquivo: '404.html',
+  html: `${head('Página não encontrada | Firetti', 'A página que você procurou não existe ou mudou de endereço.', 'assets/img/og/og-firetti-1200x630.png', null)}
+${header('')}
+
+      <!-- main-area -->
+      <main id="conteudo-principal">
+${breadcrumb('Página não encontrada', '<a href="/">Início</a> : 404', BG_PRODUTOS, 'h1')}
+         <section class="firetti-404 pt-120 pb-120">
+            <div class="container">
+               <div class="row justify-content-center">
+                  <div class="col-lg-7 text-center">
+                     <h2 class="tp-section__title mb-25">Esse endereço não existe ou mudou</h2>
+                     <p class="mb-40">O link pode estar incompleto ou a página foi reorganizada. Escolha por onde continuar:</p>
+                     <div class="firetti-404__acoes">
+                        <a class="tp-btn" href="/catalogo">Ver o catálogo</a>
+                        <a class="tp-btn-second" href="/">Ir para o início</a>
+                     </div>
+                     <p class="mt-40">Precisa de ajuda? <a href="https://wa.me/5517981642219" target="_blank" rel="noopener">Fale com a gente no WhatsApp</a>.</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+      </main>
+      <!-- main-area-end -->
+${rodape()}`
+});
+
 for (const p of paginas) {
   writeFileSync(resolve(RAIZ, p.arquivo), p.html);
   console.log(p.arquivo + ' gerado');
 }
+
+gerarSitemap();

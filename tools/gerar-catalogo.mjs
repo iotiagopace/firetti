@@ -9,7 +9,8 @@
 import { readFileSync, writeFileSync, readdirSync, unlinkSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { head, header, breadcrumb, rodape } from './blocos.mjs';
+import { head, header, breadcrumb, rodape, trilha as trilhaLd } from './blocos.mjs';
+import { gerarSitemap } from './sitemap.mjs';
 
 const RAIZ = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'site');
 const dados = JSON.parse(readFileSync(resolve(RAIZ, 'assets/data/catalogo.json'), 'utf8'));
@@ -69,11 +70,11 @@ ${pontos}
                               </div>
                               <div class="firetti-produto-card__body">
                                  <span class="firetti-produto-card__sub">${sub.nome}</span>
-                                 <h3 class="firetti-produto-card__titulo"><a href="produto-${p.slug}.html">${p.nome}</a></h3>
+                                 <h3 class="firetti-produto-card__titulo"><a href="/produto-${p.slug}">${p.nome}</a></h3>
                                  <p class="firetti-produto-card__resumo">${p.resumo}</p>${ativos}
                                  <div class="firetti-produto-card__acoes">
                                     <button type="button" class="firetti-add-btn js-adicionar-rapido" data-slug="${p.slug}" data-nome="${p.nome}" data-linha="${sub.nome}"><i class="fal fa-plus" aria-hidden="true"></i> Adicionar à lista</button>
-                                    <a class="firetti-produto-card__link" href="produto-${p.slug}.html">Configurar<i class="fal fa-arrow-right" aria-hidden="true"></i></a>
+                                    <a class="firetti-produto-card__link" href="/produto-${p.slug}">Configurar<i class="fal fa-arrow-right" aria-hidden="true"></i></a>
                                  </div>
                               </div>
                            </article>
@@ -83,7 +84,7 @@ ${pontos}
 // O "OUTRO" de cada linha na lista do cliente vira um pedido de fórmula sob medida.
 const cardSobMedida = (chave, sub) => `
                         <div class="col-xl-4 col-lg-6 col-md-6">
-                           <a class="firetti-sob-medida mb-30" href="produto-sob-medida.html?tipo=${chave}">
+                           <a class="firetti-sob-medida mb-30" href="/produto-sob-medida?tipo=${chave}">
                               <span class="firetti-sob-medida__icone" aria-hidden="true"><i class="fal fa-flask"></i></span>
                               <span class="firetti-sob-medida__titulo">Outro ${sub.singular}</span>
                               <span class="firetti-sob-medida__texto">Não encontrou o que procura nesta linha? Descreva a ideia e o nosso time desenvolve a fórmula para a sua marca.</span>
@@ -115,7 +116,7 @@ let catalogoHtml = readFileSync(catalogoPath, 'utf8');
 catalogoHtml = catalogoHtml
   .replace(/(<!-- CATALOGO:INICIO -->)[\s\S]*(<!-- CATALOGO:FIM -->)/, `$1\n${grupos}\n                  $2`)
   .replace(/(<!-- HEADER:INICIO -->)[\s\S]*(<!-- HEADER:FIM -->)/, `$1${header('catalogo')}      $2`)
-  .replace(/<!-- BREADCRUMB -->/, breadcrumb('Linha de produtos', '<a href="index.html">Início</a> : Catálogo', BG))
+  .replace(/<!-- BREADCRUMB -->/, breadcrumb('Linha de produtos', '<a href="/">Início</a> : Catálogo', BG))
   .replace(
     /(<!-- FOOTER:INICIO -->)[\s\S]*(<!-- FOOTER:FIM -->)[\s\S]*$/,
     rodape().replace('      <!-- footer-area -->', '      <!-- FOOTER:INICIO -->\n      <!-- footer-area -->').replace('      <!-- footer-area-end -->', '      <!-- footer-area-end -->\n      <!-- FOOTER:FIM -->')
@@ -151,7 +152,7 @@ const camposComuns = `
 const botoesConfigurador = `
                               <div class="product-button">
                                  <button type="submit" class="tp-btn mr-20">Adicionar à lista de orçamento</button>
-                                 <a href="orcamento.html" class="tp-btn-second">Ver minha lista</a>
+                                 <a href="/orcamento" class="tp-btn-second">Ver minha lista</a>
                               </div>
                               <p class="firetti-form-error" role="alert" hidden>Preencha os campos obrigatórios antes de adicionar.</p>
                               <p class="firetti-add-feedback" role="status" hidden>Produto adicionado à sua lista de orçamento.</p>`;
@@ -169,7 +170,7 @@ const selos = dados.selos
 for (const p of dados.produtos) {
   const sub = SUB[p.subcategoria];
   const op = opcoesDe(p);
-  const trilha = `<a href="catalogo.html">Catálogo</a> : <a href="catalogo.html?categoria=${sub.categoria}#linha-${p.subcategoria}">${sub.nome}</a>`;
+  const trilha = `<a href="/catalogo">Catálogo</a> : <a href="/catalogo?categoria=${sub.categoria}#linha-${p.subcategoria}">${sub.nome}</a>`;
 
   const campoAtivo = p.especificarAtivo
     ? `
@@ -184,7 +185,7 @@ for (const p of dados.produtos) {
     : '';
   const notaAnvisa = p.regulado ? `\n                                 <p class="mt-20">${dados.anvisaNota}</p>` : '';
 
-  const pagina = `${head(`${p.nome} | Firetti`, p.resumo, OG)}
+  const pagina = `${head(`${p.nome} | Firetti`, p.resumo, OG, `/produto-${p.slug}`, [trilhaLd([['Início', '/'], ['Catálogo', '/catalogo'], [p.nome, `/produto-${p.slug}`]])])}
 ${header('catalogo')}
 
       <!-- main-area -->
@@ -268,12 +269,12 @@ console.log(`${dados.produtos.length} fichas de produto geradas`);
 const linhasComOutro = Object.entries(SUB).filter(([, s]) => !s.semSobMedida);
 const todasEmbalagens = Object.keys(dados.embalagens);
 
-const sobMedida = `${head('Produto sob medida | Firetti', 'Não encontrou o produto na nossa lista? Descreva a ideia e o time da Firetti desenvolve a fórmula sob medida para a sua marca.', OG)}
+const sobMedida = `${head('Produto sob medida | Firetti', 'Não encontrou o produto na nossa lista? Descreva a ideia e o time da Firetti desenvolve a fórmula sob medida para a sua marca.', OG, '/produto-sob-medida', [trilhaLd([['Início', '/'], ['Catálogo', '/catalogo'], ['Produto sob medida', '/produto-sob-medida']])])}
 ${header('catalogo')}
 
       <!-- main-area -->
       <main id="conteudo-principal">
-${breadcrumb('Produto sob medida', '<a href="catalogo.html">Catálogo</a> : Sob medida', BG, 'div')}
+${breadcrumb('Produto sob medida', '<a href="/catalogo">Catálogo</a> : Sob medida', BG, 'div')}
          <!-- sob-medida-area -->
          <section class="shop-area pt-120 pb-90">
             <div class="container">
@@ -309,3 +310,5 @@ ${rodape()}`;
 
 writeFileSync(resolve(RAIZ, 'produto-sob-medida.html'), sobMedida);
 console.log('produto-sob-medida.html gerado');
+
+gerarSitemap();

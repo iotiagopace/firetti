@@ -2,5 +2,18 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "outputDirectory": "site",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:caminho*",
+      "has": [
+        {
+          "type": "host",
+          "value": "firetti.vercel.app"
+        }
+      ],
+      "destination": "https://www.firetti.com.br/:caminho*",
+      "permanent": true
+    }
+  ]
 }

@@ -29,7 +29,9 @@ Itens de conteúdo produzidos durante o desenvolvimento que precisam de confirma
 - [ ] Telefone (17) 3266-1022, endereço e horários herdados da operação anterior — confirmar pós-transição.
 - [x] **Tempo de empresa: 24 anos**, informado pelo cliente (o site dizia "mais de 20").
 - [ ] Alegações numéricas: **+500 fórmulas**, **conformidade Anvisa** — validar documentalmente.
-- [ ] **Domínio final** — necessário para canonical, sitemap, robots.txt, OG absoluto e schema.org.
+- [x] **Domínio oficial: https://www.firetti.com.br/** (já apontado para a Vercel; DNS no Grupo Atech). `firetti.com.br` e `firetti.vercel.app` redirecionam para ele. Canonical, sitemap, robots.txt, imagens de compartilhamento e dados estruturados usam esse domínio.
+- [ ] **Search Console:** criar a propriedade de **domínio** `firetti.com.br` e adicionar o registro TXT no DNS do Grupo Atech. A tag HTML já está no site e verifica a propriedade de prefixo `https://www.firetti.com.br/`. Depois: enviar `https://www.firetti.com.br/sitemap.xml`.
+- [ ] **Site antigo** `maxup.com.br/bst/` continua no ar com o mesmo conteúdo (marca Biopharcos). Pedir redirecionamento 301 página a página para o domínio novo.
 
 ## Imagens
 - [ ] Foto aérea da planta (`missao.jpg`) é real, porém em baixa resolução (739×415). Obter original em alta.

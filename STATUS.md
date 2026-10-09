@@ -88,3 +88,10 @@ STATUS.md            Este documento
 Regenerar catálogo/páginas após editar `catalogo.json` ou `tools/`:
 `node tools/gerar-catalogo.mjs && node tools/gerar-paginas.mjs`
 SCSS: `npx sass --no-source-map site/assets/scss/main.scss site/assets/css/style.css`
+
+## Como gerar e visualizar o site
+- Gerar páginas: `node tools/gerar-catalogo.mjs && node tools/gerar-paginas.mjs` (ambos atualizam `sitemap.xml` e `robots.txt`).
+- CSS: `npx sass --no-source-map site/assets/scss/main.scss site/assets/css/style.css`
+- Visualizar localmente: `npx serve site` — os links usam endereços limpos (`/catalogo`), igual à Vercel; o `python -m http.server` não abre essas páginas.
+- Domínio oficial e dados estruturados: `tools/blocos.mjs` (`SITE`, `ORGANIZACAO`).
+

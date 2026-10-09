@@ -9154,3 +9154,9 @@ textarea:focus-visible {
     padding-right: 72px;
   }
 }
+.firetti-404__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}

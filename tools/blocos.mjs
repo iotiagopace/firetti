@@ -1,7 +1,12 @@
 /** Blocos compartilhados das páginas do site Firetti */
 /* ---------- blocos compartilhados ---------- */
 
-export const head = (titulo, descricao, og) => `<!doctype html>
+// Domínio oficial. Canonical, og:url, sitemap e JSON-LD saem daqui.
+export const SITE = 'https://www.firetti.com.br';
+
+// caminho: endereço limpo da página ("/", "/catalogo"...). null = página sem canonical e fora do índice (404).
+// jsonld: lista de objetos schema.org desta página.
+export const head = (titulo, descricao, og, caminho, jsonld = []) => `<!doctype html>
 <html class="no-js" lang="pt-BR">
    <head>
       <meta charset="utf-8">
@@ -19,14 +24,21 @@ export const head = (titulo, descricao, og) => `<!doctype html>
       <meta name="google-site-verification" content="BciE4-E8IbWiskdAVI05eQv0XvaMh7bIYjjk_mkpjXQ">
       <meta name="theme-color" content="#07375E">
 
-      <!-- TODO: trocar por URL absoluta quando o domínio final for definido -->
+${caminho ? `      <link rel="canonical" href="${SITE}${caminho}">` : '      <meta name="robots" content="noindex, follow">'}
+
       <meta property="og:type" content="website">
+      <meta property="og:locale" content="pt_BR">
+      <meta property="og:site_name" content="Firetti">
       <meta property="og:title" content="${titulo}">
       <meta property="og:description" content="${descricao}">
-      <meta property="og:image" content="${og}">
-      <meta property="og:locale" content="pt_BR">
+${caminho ? `      <meta property="og:url" content="${SITE}${caminho}">\n` : ''}      <meta property="og:image" content="${SITE}/${og}">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
       <meta name="twitter:card" content="summary_large_image">
-
+      <meta name="twitter:title" content="${titulo}">
+      <meta name="twitter:description" content="${descricao}">
+      <meta name="twitter:image" content="${SITE}/${og}">
+${jsonld.map((d) => `      <script type="application/ld+json">${JSON.stringify(d)}</script>\n`).join('')}
       <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
       <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
       <link rel="shortcut icon" href="favicons/favicon.ico">
@@ -74,29 +86,29 @@ export const header = (ativa) => {
                <div class="row align-items-center">
                   <div class="col-xxl-2 col-lg-3">
                      <div class="logo">
-                        <a href="index.html"><img src="assets/img/logo/logo-firetti.svg" alt="Firetti" width="160" height="53"></a>
+                        <a href="/"><img src="assets/img/logo/logo-firetti.svg" alt="Firetti" width="160" height="53"></a>
                      </div>
                   </div>
                   <div class="col-xxl-7 col-lg-6">
                      <div class="main-menu">
                         <nav id="mobile-menu" aria-label="Navegação principal">
                            <ul>
-                              <li><a${cls('inicio')} href="index.html">Início</a></li>
-                              <li><a${cls('quem-somos')} href="quem-somos.html">Quem somos</a></li>
-                              <li class="has-dropdown"><a${cls('como-funciona')} href="como-funciona.html" aria-haspopup="true">Como funciona</a>
+                              <li><a${cls('inicio')} href="/">Início</a></li>
+                              <li><a${cls('quem-somos')} href="/quem-somos">Quem somos</a></li>
+                              <li class="has-dropdown"><a${cls('como-funciona')} href="/como-funciona" aria-haspopup="true">Como funciona</a>
                                  <ul class="sub-menu">
-                                    <li><a href="como-funciona.html">Terceirize sua produção</a></li>
-                                    <li><a href="faq.html">Perguntas frequentes</a></li>
+                                    <li><a href="/como-funciona">Terceirize sua produção</a></li>
+                                    <li><a href="/faq">Perguntas frequentes</a></li>
                                  </ul>
                               </li>
-                              <li class="has-dropdown"><a${cls('catalogo')} href="catalogo.html" aria-haspopup="true">Catálogo</a>
+                              <li class="has-dropdown"><a${cls('catalogo')} href="/catalogo" aria-haspopup="true">Catálogo</a>
                                  <ul class="sub-menu">
-                                    <li><a href="catalogo.html?categoria=capilares">Produtos capilares</a></li>
-                                    <li><a href="catalogo.html?categoria=corporais">Produtos corporais</a></li>
-                                    <li><a href="catalogo.html?categoria=faciais">Produtos faciais</a></li>
+                                    <li><a href="/catalogo?categoria=capilares">Produtos capilares</a></li>
+                                    <li><a href="/catalogo?categoria=corporais">Produtos corporais</a></li>
+                                    <li><a href="/catalogo?categoria=faciais">Produtos faciais</a></li>
                                  </ul>
                               </li>
-                              <li><a${cls('contato')} href="contato.html">Contato</a></li>
+                              <li><a${cls('contato')} href="/contato">Contato</a></li>
                            </ul>
                         </nav>
                      </div>
@@ -107,7 +119,7 @@ export const header = (ativa) => {
                            <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="2" cy="2" r="2" fill="#137C96"/><circle cx="7" cy="2" r="2" fill="#137C96"/><circle cx="12" cy="2" r="2" fill="#137C96"/><circle cx="12" cy="7" r="2" fill="#137C96"/><circle cx="12" cy="12" r="2" fill="#137C96"/><circle cx="7" cy="7" r="2" fill="#137C96"/><circle cx="7" cy="12" r="2" fill="#137C96"/><circle cx="7" cy="17" r="2" fill="#137C96"/><circle cx="2" cy="7" r="2" fill="#137C96"/><circle cx="2" cy="12" r="2" fill="#137C96"/></svg><span>Atendimento :</span>(17) 3266-1022
                         </a>
                      </div>
-                     <a class="firetti-lista-btn" href="orcamento.html" title="Lista de orçamento">
+                     <a class="firetti-lista-btn" href="/orcamento" title="Lista de orçamento">
                         <i class="fal fa-clipboard-list" aria-hidden="true"></i>
                         <span class="firetti-lista-count">0</span>
                         <span class="visually-hidden">Ver lista de orçamento</span>
@@ -125,12 +137,12 @@ export const header = (ativa) => {
             <div class="row align-items-center">
                <div class="col-6">
                   <div class="tp-mob-logo">
-                     <a href="index.html"><img src="assets/img/logo/logo-firetti.svg" alt="Firetti" width="130" height="43"></a>
+                     <a href="/"><img src="assets/img/logo/logo-firetti.svg" alt="Firetti" width="130" height="43"></a>
                   </div>
                </div>
                <div class="col-6">
                   <div class="tp-mobile-bar d-flex align-items-center justify-content-end">
-                     <a class="firetti-lista-btn mr-15" href="orcamento.html" title="Lista de orçamento">
+                     <a class="firetti-lista-btn mr-15" href="/orcamento" title="Lista de orçamento">
                         <i class="fal fa-clipboard-list" aria-hidden="true"></i>
                         <span class="firetti-lista-count">0</span>
                         <span class="visually-hidden">Ver lista de orçamento</span>
@@ -147,7 +159,7 @@ export const header = (ativa) => {
       <div id="painel-menu-mobile" class="tpsideinfo tp-side-info-area" aria-label="Menu mobile" aria-hidden="true">
          <button class="tpsideinfo__close" aria-label="Fechar menu"><i class="fal fa-times" aria-hidden="true"></i></button>
          <div class="tpsideinfo__logo mb-40">
-            <a href="index.html"><img src="assets/img/logo/logo-firetti-negativa.svg" alt="Firetti" width="160" height="53"></a>
+            <a href="/"><img src="assets/img/logo/logo-firetti-negativa.svg" alt="Firetti" width="160" height="53"></a>
          </div>
 
          <div class="mobile-menu"></div>
@@ -197,7 +209,7 @@ export const rodape = () => `
                   <div class="col-xl-3 col-lg-4 col-md-6">
                      <div class="footer-widget footer-col-1 mb-50">
                         <h4 class="footer-widget__title mb-30">
-                           <a href="index.html"><img src="assets/img/logo/logo-firetti-negativa.svg" alt="Firetti" width="160" height="53"></a>
+                           <a href="/"><img src="assets/img/logo/logo-firetti-negativa.svg" alt="Firetti" width="160" height="53"></a>
                         </h4>
                         <p>Somos especializados em terceirização de cosméticos, com 24 anos de experiência acumulada na operação. Desenvolvemos fórmulas únicas e exclusivas para a sua marca.</p>
                      </div>
@@ -207,12 +219,12 @@ export const rodape = () => `
                         <h4 class="footer-widget__title mb-20">Navegação</h4>
                         <div class="footer-widget__links">
                            <ul>
-                              <li><a href="index.html">Início</a></li>
-                              <li><a href="quem-somos.html">Quem somos</a></li>
-                              <li><a href="como-funciona.html">Como funciona</a></li>
-                              <li><a href="catalogo.html">Catálogo</a></li>
-                              <li><a href="orcamento.html">Orçamento</a></li>
-                              <li><a href="contato.html">Contato</a></li>
+                              <li><a href="/">Início</a></li>
+                              <li><a href="/quem-somos">Quem somos</a></li>
+                              <li><a href="/como-funciona">Como funciona</a></li>
+                              <li><a href="/catalogo">Catálogo</a></li>
+                              <li><a href="/orcamento">Orçamento</a></li>
+                              <li><a href="/contato">Contato</a></li>
                            </ul>
                         </div>
                      </div>
@@ -249,7 +261,7 @@ export const rodape = () => `
                <div class="row">
                   <div class="col-12">
                      <div class="footer-widget__copyright firetti-rodape-base">
-                        <span>© 2026 <a href="index.html">Firetti</a>. <i>Todos os direitos reservados.</i></span>
+                        <span>© 2026 <a href="/">Firetti</a>. <i>Todos os direitos reservados.</i></span>
                         <span class="firetti-creditos">Desenvolvido por <a href="https://bemseutipo.com.br/" target="_blank" rel="noopener">BST</a> e <a href="https://metry.cc/" target="_blank" rel="noopener">Metry</a></span>
                      </div>
                   </div>
@@ -277,3 +289,36 @@ export const rodape = () => `
    </body>
 </html>
 `;
+
+/* ---------- dados estruturados (schema.org) ---------- */
+
+// Ficha da empresa. Endereço e telefones são os publicados no site; confirmar com o cliente (PENDENCIAS.md).
+export const ORGANIZACAO = {
+  '@type': 'Organization',
+  '@id': `${SITE}/#organizacao`,
+  name: 'Firetti',
+  url: `${SITE}/`,
+  logo: `${SITE}/favicons/android-chrome-512x512.png`,
+  description: 'Indústria brasileira de terceirização de cosméticos capilares, corporais e faciais: formulação, registro na Anvisa, produção e envase para a sua marca.',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Rua Luiz Vitoretti, 485',
+    addressLocality: 'Cedral',
+    addressRegion: 'SP',
+    postalCode: '15895-000',
+    addressCountry: 'BR'
+  },
+  contactPoint: [
+    { '@type': 'ContactPoint', contactType: 'sales', telephone: '+55-17-98164-2219', availableLanguage: 'Portuguese' },
+    { '@type': 'ContactPoint', contactType: 'customer service', telephone: '+55-17-3266-1022', availableLanguage: 'Portuguese' }
+  ]
+};
+
+// Trilha de navegação: [['Início', '/'], ['Catálogo', '/catalogo'], ...]
+export const trilha = (itens) => ({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: itens.map(([nome, caminho], i) => ({
+    '@type': 'ListItem', position: i + 1, name: nome, item: `${SITE}${caminho}`
+  }))
+});
