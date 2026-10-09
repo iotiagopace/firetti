@@ -72,7 +72,7 @@ ${pontos}
                                  <h3 class="firetti-produto-card__titulo"><a href="produto-${p.slug}.html">${p.nome}</a></h3>
                                  <p class="firetti-produto-card__resumo">${p.resumo}</p>${ativos}
                                  <div class="firetti-produto-card__acoes">
-                                    <button type="button" class="firetti-add-btn js-adicionar-rapido" data-slug="${p.slug}" data-nome="${p.nome}"><i class="fal fa-plus" aria-hidden="true"></i> Adicionar à lista</button>
+                                    <button type="button" class="firetti-add-btn js-adicionar-rapido" data-slug="${p.slug}" data-nome="${p.nome}" data-linha="${sub.nome}"><i class="fal fa-plus" aria-hidden="true"></i> Adicionar à lista</button>
                                     <a class="firetti-produto-card__link" href="produto-${p.slug}.html">Configurar<i class="fal fa-arrow-right" aria-hidden="true"></i></a>
                                  </div>
                               </div>
@@ -213,7 +213,7 @@ ${p.imagens.map((im, i) => `                        <button type="button" class=
                            <div class="firetti-selos mt-20 mb-30">
                                  ${selos}
                            </div>
-                           <form class="js-configurador" data-slug="${p.slug}" data-nome="${p.nome}" action="#" novalidate>
+                           <form class="js-configurador" data-slug="${p.slug}" data-nome="${p.nome}" data-linha="${sub.nome}" action="#" novalidate>
                               <h2 class="product-model-title mb-15">Configure o seu produto</h2>${campoAtivo}
 ${campoSelect('embalagem', 'Embalagem', op.embalagens, dados.embalagens)}
 ${campoSelect('material', 'Material', op.materiais, MATERIAIS)}

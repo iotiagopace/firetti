@@ -7,6 +7,23 @@
 	var WHATSAPP = '5517981642219';
 	var CHAVE = 'firettiLista';
 
+	/* ---------- Eventos para o Google Tag Manager (dataLayer) ----------
+	   Nunca enviar dados pessoais (nome, e-mail, telefone): o GA4 proíbe. */
+
+	function rastrear(evento, dados) {
+		window.dataLayer = window.dataLayer || [];
+		window.dataLayer.push(Object.assign({ event: evento }, dados || {}));
+	}
+
+	function localDoClique(el) {
+		if (el.closest('header, #header-mob-sticky')) return 'cabecalho';
+		if (el.closest('.tpsideinfo')) return 'menu_mobile';
+		if (el.closest('footer')) return 'rodape';
+		if (el.closest('.cta-area')) return 'cta_final';
+		if (el.closest('.js-form-orcamento, #form-orcamento, .visit-serial')) return 'formulario';
+		return 'conteudo';
+	}
+
 	/* ---------- Lista de orçamento (localStorage) ---------- */
 
 	function lerLista() {
@@ -44,10 +61,17 @@
 		});
 	}
 
-	function adicionarItem(item) {
+	function adicionarItem(item, origem) {
 		var lista = lerLista();
 		lista.push(item);
 		salvarLista(lista);
+		rastrear('produto_adicionado', {
+			produto_id: item.slug || '',
+			produto_nome: item.nome || '',
+			produto_linha: item.linha || '',
+			origem: origem || 'card',
+			itens_na_lista: lista.length
+		});
 		anunciar(item.nome + ' adicionado à lista de orçamento. A lista tem ' + lista.length + ' item(ns).');
 	}
 
@@ -135,8 +159,9 @@
 		adicionarItem({
 			slug: form.dataset.slug || '',
 			nome: nome,
+			linha: tipo ? textoSelecionado(tipo) : (form.dataset.linha || ''),
 			detalhes: detalhes.join(', ')
-		});
+		}, tipo ? 'sob_medida' : 'configurador');
 
 		var feedback = form.querySelector('.firetti-add-feedback');
 		if (feedback) {
@@ -217,6 +242,13 @@
 		if (form.matches('#form-orcamento, .js-form-orcamento')) {
 			evento.preventDefault();
 			if (!validarForm(form)) return;
+			var itensLista = lerLista();
+			rastrear('orcamento_enviado', {
+				pagina: window.location.pathname.replace(/\.html$/, '') || '/',
+				itens_na_lista: itensLista.length,
+				com_lista: itensLista.length > 0,
+				com_mensagem: valor(form, 'mensagem') !== ''
+			});
 			var url = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(montarMensagem(form));
 			window.open(url, '_blank', 'noopener');
 			return;
@@ -228,14 +260,23 @@
 	});
 
 	document.addEventListener('click', function (evento) {
+		var contato = evento.target.closest('a[href*="wa.me/"], a[href^="tel:"]');
+		if (contato) {
+			var whats = contato.href.indexOf('wa.me/') !== -1;
+			rastrear(whats ? 'clique_whatsapp' : 'clique_telefone', {
+				local: localDoClique(contato),
+				pagina: window.location.pathname.replace(/\.html$/, '') || '/'
+			});
+		}
 		var botao = evento.target.closest('.js-adicionar-rapido');
 		if (botao) {
 			evento.preventDefault();
 			adicionarItem({
 				slug: botao.dataset.slug || '',
 				nome: botao.dataset.nome || 'Produto',
+				linha: botao.dataset.linha || '',
 				detalhes: 'configuração a definir'
-			});
+			}, 'card');
 			botao.classList.add('adicionado');
 			botao.textContent = 'Adicionado à lista';
 			window.setTimeout(function () {
