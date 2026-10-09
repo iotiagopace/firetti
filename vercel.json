@@ -5,6 +5,28 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "firetti.vercel.app"
+        }
+      ],
+      "destination": "https://www.firetti.com.br/",
+      "permanent": true
+    },
+    {
+      "source": "/:pagina.html",
+      "has": [
+        {
+          "type": "host",
+          "value": "firetti.vercel.app"
+        }
+      ],
+      "destination": "https://www.firetti.com.br/:pagina",
+      "permanent": true
+    },
+    {
       "source": "/:caminho*",
       "has": [
         {
